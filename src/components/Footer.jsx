@@ -125,16 +125,16 @@ const Footer = () => {
             <div className={`lg:col-span-2 space-y-6 transition-all duration-1000 transform
               ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
               <div className="space-y-4">
-                <h2 className="text-5xl font-great-vibes text-white drop-shadow-lg">
+                <h2 className="text-5xl font-mangro text-white drop-shadow-lg">
                   Bobby Lohia
                 </h2>
-                <p className="text-xl text-earth-200 font-cormorant italic">
+                <p className="text-xl text-earth-200 font-mangro italic">
                   Wildlife Photography
                 </p>
                 <div className="w-20 h-1 bg-gradient-to-r from-earth-400 to-sage-400 rounded-full" />
               </div>
               
-              <p className="text-earth-100 font-cormorant leading-relaxed text-lg max-w-md">
+              <p className="text-earth-100 font-mangro leading-relaxed text-lg max-w-md">
                 {photographerBio.shortBio}
               </p>
 
@@ -148,9 +148,9 @@ const Footer = () => {
                     style={{ transitionDelay: `${index * 0.2}s` }}
                   >
                     <div className="text-3xl font-playfair font-bold text-earth-300 group-hover:text-white transition-colors duration-300">
-                      {achievement.number}
+                        {achievement.number}
                     </div>
-                    <div className="text-sm text-earth-400 font-lato mt-1 group-hover:text-earth-200 transition-colors duration-300">
+                      <div className="text-sm text-earth-400 font-cormorant mt-1 group-hover:text-earth-200 transition-colors duration-300">
                       {achievement.label}
                     </div>
                   </div>
@@ -161,7 +161,7 @@ const Footer = () => {
             {/* Quick Links */}
             <div className={`space-y-6 transition-all duration-1000 transform delay-300
               ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              <h3 className="text-2xl font-great-vibes text-earth-200 mb-6">
+              <h3 className="text-2xl font-mangro text-earth-200 mb-6">
                 Quick Links
               </h3>
               <div className="space-y-3">
@@ -172,7 +172,7 @@ const Footer = () => {
                     className="group flex items-center space-x-3 text-earth-300 hover:text-white transition-all duration-300 transform hover:translate-x-2"
                   >
                     <div className="w-2 h-2 bg-earth-400 rounded-full group-hover:bg-sage-300 transition-colors duration-300 group-hover:scale-125 transform" />
-                    <span className="font-cormorant">{link.label}</span>
+                    <span className="font-mangro">{link.label}</span>
                   </Link>
                 ))}
               </div>
@@ -181,7 +181,7 @@ const Footer = () => {
             {/* Contact & Social */}
             <div className={`space-y-6 transition-all duration-1000 transform delay-500
               ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              <h3 className="text-2xl font-great-vibes text-earth-200 mb-6">
+              <h3 className="text-2xl font-mangro text-earth-200 mb-6">
                 Connect
               </h3>
               
@@ -191,7 +191,7 @@ const Footer = () => {
                   <svg className="w-5 h-5 text-earth-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.945a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  <a href={`mailto:${photographerBio.contact.email}`} className="hover:text-white transition-colors duration-300 font-cormorant">
+                  <a href={`mailto:${photographerBio.contact.email}`} className="hover:text-white transition-colors duration-300 font-mangro">
                     {photographerBio.contact.email}
                   </a>
                 </div>
@@ -200,13 +200,13 @@ const Footer = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
-                  <span className="font-cormorant">{photographerBio.contact.location}</span>
+                  <span className="font-mangro">{photographerBio.contact.location}</span>
                 </div>
               </div>
 
               {/* Social Media Icons */}
               <div className="space-y-4">
-                <h4 className="text-xl font-great-vibes text-earth-200">Follow My Journey</h4>
+                <h4 className="text-xl font-mangro text-earth-200">Follow My Journey</h4>
                 <div className="flex space-x-4">
                   {socialLinks.map((social, index) => (
                     <a

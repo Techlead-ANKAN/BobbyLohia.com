@@ -50,9 +50,9 @@ const Lightbox = ({ image, isOpen, onClose, onNext, onPrev }) => {
         
         {/* Image Info */}
         <div className="mt-4 text-center text-white">
-          <h3 className="text-2xl font-playfair font-semibold mb-2">{image.title}</h3>
-          <p className="text-lg font-lato text-gray-300 mb-2">{image.description}</p>
-          <div className="flex justify-center items-center space-x-6 text-sm text-gray-400 font-lato">
+          <h3 className="text-2xl font-yeseva font-semibold mb-2">{image.title}</h3>
+          <p className="text-lg font-cormorant text-gray-300 mb-2">{image.description}</p>
+          <div className="flex justify-center items-center space-x-6 text-sm text-gray-400 font-cormorant">
             <span>{image.location}</span>
             <span>•</span>
             <span>{image.year}</span>
@@ -125,7 +125,7 @@ const Gallery = () => {
         
         <div className="container-custom text-center relative">
           <div className="space-y-4">
-            <h1 className="text-6xl lg:text-7xl font-great-vibes text-forest-900 mb-3 drop-shadow-lg">
+            <h1 className="text-6xl lg:text-7xl font-mangro text-forest-900 mb-3 drop-shadow-lg">
               Gallery
             </h1>
             <div className="flex justify-center items-center space-x-6 mb-3">
@@ -133,7 +133,7 @@ const Gallery = () => {
               <div className="w-3 h-3 bg-forest-500 rounded-full animate-pulse" />
               <div className="w-16 h-px bg-gradient-to-r from-transparent via-forest-500 to-transparent" />
             </div>
-            <p className="text-xl lg:text-2xl text-earth-700 font-cormorant font-light max-w-4xl mx-auto leading-relaxed tracking-wide">
+            <p className="text-xl lg:text-2xl text-earth-700 font-mangro font-light max-w-4xl mx-auto leading-relaxed tracking-wide">
               A curated collection of wildlife photography showcasing the raw beauty, 
               intimate moments, and incredible diversity of life in the natural world.
             </p>
@@ -149,7 +149,7 @@ const Gallery = () => {
               <button
                 key={category}
                 onClick={() => handleFilterChange(category)}
-                className={`px-6 py-3 rounded-full font-lato font-medium transition-all duration-300 
+                className={`px-6 py-3 rounded-full font-mangro font-medium transition-all duration-300 
                   ${filter === category
                     ? 'bg-forest-600 text-white shadow-lg'
                     : 'bg-white text-forest-700 hover:bg-forest-100 shadow-md hover:shadow-lg'
@@ -209,17 +209,17 @@ const Gallery = () => {
                     {/* Elegant Info Card */}
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-all duration-500">
                       <div className="backdrop-blur-md bg-black/30 rounded-xl p-4 border border-white/20">
-                        <h3 className="text-lg font-great-vibes text-white mb-2 drop-shadow-lg">
+                        <h3 className="text-lg font-yeseva text-white mb-2 drop-shadow-lg">
                           {image.title}
                         </h3>
                         <p className="text-sm font-cormorant text-earth-100 mb-3 opacity-90">
                           {image.location}
                         </p>
                         <div className="flex items-center justify-between">
-                          <span className="text-xs px-3 py-1 bg-gradient-to-r from-forest-600/80 to-sage-600/80 rounded-full font-lato font-medium backdrop-blur-sm border border-white/20">
+                          <span className="text-xs px-3 py-1 bg-gradient-to-r from-forest-600/80 to-sage-600/80 rounded-full font-cormorant font-medium backdrop-blur-sm border border-white/20">
                             {image.category}
                           </span>
-                          <span className="text-xs text-earth-200 font-lato opacity-75">
+                          <span className="text-xs text-earth-200 font-cormorant opacity-75">
                             {image.year}
                           </span>
                         </div>

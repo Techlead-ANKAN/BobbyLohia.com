@@ -1,4 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Sacramento&family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+/* Mangro Elegant Serif Font Loading */
+@font-face {
+  font-family: 'Mangro Elegant Serif';
+  src: url('/fonts/mangro/Mangro-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mangro Elegant Serif';
+  src: url('/fonts/mangro/Mangro-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mangro Elegant Serif';
+  src: url('/fonts/mangro/Mangro-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,19 +37,19 @@
   }
   
   body {
-    @apply font-lato text-earth-800 bg-forest-50 leading-relaxed;
+    @apply font-mangro text-earth-800 bg-forest-50 leading-relaxed;
     margin: 0;
     min-height: 100vh;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-playfair text-forest-900;
+    @apply font-mangro text-forest-900;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply px-8 py-4 bg-gradient-to-r from-forest-600 to-sage-600 text-white rounded-xl font-lato font-medium 
+    @apply px-8 py-4 bg-gradient-to-r from-forest-600 to-sage-600 text-white rounded-xl font-cormorant font-medium 
            hover:from-forest-700 hover:to-sage-700 transition-all duration-500 ease-out transform hover:scale-105 hover:shadow-2xl
            focus:ring-4 focus:ring-forest-500/30 focus:outline-none relative overflow-hidden;
   }
@@ -41,7 +65,7 @@
   }
   
   .btn-secondary {
-    @apply px-8 py-4 border-2 border-forest-600 text-forest-600 rounded-xl font-lato font-medium
+    @apply px-8 py-4 border-2 border-forest-600 text-forest-600 rounded-xl font-cormorant font-medium
            hover:bg-forest-600 hover:text-white transition-all duration-500 ease-out transform hover:scale-105 hover:shadow-2xl
            focus:ring-4 focus:ring-forest-500/30 focus:outline-none relative overflow-hidden;
   }

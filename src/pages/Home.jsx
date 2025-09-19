@@ -34,7 +34,7 @@ const Home = () => {
         
         {/* Hero Content */}
         <div className="relative z-20 text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-great-vibes font-normal mb-8 animate-fade-in text-white drop-shadow-2xl" 
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-mangro font-normal mb-8 animate-fade-in text-white drop-shadow-2xl" 
               style={{ textShadow: '0 0 20px rgba(0,0,0,0.8), 0 4px 8px rgba(0,0,0,0.5)' }}>
             {photographerBio.name}
           </h1>
@@ -45,19 +45,19 @@ const Home = () => {
               <span className="block font-cormorant font-light text-earth-100">
                 Capturing the
               </span>
-              <span className="block text-3xl sm:text-4xl lg:text-5xl font-great-vibes bg-gradient-to-r from-earth-200 via-sage-200 to-forest-200 bg-clip-text text-transparent drop-shadow-lg">
+              <span className="block text-3xl sm:text-4xl lg:text-5xl font-mangro bg-gradient-to-r from-earth-200 via-sage-200 to-forest-200 bg-clip-text text-transparent drop-shadow-lg">
                 Essence
               </span>
               <span className="block font-cormorant font-light text-earth-100">
                 of
               </span>
-              <span className="block text-3xl sm:text-4xl lg:text-5xl font-great-vibes bg-gradient-to-r from-sage-200 via-earth-200 to-forest-200 bg-clip-text text-transparent drop-shadow-lg">
+              <span className="block text-3xl sm:text-4xl lg:text-5xl font-mangro bg-gradient-to-r from-sage-200 via-earth-200 to-forest-200 bg-clip-text text-transparent drop-shadow-lg">
                 Wildlife
               </span>
               <span className="block font-cormorant font-light text-earth-100">
                 and
               </span>
-              <span className="block text-3xl sm:text-4xl lg:text-5xl font-great-vibes bg-gradient-to-r from-forest-200 via-earth-200 to-sage-200 bg-clip-text text-transparent drop-shadow-lg">
+              <span className="block text-3xl sm:text-4xl lg:text-5xl font-mangro bg-gradient-to-r from-forest-200 via-earth-200 to-sage-200 bg-clip-text text-transparent drop-shadow-lg">
                 Nature
               </span>
             </h2>
@@ -179,7 +179,7 @@ const Home = () => {
       <section className="py-20 bg-gradient-to-b from-sage-50 to-earth-50">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-5xl lg:text-6xl font-great-vibes text-forest-900 mb-6 drop-shadow-lg">
+            <h2 className="text-5xl lg:text-6xl font-mangro text-forest-900 mb-6 drop-shadow-lg">
               Featured Work
             </h2>
             <div className="flex justify-center items-center space-x-6 mb-6">
@@ -219,7 +219,7 @@ const Home = () => {
                       {/* Image Info */}
                       <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-all duration-500">
                         <div className="backdrop-blur-md bg-black/30 rounded-lg p-3 border border-white/20">
-                          <h3 className="text-lg font-great-vibes font-bold text-white mb-1 drop-shadow-md">{image.title}</h3>
+                          <h3 className="text-lg font-mangro font-bold text-white mb-1 drop-shadow-md">{image.title}</h3>
                           <p className="text-sm font-cormorant text-earth-100 mb-1">{image.location}</p>
                           <span className="inline-block px-2 py-1 bg-forest-600/80 rounded-full text-xs font-lato text-white">
                             {image.category}

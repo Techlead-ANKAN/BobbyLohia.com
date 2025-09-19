@@ -51,7 +51,7 @@ const PhotoLightbox = ({ image, isOpen, onClose, onNext, onPrev, albumTitle }) =
         
         {/* Image Info */}
         <div className="mt-6 text-center text-white backdrop-blur-md bg-black/30 rounded-xl p-4 border border-white/20">
-          <h3 className="text-2xl font-great-vibes font-bold text-white mb-2 drop-shadow-lg">{image.title}</h3>
+          <h3 className="text-2xl font-mangro font-bold text-white mb-2 drop-shadow-lg">{image.title}</h3>
           <p className="text-earth-200 font-cormorant mb-1">{image.location}</p>
           <p className="text-sm text-earth-300 font-lato">From album: {albumTitle}</p>
         </div>
@@ -96,7 +96,7 @@ const AlbumModal = ({ album, isOpen, onClose }) => {
           <div className="relative p-8 bg-gradient-to-r from-forest-800 to-sage-800 text-white">
             <div className="absolute inset-0 bg-black/20" />
             <div className="relative">
-              <h2 className="text-4xl font-great-vibes font-bold text-white mb-3 drop-shadow-lg">
+              <h2 className="text-4xl font-mangro font-bold text-white mb-3 drop-shadow-lg">
                 {album.title}
               </h2>
               <p className="text-earth-100 font-cormorant text-lg mb-2">{album.description}</p>
@@ -209,7 +209,7 @@ const Albums = () => {
         
         <div className="container-custom text-center relative">
           <div className="space-y-4">
-            <h1 className="text-6xl lg:text-7xl font-great-vibes text-forest-900 mb-3 drop-shadow-lg">
+                          <h1 className="text-6xl lg:text-7xl font-mangro text-forest-900 mb-3 drop-shadow-lg">
               Photo Albums
             </h1>
             <div className="flex justify-center items-center space-x-6 mb-3">

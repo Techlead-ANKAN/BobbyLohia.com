@@ -9,14 +9,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'playfair': ['Playfair Display', 'serif'],
-        'dancing': ['Dancing Script', 'cursive'],
-        'great-vibes': ['Great Vibes', 'cursive'],
-        'sacramento': ['Sacramento', 'cursive'],
-        'cinzel': ['Cinzel', 'serif'],
+        'mangro': ['Mangro Elegant Serif', 'serif'],
+        'yeseva': ['Yeseva One', 'serif'],
         'cormorant': ['Cormorant Garamond', 'serif'],
-        'lato': ['Lato', 'sans-serif'],
-        'merriweather': ['Merriweather', 'serif'],
       },
       colors: {
         forest: {

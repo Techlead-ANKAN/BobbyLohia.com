@@ -101,7 +101,7 @@ const Contact = () => {
         
         <div className="container-custom text-center relative">
           <div className="space-y-4">
-            <h1 className="text-6xl lg:text-7xl font-great-vibes text-forest-900 mb-3 drop-shadow-lg">
+            <h1 className="text-6xl lg:text-7xl font-mangro text-forest-900 mb-3 drop-shadow-lg">
               Contact
             </h1>
             <div className="flex justify-center items-center space-x-6 mb-3">

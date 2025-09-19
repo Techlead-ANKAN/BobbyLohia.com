@@ -147,10 +147,10 @@ const Navigation = () => {
           {/* Elegant Header */}
           <div className="pt-24 pb-8 px-8 border-b border-white/20">
             <div className="space-y-4">
-              <h2 className="text-4xl font-great-vibes text-forest-900 leading-tight drop-shadow-sm">
+              <h2 className="text-4xl font-mangro text-forest-900 leading-tight drop-shadow-sm">
                 Bobby Lohia
               </h2>
-              <p className="text-earth-600 font-cormorant italic text-lg tracking-wide">
+              <p className="text-earth-600 font-mangro italic text-lg tracking-wide">
                 Wildlife Photography
               </p>
               <div className="w-16 h-1 bg-gradient-to-r from-forest-600 to-sage-600 rounded-full" />
@@ -191,11 +191,11 @@ const Navigation = () => {
                       {item.icon}
                     </div>
                     <div className="flex-1">
-                      <div className={`text-xl font-great-vibes font-bold mb-1 transition-colors duration-300
+                      <div className={`text-xl font-mangro font-bold mb-1 transition-colors duration-300
                         ${isActive ? 'text-white' : 'text-forest-900 group-hover:text-forest-700'}`}>
                         {item.label}
                       </div>
-                      <div className={`text-sm font-cormorant transition-colors duration-300
+                      <div className={`text-sm font-mangro transition-colors duration-300
                         ${isActive ? 'text-forest-100' : 'text-earth-600 group-hover:text-earth-700'}`}>
                         {item.description}
                       </div>
@@ -268,7 +268,7 @@ const Navigation = () => {
               
               {/* Signature */}
               <div className="pt-4 border-t border-white/10">
-                <p className="text-xs text-earth-400 font-cormorant tracking-wider">
+                <p className="text-xs text-earth-400 font-mangro tracking-wider">
                   © 2024 Bobby Lohia Photography
                 </p>
               </div>
