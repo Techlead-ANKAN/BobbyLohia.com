@@ -1,173 +1,199 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { photographerBio, wildlifeImages } from '../data/portfolio';
+import { wildlifeImages } from '../data/portfolio';
 
 const Home = () => {
-  // Get a diverse selection of featured images for the preview section
-  const featuredImages = wildlifeImages.slice(0, 8); // Show 8 images instead of 3
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isLoaded, setIsLoaded] = useState(false);
+  const featuredImages = wildlifeImages.slice(0, 6);
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    setTimeout(() => setIsLoaded(true), 500);
+
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Video */}
-        <div className="absolute inset-0 z-0">
-          <video
-            className="w-full h-full object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
-          >
-            <source src="/wildlife-hero.mp4" type="video/mp4" />
-            {/* Fallback image for browsers that don't support video */}
-            <img 
-              src={wildlifeImages[0].image}
-              alt="Wildlife Photography" 
-              className="w-full h-full object-cover"
-            />
-          </video>
-        </div>
+    <div className="min-h-screen bg-black text-white overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="fixed inset-0 pointer-events-none">
+        <div 
+          className="absolute w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse"
+          style={{
+            left: mousePosition.x - 192,
+            top: mousePosition.y - 192,
+            transition: 'all 0.3s ease-out'
+          }}
+        />
+        <div className="absolute top-20 right-20 w-32 h-32 bg-white/10 rounded-full blur-2xl animate-pulse" />
+        <div className="absolute bottom-40 left-20 w-24 h-24 bg-white/5 rounded-full blur-xl animate-pulse delay-1000" />
+      </div>
 
-        {/* Video Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50 z-10" />
-        
-        {/* Hero Content */}
-        <div className="relative z-20 text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-mangro font-normal mb-8 animate-fade-in text-white drop-shadow-2xl" 
-              style={{ textShadow: '0 0 20px rgba(0,0,0,0.8), 0 4px 8px rgba(0,0,0,0.5)' }}>
-            {photographerBio.name}
-          </h1>
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center px-6 pt-24">
+        <div className={`text-center max-w-6xl mx-auto transition-all duration-2000 ${
+          isLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'
+        }`}>
           
-          {/* Enhanced Tagline */}
-          <div className="mb-8 animate-fade-in space-y-2">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-cinzel font-medium leading-tight">
-              <span className="block font-cormorant font-light text-earth-100">
-                Capturing the
+          {/* Main Title */}
+          <div className="mb-12">
+            <h1 className="text-7xl md:text-9xl lg:text-[12rem] font-mangro font-bold leading-none tracking-tighter mb-4">
+              <span className="block text-white hover:text-primary-200 transition-colors duration-700 cursor-default">
+                BOBBY
               </span>
-              <span className="block text-3xl sm:text-4xl lg:text-5xl font-mangro bg-gradient-to-r from-earth-200 via-sage-200 to-forest-200 bg-clip-text text-transparent drop-shadow-lg">
-                Essence
+              <span className="block text-gradient hover:scale-105 transition-transform duration-700 cursor-default">
+                LOHIA
               </span>
-              <span className="block font-cormorant font-light text-earth-100">
-                of
-              </span>
-              <span className="block text-3xl sm:text-4xl lg:text-5xl font-mangro bg-gradient-to-r from-sage-200 via-earth-200 to-forest-200 bg-clip-text text-transparent drop-shadow-lg">
-                Wildlife
-              </span>
-              <span className="block font-cormorant font-light text-earth-100">
-                and
-              </span>
-              <span className="block text-3xl sm:text-4xl lg:text-5xl font-mangro bg-gradient-to-r from-forest-200 via-earth-200 to-sage-200 bg-clip-text text-transparent drop-shadow-lg">
-                Nature
-              </span>
-            </h2>
+            </h1>
             
-            {/* Decorative Elements */}
-            <div className="flex justify-center items-center space-x-6 pt-4">
-              <div className="w-12 h-px bg-gradient-to-r from-transparent via-earth-300 to-transparent" />
-              <div className="w-2 h-2 bg-earth-300 rounded-full animate-pulse" />
-              <div className="w-12 h-px bg-gradient-to-r from-transparent via-earth-300 to-transparent" />
+            <div className="flex items-center justify-center space-x-8 mb-8">
+              <div className="w-16 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
+              <div className="w-16 h-px bg-gradient-to-r from-white via-transparent to-transparent" />
+            </div>
+            
+            <p className="text-2xl md:text-3xl font-mangro font-light text-white/80 tracking-[0.3em] mb-4">
+              WILDLIFE PHOTOGRAPHY
+            </p>
+            <p className="text-lg md:text-xl font-mangro text-white/60 max-w-3xl mx-auto leading-relaxed">
+              Capturing the untamed spirit of nature through 15+ years of passionate dedication to wildlife conservation and storytelling
+            </p>
+          </div>
+
+          {/* Action Buttons */}
+          <div className={`flex flex-col sm:flex-row gap-6 justify-center mb-16 transition-all duration-2000 delay-500 ${
+            isLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-4'
+          }`}>
+            <Link to="/gallery" className="btn-primary group">
+              <span>Explore Gallery</span>
+              <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+            <Link to="/contact" className="btn-secondary group">
+              <span>Get In Touch</span>
+              <svg className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+            </Link>
+          </div>
+
+          {/* Scroll Indicator */}
+          <div className={`transition-all duration-2000 delay-1000 ${
+            isLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-4'
+          }`}>
+            <div className="flex flex-col items-center animate-bounce">
+              <span className="text-white/60 font-mangro text-sm tracking-wider mb-2">SCROLL TO EXPLORE</span>
+              <svg className="w-6 h-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
             </div>
           </div>
-          
-          {/* Elegant Transparent Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-in">
-            <Link 
-              to="/gallery" 
-              className="group relative overflow-hidden px-6 py-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 
-                         text-white font-lato font-medium text-base hover:bg-white/20 hover:border-white/40 
-                         transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-white/10"
-            >
-              <span className="relative z-10">View Gallery</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-earth-600/20 to-sage-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            </Link>
-            <Link 
-              to="/albums" 
-              className="group relative overflow-hidden px-6 py-3 rounded-full bg-black/10 backdrop-blur-sm border border-white/20 
-                         text-white font-lato font-medium text-base hover:bg-black/20 hover:border-white/40 
-                         transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-black/20"
-            >
-              <span className="relative z-10">Explore Albums</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-forest-600/20 to-earth-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        </div>
+      </section>
+
+      {/* Featured Work Section */}
+      <section className="py-32 px-6">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-7xl font-mangro font-bold text-white mb-8">
+              Featured Work
+            </h2>
+            <p className="text-xl text-white/70 font-mangro max-w-3xl mx-auto">
+              A curated selection of moments that capture the wild heart of nature
+            </p>
+          </div>
+
+          {/* Image Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredImages.map((image, index) => (
+              <div 
+                key={index}
+                className="gallery-item group h-80 md:h-96"
+                style={{ animationDelay: `${index * 200}ms` }}
+              >
+                <img
+                  src={image.image}
+                  alt={image.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="image-overlay">
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <h3 className="text-xl font-mangro text-white mb-2">{image.title}</h3>
+                    <p className="text-white/80 font-mangro text-sm">{image.location}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* View All Link */}
+          <div className="text-center mt-16">
+            <Link to="/gallery" className="btn-ghost group">
+              <span>View Complete Gallery</span>
+              <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </Link>
           </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-gradient-to-b from-forest-50 to-sage-50">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <section className="py-32 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Text Content */}
-            <div className="animate-fade-in">
-              <h2 className="text-4xl lg:text-5xl font-playfair font-bold text-forest-900 mb-6">
-                About the Artist
+            <div>
+              <h2 className="text-5xl md:text-6xl font-mangro font-bold text-white mb-8">
+                The Story Behind
+                <br />
+                <span className="text-gradient">The Lens</span>
               </h2>
-              <div className="space-y-6 text-lg text-earth-700 font-lato leading-relaxed">
+              <div className="space-y-6 text-lg text-white/70 font-mangro leading-relaxed">
                 <p>
-                  {photographerBio.shortBio}
+                  For over 15 years, I've dedicated my life to documenting the incredible diversity 
+                  of wildlife across the globe. Each photograph tells a story of survival, beauty, 
+                  and the delicate balance of our natural world.
                 </p>
                 <p>
-                  Bobby's lens captures not just images, but stories – tales of survival, beauty, and the 
-                  intricate dance of life in the wilderness. Each photograph is a testament to his deep 
-                  respect for nature and his commitment to conservation through visual storytelling.
+                  From the dense jungles of India to the vast savannas of Africa, my camera has 
+                  been witness to moments of pure magic – the intimate bond between a mother and 
+                  her cubs, the graceful flight of birds against golden sunsets, and the raw power 
+                  of predators in their natural habitat.
                 </p>
-                <div className="pt-4">
-                  <h3 className="text-xl font-playfair font-semibold text-forest-800 mb-3">
-                    Specializations
-                  </h3>
-                  <div className="flex flex-wrap gap-3">
-                    {photographerBio.specializations.map((spec, index) => (
-                      <span 
-                        key={index}
-                        className="px-4 py-2 bg-forest-100 text-forest-700 rounded-full text-sm font-lato font-medium"
-                      >
-                        {spec}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+                <p>
+                  My mission extends beyond photography. Through these images, I aim to inspire 
+                  conservation awareness and connect people with the wild world that desperately 
+                  needs our protection.
+                </p>
               </div>
-              <div className="mt-8">
-                <Link 
-                  to="/contact" 
-                  className="btn-primary hover:shadow-lg transition-all duration-300"
-                >
-                  Get in Touch
+              <div className="mt-12">
+                <Link to="/contact" className="btn-primary">
+                  Let's Collaborate
                 </Link>
               </div>
             </div>
 
             {/* Image */}
-            <div className="relative animate-fade-in">
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                <img 
-                  src={wildlifeImages[1].image} 
-                  alt="Bobby Lohia Photography"
-                  className="w-full h-[500px] object-cover transition-transform duration-700 hover:scale-105"
+            <div className="relative">
+              <div className="card-modern p-1 h-96">
+                <img
+                  src="https://images.unsplash.com/photo-1549366021-9f761d040a94?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                  alt="Bobby Lohia"
+                  className="w-full h-full object-cover rounded-2xl"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
               </div>
-              
-              {/* Floating Stats */}
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-xl p-6 border-l-4 border-forest-600">
+              <div className="absolute -bottom-6 -right-6 card-modern p-4">
                 <div className="text-center">
-                  <div className="text-3xl font-playfair font-bold text-forest-900">15+</div>
-                  <div className="text-sm text-earth-600 font-lato">Years Experience</div>
-                </div>
-              </div>
-              
-              <div className="absolute -top-6 -right-6 bg-white rounded-xl shadow-xl p-6 border-l-4 border-sage-600">
-                <div className="text-center">
-                  <div className="text-3xl font-playfair font-bold text-forest-900">500+</div>
-                  <div className="text-sm text-earth-600 font-lato">Wildlife Captures</div>
+                  <div className="text-3xl font-mangro font-bold text-white">15+</div>
+                  <div className="text-sm text-white/70 font-mangro">Years Experience</div>
                 </div>
               </div>
             </div>
@@ -175,80 +201,23 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Enhanced Featured Work Preview */}
-      <section className="py-20 bg-gradient-to-b from-sage-50 to-earth-50">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl lg:text-6xl font-mangro text-forest-900 mb-6 drop-shadow-lg">
-              Featured Work
-            </h2>
-            <div className="flex justify-center items-center space-x-6 mb-6">
-              <div className="w-16 h-px bg-gradient-to-r from-transparent via-forest-500 to-transparent" />
-              <div className="w-3 h-3 bg-forest-500 rounded-full animate-pulse" />
-              <div className="w-16 h-px bg-gradient-to-r from-transparent via-forest-500 to-transparent" />
-            </div>
-            <p className="text-xl lg:text-2xl text-earth-700 font-cormorant font-light max-w-4xl mx-auto leading-relaxed tracking-wide">
-              A glimpse into the wild world through my lens – each image tells a story of 
-              nature's incredible beauty and the urgent need for conservation.
-            </p>
-          </div>
-
-          {/* Enhanced Masonry-style Grid */}
-          <div className="masonry-grid columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6 mb-12">
-            {featuredImages.map((image, index) => {
-              const heights = ['h-64', 'h-80', 'h-72', 'h-96', 'h-56', 'h-88', 'h-68', 'h-84'];
-              const randomHeight = heights[index % heights.length];
-              
-              return (
-                <div 
-                  key={image.id}
-                  className={`break-inside-avoid mb-6 group cursor-pointer animate-fade-in transform hover:scale-[1.02] transition-all duration-500`}
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className="relative overflow-hidden rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500 group-hover:shadow-forest-500/20">
-                    <div className={`relative ${randomHeight} overflow-hidden`}>
-                      <img 
-                        src={image.image} 
-                        alt={image.title}
-                        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
-                      />
-                      
-                      {/* Sophisticated Overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
-                      
-                      {/* Image Info */}
-                      <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-all duration-500">
-                        <div className="backdrop-blur-md bg-black/30 rounded-lg p-3 border border-white/20">
-                          <h3 className="text-lg font-mangro font-bold text-white mb-1 drop-shadow-md">{image.title}</h3>
-                          <p className="text-sm font-cormorant text-earth-100 mb-1">{image.location}</p>
-                          <span className="inline-block px-2 py-1 bg-forest-600/80 rounded-full text-xs font-lato text-white">
-                            {image.category}
-                          </span>
-                        </div>
-                      </div>
-
-                      {/* View Icon */}
-                      <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transform scale-0 group-hover:scale-100 transition-all duration-300 delay-100">
-                        <div className="w-8 h-8 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/30">
-                          <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          <div className="text-center">
-            <Link 
-              to="/gallery" 
-              className="btn-primary text-lg px-8 py-4 hover:shadow-lg transition-all duration-300"
-            >
-              View Full Gallery
+      {/* Call to Action */}
+      <section className="py-32 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-5xl md:text-7xl font-mangro font-bold text-white mb-8">
+            Ready to Explore
+            <br />
+            <span className="text-gradient">The Wild?</span>
+          </h2>
+          <p className="text-xl text-white/70 font-mangro mb-12 max-w-2xl mx-auto">
+            Dive deeper into the world of wildlife photography and discover stories that inspire conservation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Link to="/albums" className="btn-primary">
+              Browse Albums
+            </Link>
+            <Link to="/gallery" className="btn-secondary">
+              View Gallery
             </Link>
           </div>
         </div>

@@ -14,45 +14,33 @@ export default {
         'cormorant': ['Cormorant Garamond', 'serif'],
       },
       colors: {
-        forest: {
-          50: '#f7f9f4',
-          100: '#eef3e7',
-          200: '#d9e7cf',
-          300: '#b8d4a7',
-          400: '#90bc77',
-          500: '#6fa054',
-          600: '#578040',
-          700: '#456535',
-          800: '#39512d',
-          900: '#314427',
-          950: '#1a2514',
+        // Premium Black & White System
+        primary: {
+          50: '#ffffff',     // Pure white
+          100: '#f8fafc',    // Off-white
+          200: '#f1f5f9',    // Light gray
+          300: '#cbd5e1',    // Medium light gray
+          400: '#94a3b8',    // Medium gray
+          500: '#64748b',    // Neutral gray
+          600: '#475569',    // Dark gray
+          700: '#334155',    // Darker gray
+          800: '#1e293b',    // Very dark gray
+          900: '#0f172a',    // Almost black
+          950: '#000000',    // Pure black
         },
-        earth: {
-          50: '#faf8f5',
-          100: '#f2ede6',
-          200: '#e3d8ca',
-          300: '#d0bfa8',
-          400: '#b9a085',
-          500: '#a8896c',
-          600: '#977760',
-          700: '#7d6151',
-          800: '#665045',
-          900: '#53433a',
-          950: '#2c221e',
+        // Elegant accent colors
+        accent: {
+          50: '#f8fafc',
+          100: '#f1f5f9',
+          200: '#e2e8f0',
+          300: '#cbd5e1',
+          400: '#94a3b8',
+          500: '#64748b',
+          600: '#475569',
+          700: '#334155',
+          800: '#1e293b',
+          900: '#0f172a',
         },
-        sage: {
-          50: '#f6f7f4',
-          100: '#e9ece4',
-          200: '#d4dac9',
-          300: '#b7c1a5',
-          400: '#96a57e',
-          500: '#7b8b60',
-          600: '#626e4a',
-          700: '#4d563c',
-          800: '#404732',
-          900: '#363d2b',
-          950: '#1c2016',
-        }
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-in-out',

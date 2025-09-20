@@ -11,7 +11,7 @@ import NotFound from './pages/NotFound';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-forest-50">
+      <div className="min-h-screen bg-black text-white">
         <Navigation />
         <main className="relative">
           <Routes>
