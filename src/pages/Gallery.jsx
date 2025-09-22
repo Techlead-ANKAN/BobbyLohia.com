@@ -129,28 +129,28 @@ const Gallery = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
-      {/* Hero Header */}
-      <section className="pt-32 pb-16 px-6">
+    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+      {/* Ultra-Modern Hero Header */}
+      <section className="pt-32 pb-20 px-6 relative">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-6xl md:text-8xl font-mangro font-bold text-white mb-8">
+          <h1 className="text-7xl md:text-9xl font-mangro font-bold text-white mb-12 text-shadow-glow">
             Wildlife
             <br />
-            <span className="text-gradient">Gallery</span>
+            <span className="text-gradient-ultra">Gallery</span>
           </h1>
-          <p className="text-xl text-white/70 font-mangro max-w-3xl mx-auto">
+          <p className="text-xl text-white/80 font-mangro max-w-4xl mx-auto leading-relaxed">
             A comprehensive collection of wildlife moments captured across diverse ecosystems around the world
           </p>
         </div>
       </section>
 
-      {/* Search and Filter Section */}
-      <section className="py-8 px-6 sticky top-0 z-30 bg-black/80 backdrop-blur-xl border-b border-white/10">
+      {/* Enhanced Search and Filter Section */}
+      <section className="py-10 px-6 sticky top-0 z-30 glass-ultra border-b border-white/20">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-            {/* Search */}
-            <div className="relative flex-1 max-w-md">
-              <svg className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="flex flex-col lg:flex-row gap-8 items-center justify-between">
+            {/* Enhanced Search */}
+            <div className="relative flex-1 max-w-lg">
+              <svg className="absolute left-5 top-1/2 transform -translate-y-1/2 w-6 h-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
               <input
@@ -158,22 +158,22 @@ const Gallery = () => {
                 placeholder="Search wildlife..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-white/5 border border-white/20 rounded-full text-white placeholder-white/50
-                           focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/40 transition-all duration-500
-                           backdrop-blur-sm"
+                className="w-full pl-14 pr-6 py-4 bg-white/8 border border-white/30 rounded-full text-white placeholder-white/60
+                           focus:outline-none focus:ring-2 focus:ring-white/40 focus:border-white/50 transition-all duration-500
+                           backdrop-blur-xl text-lg font-mangro"
               />
             </div>
 
-            {/* Category Filter */}
-            <div className="flex flex-wrap gap-2 justify-center">
+            {/* Enhanced Category Filter */}
+            <div className="flex flex-wrap gap-3 justify-center">
               {categories.map((category) => (
                 <button
                   key={category}
                   onClick={() => setFilter(category)}
-                  className={`px-6 py-2 rounded-full font-mangro text-sm tracking-wide transition-all duration-500 transform hover:scale-105 ${
+                  className={`px-8 py-3 rounded-full font-mangro text-sm tracking-wide transition-all duration-500 transform hover:scale-105 magnetic-hover ${
                     filter === category
-                      ? 'bg-white text-black'
-                      : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
+                      ? 'bg-white text-black shadow-xl'
+                      : 'bg-white/10 text-white hover:bg-white/20 border border-white/30 backdrop-blur-sm'
                   }`}
                 >
                   {category.charAt(0).toUpperCase() + category.slice(1)}
@@ -182,46 +182,48 @@ const Gallery = () => {
             </div>
           </div>
 
-          {/* Results Count */}
-          <div className="mt-4 text-center">
-            <p className="text-white/60 font-mangro text-sm">
+          {/* Enhanced Results Count */}
+          <div className="mt-6 text-center">
+            <p className="text-white/70 font-mangro text-base">
               Showing {filteredImages.length} of {wildlifeImages.length} images
             </p>
           </div>
         </div>
       </section>
 
-      {/* Gallery Grid */}
-      <section className="py-16 px-6">
+      {/* Ultra-Modern Gallery Grid */}
+      <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           {filteredImages.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
               {filteredImages.map((image, index) => (
                 <div
                   key={index}
-                  className="gallery-item group cursor-pointer h-80"
+                  className="card-ultra-modern group cursor-pointer h-80 image-reveal magnetic-hover"
                   onClick={() => openLightbox(image, index)}
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
-                  <img
-                    src={image.image}
-                    alt={image.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    loading="lazy"
-                  />
-                  <div className="image-overlay">
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                        <h3 className="text-lg font-mangro text-white mb-1">{image.title}</h3>
-                        <p className="text-white/80 font-mangro text-sm mb-2">{image.location}</p>
-                        <div className="flex items-center justify-between">
-                          <span className="text-xs text-white/60 bg-white/20 px-2 py-1 rounded-full backdrop-blur-sm">
-                            {image.category}
-                          </span>
-                          <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-                            <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                            </svg>
+                  <div className="relative h-full overflow-hidden rounded-3xl">
+                    <img
+                      src={image.image}
+                      alt={image.title}
+                      className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110"
+                      loading="lazy"
+                    />
+                    <div className="image-overlay">
+                      <div className="absolute bottom-0 left-0 right-0 p-8">
+                        <div className="transform translate-y-6 group-hover:translate-y-0 transition-transform duration-700">
+                          <h3 className="text-xl font-mangro text-white mb-2 text-shadow-glow">{image.title}</h3>
+                          <p className="text-white/90 font-mangro text-sm mb-4">{image.location}</p>
+                          <div className="flex items-center justify-between">
+                            <span className="text-xs text-white/80 bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm">
+                              {image.category}
+                            </span>
+                            <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300">
+                              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                              </svg>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -231,34 +233,34 @@ const Gallery = () => {
               ))}
             </div>
           ) : (
-            <div className="text-center py-20">
-              <div className="w-24 h-24 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-12 h-12 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="text-center py-32">
+              <div className="w-32 h-32 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-8 morphing-blob">
+                <svg className="w-16 h-16 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-mangro text-white mb-4">No images found</h3>
-              <p className="text-white/70 font-mangro">Try adjusting your search or filter criteria</p>
+              <h3 className="text-3xl font-mangro text-white mb-6 text-shadow-glow">No images found</h3>
+              <p className="text-white/80 font-mangro text-lg">Try adjusting your search or filter criteria</p>
             </div>
           )}
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-mangro font-bold text-white mb-6">
+      {/* Enhanced Call to Action */}
+      <section className="py-32 px-6">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-5xl md:text-6xl font-mangro font-bold text-white mb-8 text-shadow-glow">
             Inspired by Nature?
           </h2>
-          <p className="text-lg text-white/70 font-mangro mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/80 font-mangro mb-12 max-w-3xl mx-auto leading-relaxed">
             Connect with me to discuss conservation projects, prints, or photography expeditions
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="btn-primary">
-              Get In Touch
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <a href="/contact" className="btn-ultra-modern magnetic-hover">
+              <span className="relative z-10">Get In Touch</span>
             </a>
-            <a href="/albums" className="btn-secondary">
-              Browse Albums
+            <a href="/albums" className="btn-secondary magnetic-hover">
+              <span>Browse Albums</span>
             </a>
           </div>
         </div>

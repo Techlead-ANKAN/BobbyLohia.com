@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import MouseTracker from './components/MouseTracker';
 import Home from './pages/Home';
 import Gallery from './pages/Gallery';
 import Albums from './pages/Albums';
@@ -12,8 +13,9 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-black text-white">
+        <MouseTracker />
         <Navigation />
-        <main className="relative">
+        <main className="relative z-10">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/gallery" element={<Gallery />} />
