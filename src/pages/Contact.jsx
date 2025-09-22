@@ -61,7 +61,7 @@ const Contact = () => {
       {/* Ultra-Modern Hero Section */}
       <section className="pt-32 pb-20 px-6 relative">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-7xl md:text-9xl font-mangro font-bold text-white mb-12 text-shadow-glow">
+          <h1 className="text-5xl md:text-7xl font-mangro font-bold text-white mb-12 text-shadow-glow">
             Get In
             <br />
             <span className="text-gradient-ultra">Touch</span>
@@ -92,9 +92,9 @@ const Contact = () => {
                       type="text"
                       name="firstName"
                       required
-                      className="w-full px-6 py-4 bg-white/8 border border-white/30 rounded-xl text-white placeholder-white/60
+                      className="w-full px-6 py-4 bg-white/10 border border-white/30 rounded-xl text-white placeholder-white/60
                                focus:border-white/50 focus:ring-2 focus:ring-white/30 transition-all duration-500 font-mangro
-                               backdrop-blur-xl text-lg"
+                               backdrop-blur-xl text-lg focus:text-white hover:text-white focus:bg-white/10 hover:bg-white/10"
                       placeholder="Enter your first name"
                     />
                   </div>
@@ -108,7 +108,7 @@ const Contact = () => {
                       required
                       className="w-full px-6 py-4 bg-white/8 border border-white/30 rounded-xl text-white placeholder-white/60
                                focus:border-white/50 focus:ring-2 focus:ring-white/30 transition-all duration-500 font-mangro
-                               backdrop-blur-xl text-lg"
+                               backdrop-blur-xl text-lg focus:text-white hover:text-white focus:bg-white/10 hover:bg-white/10"
                       placeholder="Enter your last name"
                     />
                   </div>
@@ -124,7 +124,7 @@ const Contact = () => {
                     required
                     className="w-full px-6 py-4 bg-white/8 border border-white/30 rounded-xl text-white placeholder-white/60
                              focus:border-white/50 focus:ring-2 focus:ring-white/30 transition-all duration-500 font-mangro
-                             backdrop-blur-xl text-lg"
+                             backdrop-blur-xl text-lg focus:text-white hover:text-white focus:bg-white/10 hover:bg-white/10"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -139,7 +139,7 @@ const Contact = () => {
                     required
                     className="w-full px-6 py-4 bg-white/8 border border-white/30 rounded-xl text-white placeholder-white/60
                              focus:border-white/50 focus:ring-2 focus:ring-white/30 transition-all duration-500 font-mangro
-                             backdrop-blur-xl text-lg"
+                             backdrop-blur-xl text-lg focus:text-white hover:text-white focus:bg-white/10 hover:bg-white/10"
                     placeholder="What's this about?"
                   />
                 </div>
@@ -154,7 +154,7 @@ const Contact = () => {
                     rows="6"
                     className="w-full px-6 py-4 bg-white/8 border border-white/30 rounded-xl text-white placeholder-white/60
                              focus:border-white/50 focus:ring-2 focus:ring-white/30 transition-all duration-500 font-mangro
-                             backdrop-blur-xl resize-vertical text-lg"
+                             backdrop-blur-xl resize-vertical text-lg focus:text-white hover:text-white focus:bg-white/10 hover:bg-white/10"
                     placeholder="Tell me more about your project or inquiry..."
                   ></textarea>
                 </div>
@@ -163,7 +163,11 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="btn-ultra-modern w-full disabled:opacity-50 disabled:cursor-not-allowed magnetic-hover"
+                  className="relative overflow-hidden px-8 py-4 bg-white text-black font-semibold rounded-full
+                           w-full disabled:opacity-50 disabled:cursor-not-allowed magnetic-hover
+                           transition-all duration-500 transform hover:scale-105
+                           hover:bg-gray-800 hover:text-white border-2 border-transparent hover:border-white/20
+                           hover:shadow-lg hover:shadow-white/20"
                 >
                   {isSubmitting ? (
                     <div className="flex items-center justify-center space-x-3">
@@ -229,7 +233,8 @@ const Contact = () => {
                   <a
                     href="#"
                     className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center text-white 
-                             hover:bg-white/20 hover:scale-110 transition-all duration-500 magnetic-hover"
+                             hover:bg-white/20 hover:scale-110 transition-all duration-500 magnetic-hover
+                             hover:text-white focus:text-white"
                     aria-label="Instagram"
                   >
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -275,11 +280,31 @@ const Contact = () => {
             From conservation photography to commercial projects, let's work together to tell stories that matter.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a href="/gallery" className="btn-secondary magnetic-hover">
-              <span>View My Work</span>
+            <a href="/gallery" 
+               className="relative overflow-hidden px-8 py-4 bg-transparent text-white font-semibold rounded-full
+                          magnetic-hover group transition-all duration-500 transform hover:scale-105
+                          border-2 border-white/30 hover:border-white/60 hover:bg-white/10
+                          hover:shadow-lg hover:shadow-white/10">
+              <span className="relative z-10 flex items-center">
+                View My Work
+                <svg className="ml-2 w-5 h-5 transform transition-transform group-hover:translate-x-1" 
+                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </span>
             </a>
-            <a href="/albums" className="btn-ultra-modern magnetic-hover">
-              <span className="relative z-10">Browse Albums</span>
+            <a href="/albums" 
+               className="relative overflow-hidden px-8 py-4 bg-white text-black font-semibold rounded-full
+                          magnetic-hover group transition-all duration-500 transform hover:scale-105
+                          hover:bg-gray-800 hover:text-white border-2 border-transparent hover:border-white/20
+                          hover:shadow-lg hover:shadow-white/20">
+              <span className="relative z-10 flex items-center">
+                Browse Albums
+                <svg className="ml-2 w-5 h-5 transform transition-transform group-hover:rotate-45" 
+                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                </svg>
+              </span>
             </a>
           </div>
         </div>

@@ -13,6 +13,7 @@ export default {
         'sans': ['Inter', 'system-ui', 'sans-serif'],
         'display': ['Playfair Display', 'serif'],
         'mono': ['JetBrains Mono', 'monospace'],
+        'mangro': ['Mangro', 'serif'],
       },
       colors: {
         border: 'hsl(var(--border))',

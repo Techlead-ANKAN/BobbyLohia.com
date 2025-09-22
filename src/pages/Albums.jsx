@@ -10,7 +10,7 @@ const Albums = () => {
       {/* Ultra-Modern Hero Section */}
       <section className="pt-32 pb-20 px-6 relative">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-7xl md:text-9xl font-mangro font-bold text-white mb-12 text-shadow-glow">
+          <h1 className="text-5xl md:text-7xl font-mangro font-bold text-white mb-12 text-shadow-glow">
             Photography
             <br />
             <span className="text-gradient-ultra">Albums</span>
@@ -79,11 +79,19 @@ const Albums = () => {
             Discover individual masterpieces in our main gallery
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link to="/gallery" className="btn-ultra-modern magnetic-hover">
+            <Link to="/gallery" 
+                  className="relative overflow-hidden px-8 py-4 bg-white text-black font-semibold rounded-full
+                             magnetic-hover group transition-all duration-500 transform hover:scale-105
+                             hover:bg-gray-800 hover:text-white border-2 border-transparent hover:border-white/20
+                             hover:shadow-lg hover:shadow-white/20">
               <span className="relative z-10">View Gallery</span>
             </Link>
-            <Link to="/contact" className="btn-secondary magnetic-hover">
-              <span>Get In Touch</span>
+            <Link to="/contact" 
+                  className="relative overflow-hidden px-8 py-4 bg-transparent text-white font-semibold rounded-full
+                             magnetic-hover group transition-all duration-500 transform hover:scale-105
+                             border-2 border-white/30 hover:border-white/60 hover:bg-white/10
+                             hover:shadow-lg hover:shadow-white/10">
+              <span className="relative z-10">Get In Touch</span>
             </Link>
           </div>
         </div>

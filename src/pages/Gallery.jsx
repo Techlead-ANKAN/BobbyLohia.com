@@ -20,7 +20,8 @@ const ModernLightbox = ({ image, isOpen, onClose, onNext, onPrev }) => {
   if (!isOpen || !image) return null;
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/98 backdrop-blur-xl flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 bg-black/98 backdrop-blur-xl flex items-center justify-center p-4
+         animate-[fadeIn_0.3s_ease-in-out]">
       {/* Modern Close Button */}
       <button
         onClick={onClose}
@@ -133,7 +134,7 @@ const Gallery = () => {
       {/* Ultra-Modern Hero Header */}
       <section className="pt-32 pb-20 px-6 relative">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-7xl md:text-9xl font-mangro font-bold text-white mb-12 text-shadow-glow">
+          <h1 className="text-xl md:text-7xl font-mangro font-bold text-white mb-12 text-shadow-glow">
             Wildlife
             <br />
             <span className="text-gradient-ultra">Gallery</span>
@@ -158,9 +159,9 @@ const Gallery = () => {
                 placeholder="Search wildlife..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-14 pr-6 py-4 bg-white/8 border border-white/30 rounded-full text-white placeholder-white/60
-                           focus:outline-none focus:ring-2 focus:ring-white/40 focus:border-white/50 transition-all duration-500
-                           backdrop-blur-xl text-lg font-mangro"
+                className="input-ultra w-full pl-14 pr-6 py-4 rounded-full hover:scale-[1.02] focus:scale-[1.02]
+                           bg-white/10 border border-white/30 backdrop-blur-xl transform-gpu transition-all duration-500 
+                           text-white placeholder-white/60 focus:text-white hover:text-white font-mangro"
               />
             </div>
 
@@ -170,10 +171,11 @@ const Gallery = () => {
                 <button
                   key={category}
                   onClick={() => setFilter(category)}
-                  className={`px-8 py-3 rounded-full font-mangro text-sm tracking-wide transition-all duration-500 transform hover:scale-105 magnetic-hover ${
+                  className={`px-8 py-3 rounded-full font-mangro text-sm font-semibold tracking-wide transition-all duration-500 
+                    transform hover:scale-105 hover:shadow-lg hover:shadow-white/10 magnetic-hover relative overflow-hidden ${
                     filter === category
-                      ? 'bg-white text-black shadow-xl'
-                      : 'bg-white/10 text-white hover:bg-white/20 border border-white/30 backdrop-blur-sm'
+                      ? 'bg-white text-black hover:bg-gray-100 hover:text-black shadow-xl'
+                      : 'bg-white/10 text-white hover:text-white hover:bg-white/20 border border-white/30 backdrop-blur-sm hover:border-white/50'
                   }`}
                 >
                   {category.charAt(0).toUpperCase() + category.slice(1)}
@@ -199,7 +201,8 @@ const Gallery = () => {
               {filteredImages.map((image, index) => (
                 <div
                   key={index}
-                  className="card-ultra-modern group cursor-pointer h-80 image-reveal magnetic-hover"
+                  className="card-ultra-modern group cursor-pointer h-80 image-reveal magnetic-hover
+                           hover:shadow-2xl hover:shadow-white/10 transition-all duration-700"
                   onClick={() => openLightbox(image, index)}
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
@@ -207,7 +210,8 @@ const Gallery = () => {
                     <img
                       src={image.image}
                       alt={image.title}
-                      className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110"
+                      className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 
+                               transform-gpu group-hover:rotate-1 filter group-hover:brightness-110"
                       loading="lazy"
                     />
                     <div className="image-overlay">
@@ -247,20 +251,41 @@ const Gallery = () => {
       </section>
 
       {/* Enhanced Call to Action */}
-      <section className="py-32 px-6">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-5xl md:text-6xl font-mangro font-bold text-white mb-8 text-shadow-glow">
+      <section className="py-32 px-6 relative overflow-hidden">
+        <div className="max-w-5xl mx-auto text-center relative z-10">
+          <h2 className="text-5xl md:text-6xl font-mangro font-bold text-white mb-8 text-shadow-glow
+                         animate-[fadeInUp_0.6s_ease-out] hover:scale-105 transition-transform duration-500">
             Inspired by Nature?
           </h2>
           <p className="text-xl text-white/80 font-mangro mb-12 max-w-3xl mx-auto leading-relaxed">
             Connect with me to discuss conservation projects, prints, or photography expeditions
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a href="/contact" className="btn-ultra-modern magnetic-hover">
-              <span className="relative z-10">Get In Touch</span>
+            <a href="/contact" 
+               className="relative overflow-hidden px-8 py-4 bg-white text-black font-semibold rounded-full
+                          magnetic-hover group transition-all duration-500 transform hover:scale-105
+                          hover:bg-gray-800 hover:text-white border-2 border-transparent hover:border-white/20
+                          animate-[fadeInUp_0.8s_ease-out] hover:shadow-lg hover:shadow-white/20">
+              <span className="relative z-10 flex items-center">
+                Get In Touch
+                <svg className="ml-2 w-5 h-5 transform transition-transform group-hover:translate-x-1" 
+                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </span>
             </a>
-            <a href="/albums" className="btn-secondary magnetic-hover">
-              <span>Browse Albums</span>
+            <a href="/albums" 
+               className="relative overflow-hidden px-8 py-4 bg-transparent text-white font-semibold rounded-full
+                          magnetic-hover group transition-all duration-500 transform hover:scale-105
+                          border-2 border-white/30 hover:border-white/60 hover:bg-white/10
+                          animate-[fadeInUp_0.8s_ease-out_0.2s] hover:shadow-lg hover:shadow-white/10">
+              <span className="relative z-10 flex items-center">
+                Browse Albums
+                <svg className="ml-2 w-5 h-5 transform transition-transform group-hover:rotate-45" 
+                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                </svg>
+              </span>
             </a>
           </div>
         </div>
