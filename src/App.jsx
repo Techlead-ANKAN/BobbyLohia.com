@@ -6,6 +6,7 @@ import MouseTracker from './components/MouseTracker';
 import Home from './pages/Home';
 import Gallery from './pages/Gallery';
 import Albums from './pages/Albums';
+import AlbumDetail from './pages/AlbumDetail';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/albums" element={<Albums />} />
+            <Route path="/albums/:albumId" element={<AlbumDetail />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -11,8 +11,8 @@ const Button = ({
   const baseClasses = 'inline-flex items-center justify-center font-medium transition-all duration-500 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95';
 
   const variants = {
-    primary: 'magnetic-btn bg-white text-black hover:text-white shadow-lg hover:shadow-2xl backdrop-blur-md bg-opacity-80 hover:bg-gradient-to-r hover:from-white hover:to-gray-300 border border-transparent hover:border-white',
-    secondary: 'magnetic-btn border border-white/30 text-white hover:bg-white/10 shadow-lg hover:shadow-2xl backdrop-blur-md bg-opacity-10 hover:bg-gradient-to-r hover:from-gray-800 hover:to-gray-600',
+    primary: 'magnetic-btn bg-white text-black hover:bg-black hover:text-white shadow-lg hover:shadow-2xl backdrop-blur-md bg-opacity-80 border border-transparent hover:border-white',
+    secondary: 'magnetic-btn border border-white/30 text-white hover:bg-white hover:text-black shadow-lg hover:shadow-2xl backdrop-blur-md bg-opacity-10',
     ghost: 'magnetic-btn text-white hover:bg-white/10 backdrop-blur-md bg-opacity-0 hover:bg-opacity-10',
     outline: 'magnetic-btn border-2 border-current text-current hover:bg-current hover:text-white hover:border-transparent',
   };

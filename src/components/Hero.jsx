@@ -55,7 +55,7 @@ const Hero = () => {
         }`}>
           <Link 
             to="/gallery" 
-            className="magnetic-btn bg-white text-slate-900 hover:text-white group"
+            className="relative overflow-hidden rounded-full px-8 py-4 bg-white text-black font-medium transition-all duration-500 hover:bg-black hover:text-white transform hover:scale-105 group"
           >
             <span className="relative z-10 flex items-center">
               Explore Gallery
@@ -67,7 +67,7 @@ const Hero = () => {
           
           <Link 
             to="/contact" 
-            className="magnetic-btn border border-white/30 text-white hover:bg-white/10 group"
+            className="relative overflow-hidden rounded-full px-8 py-4 border border-white/30 text-white font-medium transition-all duration-500 hover:bg-white hover:text-black transform hover:scale-105 group"
           >
             <span className="relative z-10 flex items-center">
               Get In Touch

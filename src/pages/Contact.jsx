@@ -106,7 +106,7 @@ const Contact = () => {
                       type="text"
                       name="lastName"
                       required
-                      className="w-full px-6 py-4 bg-white/8 border border-white/30 rounded-xl text-white placeholder-white/60
+                      className="w-full px-6 py-4 bg-white/10 border border-white/30 rounded-xl text-white placeholder-white/60
                                focus:border-white/50 focus:ring-2 focus:ring-white/30 transition-all duration-500 font-mangro
                                backdrop-blur-xl text-lg focus:text-white hover:text-white focus:bg-white/10 hover:bg-white/10"
                       placeholder="Enter your last name"
@@ -122,7 +122,7 @@ const Contact = () => {
                     type="email"
                     name="email"
                     required
-                    className="w-full px-6 py-4 bg-white/8 border border-white/30 rounded-xl text-white placeholder-white/60
+                    className="w-full px-6 py-4 bg-white/10 border border-white/30 rounded-xl text-white placeholder-white/60
                              focus:border-white/50 focus:ring-2 focus:ring-white/30 transition-all duration-500 font-mangro
                              backdrop-blur-xl text-lg focus:text-white hover:text-white focus:bg-white/10 hover:bg-white/10"
                     placeholder="your.email@example.com"
@@ -137,7 +137,7 @@ const Contact = () => {
                     type="text"
                     name="subject"
                     required
-                    className="w-full px-6 py-4 bg-white/8 border border-white/30 rounded-xl text-white placeholder-white/60
+                    className="w-full px-6 py-4 bg-white/10 border border-white/30 rounded-xl text-white placeholder-white/60
                              focus:border-white/50 focus:ring-2 focus:ring-white/30 transition-all duration-500 font-mangro
                              backdrop-blur-xl text-lg focus:text-white hover:text-white focus:bg-white/10 hover:bg-white/10"
                     placeholder="What's this about?"
@@ -152,7 +152,7 @@ const Contact = () => {
                     name="message"
                     required
                     rows="6"
-                    className="w-full px-6 py-4 bg-white/8 border border-white/30 rounded-xl text-white placeholder-white/60
+                    className="w-full px-6 py-4 bg-white/10 border border-white/30 rounded-xl text-white placeholder-white/60
                              focus:border-white/50 focus:ring-2 focus:ring-white/30 transition-all duration-500 font-mangro
                              backdrop-blur-xl resize-vertical text-lg focus:text-white hover:text-white focus:bg-white/10 hover:bg-white/10"
                     placeholder="Tell me more about your project or inquiry..."
@@ -283,7 +283,7 @@ const Contact = () => {
             <a href="/gallery" 
                className="relative overflow-hidden px-8 py-4 bg-transparent text-white font-semibold rounded-full
                           magnetic-hover group transition-all duration-500 transform hover:scale-105
-                          border-2 border-white/30 hover:border-white/60 hover:bg-white/10
+                          border-2 border-white/30 hover:border-white/60 hover:bg-white hover:text-black
                           hover:shadow-lg hover:shadow-white/10">
               <span className="relative z-10 flex items-center">
                 View My Work
@@ -296,7 +296,7 @@ const Contact = () => {
             <a href="/albums" 
                className="relative overflow-hidden px-8 py-4 bg-white text-black font-semibold rounded-full
                           magnetic-hover group transition-all duration-500 transform hover:scale-105
-                          hover:bg-gray-800 hover:text-white border-2 border-transparent hover:border-white/20
+                          hover:bg-black hover:text-white border-2 border-transparent hover:border-white/20
                           hover:shadow-lg hover:shadow-white/20">
               <span className="relative z-10 flex items-center">
                 Browse Albums
