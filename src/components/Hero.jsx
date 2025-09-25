@@ -45,8 +45,7 @@ const Hero = () => {
         <p className={`text-responsive-md text-white/80 max-w-3xl mx-auto mb-12 leading-relaxed transition-all duration-1000 delay-400 ${
           isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
-          Through the lens of passion and precision, I document the untamed beauty of wildlife, 
-          creating visual stories that inspire conservation and connect us with the natural world.
+          Documenting raw stories of the wild and the timeless rhythm of nature.
         </p>
 
         {/* CTA Buttons */}

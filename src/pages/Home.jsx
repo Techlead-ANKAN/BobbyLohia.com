@@ -7,6 +7,8 @@ import GalleryCard from '../components/GalleryCard';
 import Button from '../components/Button';
 import Lightbox from '../components/Lightbox';
 
+import  Image1  from "../assets/Img2.jpg"
+
 const Home = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -49,7 +51,7 @@ const Home = () => {
             <span className="block hero-gradient-dark">Work</span>
           </h2>
           <p className="text-responsive-md text-white/70 max-w-3xl mx-auto">
-            A curated selection of my most impactful wildlife photography, showcasing the raw beauty and untamed spirit of nature
+            A showcase of selected wildlife photography that captures raw moments from the field.
           </p>
         </div>
 
@@ -88,25 +90,18 @@ const Home = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-responsive-lg font-display font-bold text-white mb-8">
-              The Story Behind
-              <span className="block hero-gradient-dark">The Lens</span>
+              A Journey Framed by the Wild
+              {/* <span className="block hero-gradient-dark">The Lens</span> */}
             </h2>
             <div className="space-y-6 text-lg text-white/70 leading-relaxed">
               <p>
-                For over 15 years, I've dedicated my life to documenting the incredible diversity 
-                of wildlife across the globe. Each photograph tells a story of survival, beauty, 
-                and the delicate balance of our natural world.
+                Over 15 years ago, Bobby Lohia picked up a camera in the forests of Kanha and pressed the shutter on his very first tiger. The photo came out entirely blue - an amusing mistake that, instead of discouraging him, sparked a lifelong journey into wildlife photography. What began as an imperfect frame soon became the perfect reason to return to the wild again and again.
               </p>
               <p>
-                From the dense jungles of India to the vast savannas of Africa, my camera has 
-                been witness to moments of pure magic – the intimate bond between a mother and 
-                her cubs, the graceful flight of birds against golden sunsets, and the raw power 
-                of predators in their natural habitat.
+                Since then, Mr. Lohia’s lens has travelled across India’s dense jungles and Africa’s sweeping savannas, chasing not just animals but stories. He has captured intimate bonds between mothers and cubs, the fierce power of predators, and the delicate rhythms of bird flight against glowing skies.
               </p>
               <p>
-                My mission extends beyond photography. Through these images, I aim to inspire 
-                conservation awareness and connect people with the wild world that desperately 
-                needs our protection.
+                Today, he sees photography as far more than an art form. For him, it is a tool for conservation, a bridge between people and wilderness, and a way to inspire communities to cherish the wild stories still unfolding around us.
               </p>
             </div>
             <div className="mt-12">
@@ -119,11 +114,12 @@ const Home = () => {
           </div>
 
           <div className="relative">
-            <div className="glass-card p-4 h-96">
+            <div className="glass-card p-4">
               <img
-                src="https://images.unsplash.com/photo-1549366021-9f761d040a94?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                src={Image1}
                 alt="Bobby Lohia"
-                className="w-full h-full object-cover rounded-xl"
+                className="w-full h-auto object-cover rounded-xl mx-auto"
+                style={{ height: 'auto', width: '100%' }}
               />
             </div>
             <div className="absolute -bottom-6 -right-6 glass-card p-6">

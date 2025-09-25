@@ -116,7 +116,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="text-center pt-8 border-t border-white/10">
           <p className="text-white/60 font-mangro">
-            &copy; {new Date().getFullYear()} Bobby Lohia. All rights reserved.
+            &copy; {new Date().getFullYear()} Bobby Lohia | Documenting Wildlife Responsibly - All Rights Reserved
           </p>
         </div>
       </div>

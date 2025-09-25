@@ -67,8 +67,7 @@ const Contact = () => {
             <span className="text-gradient-ultra">Touch</span>
           </h1>
           <p className="text-xl text-white/80 font-mangro max-w-4xl mx-auto leading-relaxed">
-            Ready to collaborate on your next project or discuss conservation initiatives? 
-            Let's create something extraordinary together.
+            Reach out to discuss projects, collaborations, or conservation ideas.
           </p>
         </div>
       </section>
@@ -199,8 +198,7 @@ const Contact = () => {
               <div>
                 <h2 className="text-4xl font-mangro font-bold text-white mb-10 text-shadow-glow">Let's Connect</h2>
                 <p className="text-lg text-white/80 font-mangro leading-relaxed mb-10">
-                  Whether you're looking to commission a photography project, discuss conservation efforts, 
-                  or simply want to chat about wildlife, I'd love to hear from you.
+                  For commissions, conservation discussions, or collaborations, I’d be glad to hear from you.
                 </p>
               </div>
 

@@ -140,7 +140,7 @@ const Gallery = () => {
             <span className="text-gradient-ultra">Gallery</span>
           </h1>
           <p className="text-xl text-white/80 font-mangro max-w-4xl mx-auto leading-relaxed">
-            A comprehensive collection of wildlife moments captured across diverse ecosystems around the world
+            An extensive gallery of images from diverse landscapes, ecosystems, and species across the globe.
           </p>
         </div>
       </section>

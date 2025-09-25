@@ -16,7 +16,7 @@ const Albums = () => {
             <span className="text-gradient-ultra">Albums</span>
           </h1>
           <p className="text-xl text-white/80 font-mangro max-w-4xl mx-auto leading-relaxed">
-            Curated collections of wildlife moments, each telling a unique story of nature's magnificence
+            Curated collections of wildlife encounters, organized to highlight unique perspectives of the natural world.
           </p>
         </div>
       </section>
