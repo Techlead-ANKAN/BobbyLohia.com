@@ -8,6 +8,8 @@ import Button from '../components/Button';
 import Lightbox from '../components/Lightbox';
 
 import  Image1  from "../assets/Img2.jpg"
+import  Image2  from "../assets/Img1.jpg"
+import WBNLOGO from "../assets/WBN Logo 2.jpg"
 
 const Home = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -118,7 +120,7 @@ const Home = () => {
               <img
                 src={Image1}
                 alt="Bobby Lohia"
-                className="w-full h-auto object-cover rounded-xl mx-auto"
+                className="w-full h-auto max-h-[37rem] object-cover rounded-xl mx-auto"
                 style={{ height: 'auto', width: '100%' }}
               />
             </div>
@@ -126,6 +128,128 @@ const Home = () => {
               <div className="text-center">
                 <div className="text-3xl font-display font-bold text-white">15+</div>
                 <div className="text-sm text-white/70">Years Experience</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Philosophy Section */}
+      <Section background="bg-black" padding="py-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="relative lg:order-1">
+            <div className="glass-card p-4">
+              <img
+                src={Image2}
+                alt="Wildlife Photography"
+                className="w-full h-auto max-h-[32rem] object-cover rounded-xl mx-auto"
+                style={{ height: 'auto', width: '100%' }}
+              />
+            </div>
+            <div className="absolute -bottom-6 -left-6 glass-card p-6">
+              <div className="text-center">
+                <div className="text-3xl font-display font-bold text-white">500+</div>
+                <div className="text-sm text-white/70">Species Captured</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="lg:order-2">
+            <h2 className="text-responsive-lg font-display font-bold text-white mb-8">
+              Conservation Through
+              <span className="block hero-gradient-dark">Photography</span>
+            </h2>
+            <div className="space-y-6 text-lg text-white/70 leading-relaxed">
+              <p>
+                Every photograph tells a story, but wildlife photography tells stories that matter for the future of our planet. Through each frame, Bobby captures not just the beauty of nature, but also its fragility and the urgent need for conservation.
+              </p>
+              <p>
+                His work has contributed to various conservation initiatives across India and Africa, raising awareness about endangered species and their diminishing habitats. From documenting the majestic tigers of Ranthambore to the gentle giants of the African savanna, each image serves as a powerful voice for the voiceless.
+              </p>
+              <p>
+                Photography becomes a bridge between the wild and civilization, inspiring viewers to become guardians of nature. Through exhibitions, workshops, and collaborations with conservation organizations, Bobby continues to use his art as a tool for positive environmental change.
+              </p>
+            </div>
+            <div className="mt-12">
+              <Link to="/gallery">
+                <Button variant="primary" size="lg">
+                  View Conservation Work
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Wild By Nature Section */}
+      <Section background="bg-black" padding="py-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+          <div>
+            <h2 className="text-responsive-lg font-display font-bold text-white mb-8">
+              Wild By Nature:
+              <span className="block hero-gradient-dark">Building a Movement</span>
+            </h2>
+            <div className="space-y-6 text-lg text-white/70 leading-relaxed">
+              <p>
+                Wild By Nature grew from Mr. Lohia's realization that wildlife photography in India needed more than passion, it needed a community. After years in the field, he saw scattered talent, limited mentorship, and little space for ethical conversations. What began as his personal pursuit soon evolved into a larger vision: to create a platform where learning, storytelling, and conservation could come together.
+              </p>
+              <p>
+                At its core, Wild By Nature is a collective. It offers mentorship from seasoned experts, curated safaris designed for deeper field experience, opportunities to showcase work through competitions, and guidance on gear and ethics. Every aspect of the platform is built on the belief that wildlife photography should serve a greater purpose - inspiring respect for nature and empowering those who live closest to it.
+              </p>
+              <p>
+                Looking ahead, Bobby envisions Wild By Nature as more than just a platform. He sees it as a movement - one that will expand across borders, build global collaborations, and nurture the next generation of storytellers dedicated to conservation.
+              </p>
+            </div>
+            <div className="mt-12 flex flex-col sm:flex-row gap-6">
+              <a 
+                href="https://wildbynatureglobal.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="relative overflow-hidden px-8 py-4 bg-white text-black font-semibold rounded-full
+                           magnetic-hover group transition-all duration-500 transform hover:scale-105
+                           hover:bg-gray-800 hover:text-white border-2 border-transparent hover:border-white/20
+                           hover:shadow-lg hover:shadow-white/20"
+              >
+                <span className="relative z-10 flex items-center">
+                  Visit Wild By Nature
+                  <svg className="ml-2 w-5 h-5 transform transition-transform group-hover:translate-x-1" 
+                       fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </span>
+              </a>
+              <a 
+                href="https://wildbynatureglobal.com/login" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="relative overflow-hidden px-8 py-4 bg-transparent text-white font-semibold rounded-full
+                           magnetic-hover group transition-all duration-500 transform hover:scale-105
+                           border-2 border-white/30 hover:border-white/60 hover:bg-white/10
+                           hover:shadow-lg hover:shadow-white/10"
+              >
+                <span className="relative z-10 flex items-center">
+                  Join the Community
+                  <svg className="ml-2 w-5 h-5 transform transition-transform group-hover:rotate-45" 
+                       fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div className="relative flex justify-center items-center">
+            <div className="w-82 h-82 overflow-hidden rounded-full">
+              <img
+                src={WBNLOGO}
+                alt="Wild By Nature Logo"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="absolute -bottom-6 -left-6 glass-card p-6">
+              <div className="text-center">
+                <div className="text-3xl font-display font-bold text-white">Global</div>
+                <div className="text-sm text-white/70">Movement</div>
               </div>
             </div>
           </div>
