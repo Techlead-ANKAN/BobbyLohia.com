@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Contact Form Submission - Bobby Lohia Photography</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        
+        .email-container {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .email-header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+            color: #ffffff;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .email-header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        
+        .email-header p {
+            margin: 10px 0 0 0;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .email-body {
+            padding: 30px;
+        }
+        
+        .contact-info {
+            background: #f8f9fa;
+            border-left: 4px solid #007bff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .contact-info h2 {
+            margin: 0 0 15px 0;
+            color: #007bff;
+            font-size: 18px;
+        }
+        
+        .info-row {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-label {
+            font-weight: 600;
+            color: #555;
+            min-width: 80px;
+            margin-right: 10px;
+        }
+        
+        .info-value {
+            color: #333;
+            flex: 1;
+        }
+        
+        .message-section {
+            background: #ffffff;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .message-section h3 {
+            margin: 0 0 15px 0;
+            color: #333;
+            font-size: 16px;
+        }
+        
+        .message-content {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 3px solid #28a745;
+            font-style: italic;
+            line-height: 1.8;
+        }
+        
+        .email-footer {
+            background: #f8f9fa;
+            padding: 20px 30px;
+            text-align: center;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .email-footer p {
+            margin: 0;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .timestamp {
+            color: #999;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        
+        .divider {
+            height: 1px;
+            background: #e9ecef;
+            margin: 25px 0;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            .email-header,
+            .email-body,
+            .email-footer {
+                padding: 20px;
+            }
+            
+            .info-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .info-label {
+                min-width: auto;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            <h1>📸 New Contact Form Submission</h1>
+            <p>Bobby Lohia Photography Portfolio</p>
+        </div>
+        
+        <div class="email-body">
+            <p>Hello Bobby,</p>
+            <p>You have received a new message through your photography portfolio website contact form.</p>
+            
+            <div class="contact-info">
+                <h2>Contact Details</h2>
+                <div class="info-row">
+                    <span class="info-label">Name:</span>
+                    <span class="info-value">{{name}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Email:</span>
+                    <span class="info-value">{{email}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Phone:</span>
+                    <span class="info-value">{{phone}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Subject:</span>
+                    <span class="info-value">{{subject}}</span>
+                </div>
+            </div>
+            
+            <div class="message-section">
+                <h3>📝 Message Content</h3>
+                <div class="message-content">
+                    {{message}}
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <p><strong>Next Steps:</strong></p>
+            <ul>
+                <li>Reply to this email to respond directly to {{name}}</li>
+                <li>Add {{email}} to your contacts for future communication</li>
+                <li>Consider following up within 24-48 hours for the best client experience</li>
+            </ul>
+        </div>
+        
+        <div class="email-footer">
+            <p>This email was sent from your Bobby Lohia Photography website contact form</p>
+            <p class="timestamp">Received: {{current_date}} at {{current_time}}</p>
+        </div>
+    </div>
+</body>
+</html>

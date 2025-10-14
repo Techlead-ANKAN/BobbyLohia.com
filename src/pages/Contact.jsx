@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const form = useRef();
@@ -11,11 +12,30 @@ const Contact = () => {
     setSubmitStatus(null);
 
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Get form data
+      const formData = new FormData(form.current);
+      const templateParams = {
+        name: `${formData.get('firstName')} ${formData.get('lastName')}`.trim(),
+        email: formData.get('email'),
+        phone: formData.get('phone') || 'Not provided',
+        subject: formData.get('subject'),
+        message: formData.get('message'),
+        current_date: new Date().toLocaleDateString(),
+        current_time: new Date().toLocaleTimeString(),
+      };
+
+      // Send email using EmailJS
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_eirqppc',
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_vwsh3gi',
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '3NyLqOGtvYdpovGxA'
+      );
+
       setSubmitStatus('success');
       form.current.reset();
     } catch (error) {
+      console.error('EmailJS Error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -125,6 +145,20 @@ const Contact = () => {
                              focus:border-white/50 focus:ring-2 focus:ring-white/30 transition-all duration-500 font-mangro
                              backdrop-blur-xl text-lg focus:text-white hover:text-white focus:bg-white/10 hover:bg-white/10"
                     placeholder="your.email@example.com"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-mangro text-white/80 mb-3">
+                    Phone Number (Optional)
+                  </label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    className="w-full px-6 py-4 bg-white/10 border border-white/30 rounded-xl text-white placeholder-white/60
+                             focus:border-white/50 focus:ring-2 focus:ring-white/30 transition-all duration-500 font-mangro
+                             backdrop-blur-xl text-lg focus:text-white hover:text-white focus:bg-white/10 hover:bg-white/10"
+                    placeholder="+91 98765 43210"
                   />
                 </div>
 
