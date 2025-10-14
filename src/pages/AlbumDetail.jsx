@@ -44,33 +44,32 @@ const AlbumDetail = () => {
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* Album Hero Section */}
-      <section className="pt-32 pb-20 px-6 relative">
+      <section className="pt-24 xs:pt-28 md:pt-32 pb-12 xs:pb-16 md:pb-20 px-4 xs:px-6 relative">
         <div className="max-w-7xl mx-auto">
           {/* Breadcrumb */}
-          <div className="mb-8">
-            <nav className="flex items-center space-x-2 text-sm text-white/60">
-              <Link to="/albums" className="hover:text-white transition-colors">
+          <div className="mb-6 xs:mb-8">
+            <nav className="flex items-center space-x-2 text-xs xs:text-sm text-white/60 overflow-hidden">
+              <Link to="/albums" className="hover:text-white transition-colors whitespace-nowrap">
                 Albums
               </Link>
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-3 h-3 xs:w-4 xs:h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-              <span className="text-white">{album.title}</span>
+              <span className="text-white truncate">{album.title}</span>
             </nav>
           </div>
 
           {/* Album Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-7xl font-mangro font-bold text-white mb-8 text-shadow-glow">
-              {album.title}
-              <br />
+          <div className="text-center mb-12 xs:mb-14 md:mb-16">
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-mangro font-bold text-white mb-6 xs:mb-8 text-shadow-glow leading-tight">
+              <span className="block">{album.title}</span>
               <span className="text-gradient-ultra">Collection</span>
             </h1>
-            <p className="text-xl text-white/80 font-mangro max-w-4xl mx-auto leading-relaxed mb-8">
+            <p className="text-base xs:text-lg sm:text-xl text-white/80 font-mangro max-w-4xl mx-auto leading-relaxed mb-6 xs:mb-8 px-4">
               {album.description}
             </p>
-            <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90">
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="inline-flex items-center px-4 xs:px-6 py-2 xs:py-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm xs:text-base">
+              <svg className="w-4 h-4 xs:w-5 xs:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
               {album.images.length} Photos
@@ -80,9 +79,9 @@ const AlbumDetail = () => {
       </section>
 
       {/* Photo Grid */}
-      <section className="py-20 px-6">
+      <section className="py-12 xs:py-16 md:py-20 px-4 xs:px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-4 xs:gap-6 md:gap-8">
             {album.images.map((image, index) => (
               <GalleryCard
                 key={image.id}
@@ -96,37 +95,36 @@ const AlbumDetail = () => {
       </section>
 
       {/* Back to Albums Section */}
-      <section className="py-32 px-6">
+      <section className="py-20 xs:py-24 md:py-32 px-4 xs:px-6">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-mangro font-bold text-white mb-8 text-shadow-glow">
-            Explore More
-            <br />
+          <h2 className="text-3xl xs:text-4xl sm:text-4xl md:text-5xl font-mangro font-bold text-white mb-6 xs:mb-8 text-shadow-glow leading-tight">
+            <span className="block">Explore More</span>
             <span className="text-gradient-ultra">Collections</span>
           </h2>
-          <p className="text-xl text-white/80 font-mangro mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base xs:text-lg sm:text-xl text-white/80 font-mangro mb-8 xs:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed px-4">
             Discover more curated photography collections showcasing different aspects of wildlife and nature.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col xs:flex-col sm:flex-row gap-4 xs:gap-6 justify-center max-w-md xs:max-w-lg sm:max-w-none mx-auto">
             <Link to="/albums" 
-                  className="relative overflow-hidden px-8 py-4 bg-white text-black font-semibold rounded-full
+                  className="relative overflow-hidden px-6 xs:px-8 py-3 xs:py-4 bg-white text-black font-semibold rounded-full
                              transition-all duration-500 transform hover:scale-105
                              hover:bg-black hover:text-white border-2 border-transparent hover:border-white/20
-                             hover:shadow-lg hover:shadow-white/20">
-              <span className="relative z-10 flex items-center">
-                <svg className="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                             hover:shadow-lg hover:shadow-white/20 text-sm xs:text-base touch-manipulation">
+              <span className="relative z-10 flex items-center justify-center">
+                <svg className="mr-2 w-4 h-4 xs:w-5 xs:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
                 View All Albums
               </span>
             </Link>
             <Link to="/gallery" 
-                  className="relative overflow-hidden px-8 py-4 bg-transparent text-white font-semibold rounded-full
+                  className="relative overflow-hidden px-6 xs:px-8 py-3 xs:py-4 bg-transparent text-white font-semibold rounded-full
                              transition-all duration-500 transform hover:scale-105
                              border-2 border-white/30 hover:border-white/60 hover:bg-white hover:text-black
-                             hover:shadow-lg hover:shadow-white/10">
-              <span className="relative z-10 flex items-center">
+                             hover:shadow-lg hover:shadow-white/10 text-sm xs:text-base touch-manipulation">
+              <span className="relative z-10 flex items-center justify-center">
                 Browse Gallery
-                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="ml-2 w-4 h-4 xs:w-5 xs:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </span>

@@ -209,6 +209,44 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-display;
   }
+
+  /* Mobile-specific optimizations */
+  @media (max-width: 640px) {
+    .touch-manipulation {
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Improve mobile scrolling */
+    html {
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* Better mobile text rendering */
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* Prevent zoom on input focus */
+    input, textarea, select {
+      font-size: 16px !important;
+    }
+  }
+
+  /* Foldable device specific */
+  @media (max-width: 480px) {
+    .foldable-text-sm {
+      font-size: 0.75rem;
+      line-height: 1rem;
+    }
+
+    .foldable-p-2 {
+      padding: 0.5rem;
+    }
+  }
 }
 
 @layer components {

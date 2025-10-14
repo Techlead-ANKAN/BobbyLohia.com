@@ -30,8 +30,8 @@ const Contact = () => {
         </svg>
       ),
       label: 'Email',
-      value: 'bobbylohia@example.com',
-      link: 'mailto:bobbylohia@example.com'
+      value: 'plohia@yahoo.com',
+      link: 'mailto:plohia@yahoo.com'
     },
     {
       icon: (
@@ -40,8 +40,8 @@ const Contact = () => {
         </svg>
       ),
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      value: '+91 98312 55000',
+      link: 'tel:+919831255000'
     },
     {
       icon: (
@@ -51,63 +51,63 @@ const Contact = () => {
         </svg>
       ),
       label: 'Location',
-      value: 'Mumbai, India',
+      value: 'Kolkata, India',
       link: '#'
     }
   ];
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Ultra-Modern Hero Section */}
-      <section className="pt-32 pb-20 px-6 relative">
+      {/* Ultra-Modern Hero Section - Mobile optimized */}
+      <section className="pt-24 sm:pt-32 pb-12 sm:pb-20 px-4 sm:px-6 relative">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-mangro font-bold text-white mb-12 text-shadow-glow">
+          <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-mangro font-bold text-white mb-8 sm:mb-12 text-shadow-glow leading-tight">
             Get In
             <br />
             <span className="text-gradient-ultra">Touch</span>
           </h1>
-          <p className="text-xl text-white/80 font-mangro max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg lg:text-xl text-white/80 font-mangro max-w-4xl mx-auto leading-relaxed px-4">
             Reach out to discuss projects, collaborations, or conservation ideas.
           </p>
         </div>
       </section>
 
-      {/* Enhanced Contact Form & Info */}
-      <section className="py-20 px-6">
+      {/* Enhanced Contact Form & Info - Mobile-first responsive */}
+      <section className="py-12 sm:py-20 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20">
             
-            {/* Enhanced Contact Form */}
-            <div className="card-ultra-modern p-10">
-              <h2 className="text-4xl font-mangro font-bold text-white mb-10 text-shadow-glow">Send a Message</h2>
+            {/* Enhanced Contact Form - Mobile responsive */}
+            <div className="card-ultra-modern p-6 sm:p-8 lg:p-10">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-mangro font-bold text-white mb-6 sm:mb-8 lg:mb-10 text-shadow-glow">Send a Message</h2>
               
-              <form ref={form} onSubmit={handleSubmit} className="space-y-8">
-                <div className="grid md:grid-cols-2 gap-8">
+              <form ref={form} onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
                   <div>
-                    <label className="block text-sm font-mangro text-white/80 mb-3">
+                    <label className="block text-sm font-mangro text-white/80 mb-2 sm:mb-3">
                       First Name *
                     </label>
                     <input
                       type="text"
                       name="firstName"
                       required
-                      className="w-full px-6 py-4 bg-white/10 border border-white/30 rounded-xl text-white placeholder-white/60
+                      className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-white/10 border border-white/30 rounded-lg sm:rounded-xl text-white placeholder-white/60
                                focus:border-white/50 focus:ring-2 focus:ring-white/30 transition-all duration-500 font-mangro
-                               backdrop-blur-xl text-lg focus:text-white hover:text-white focus:bg-white/10 hover:bg-white/10"
+                               backdrop-blur-xl text-base sm:text-lg focus:text-white hover:text-white focus:bg-white/10 hover:bg-white/10 touch-manipulation"
                       placeholder="Enter your first name"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-mangro text-white/80 mb-3">
+                    <label className="block text-sm font-mangro text-white/80 mb-2 sm:mb-3">
                       Last Name *
                     </label>
                     <input
                       type="text"
                       name="lastName"
                       required
-                      className="w-full px-6 py-4 bg-white/10 border border-white/30 rounded-xl text-white placeholder-white/60
+                      className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-white/10 border border-white/30 rounded-lg sm:rounded-xl text-white placeholder-white/60
                                focus:border-white/50 focus:ring-2 focus:ring-white/30 transition-all duration-500 font-mangro
-                               backdrop-blur-xl text-lg focus:text-white hover:text-white focus:bg-white/10 hover:bg-white/10"
+                               backdrop-blur-xl text-base sm:text-lg focus:text-white hover:text-white focus:bg-white/10 hover:bg-white/10 touch-manipulation"
                       placeholder="Enter your last name"
                     />
                   </div>
@@ -202,65 +202,29 @@ const Contact = () => {
                 </p>
               </div>
 
-              {/* Enhanced Contact Details */}
-              <div className="space-y-8">
+              {/* Enhanced Contact Details - Mobile-first layout */}
+              <div className="space-y-4 sm:space-y-6 lg:space-y-8">
                 {contactInfo.map((item, index) => (
                   <a
                     key={index}
                     href={item.link}
-                    className="card-ultra-modern p-8 block magnetic-hover group"
+                    className="card-ultra-modern p-4 sm:p-6 lg:p-8 block magnetic-hover group touch-manipulation"
                   >
-                    <div className="flex items-center space-x-6">
-                      <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center text-white 
-                                    group-hover:bg-white/20 transition-colors duration-500">
+                    <div className="flex items-center space-x-4 sm:space-x-6">
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white/10 rounded-full flex items-center justify-center text-white 
+                                    group-hover:bg-white/20 transition-colors duration-500 flex-shrink-0">
                         {item.icon}
                       </div>
-                      <div>
-                        <h3 className="text-xl font-mangro text-white mb-2 text-shadow-glow">{item.label}</h3>
-                        <p className="text-white/80 font-mangro text-lg">{item.value}</p>
+                      <div className="min-w-0 flex-1">
+                        <h3 className="text-lg sm:text-xl font-mangro text-white mb-1 sm:mb-2 text-shadow-glow">{item.label}</h3>
+                        <p className="text-white/80 font-mangro text-sm sm:text-base lg:text-lg break-words">{item.value}</p>
                       </div>
                     </div>
                   </a>
                 ))}
               </div>
 
-              {/* Enhanced Social Links */}
-              <div className="card-ultra-modern p-8">
-                <h3 className="text-2xl font-mangro text-white mb-6 text-shadow-glow">Follow My Journey</h3>
-                <div className="flex space-x-6">
-                  <a
-                    href="#"
-                    className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center text-white 
-                             hover:bg-white/20 hover:scale-110 transition-all duration-500 magnetic-hover
-                             hover:text-white focus:text-white"
-                    aria-label="Instagram"
-                  >
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.618 5.367 11.986 11.988 11.986s11.987-5.368 11.987-11.986C24.004 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.321-1.297C4.198 14.861 3.708 13.71 3.708 12.413s.49-2.448 1.42-3.321c.873-.807 2.024-1.297 3.321-1.297s2.448.49 3.321 1.297c.93.873 1.42 2.024 1.42 3.321s-.49 2.448-1.42 3.321c-.873.807-2.024 1.297-3.321 1.297zm7.07 0c-1.297 0-2.448-.49-3.321-1.297-.93-.873-1.42-2.024-1.42-3.321s.49-2.448 1.42-3.321c.873-.807 2.024-1.297 3.321-1.297s2.448.49 3.321 1.297c.93.873 1.42 2.024 1.42 3.321s-.49 2.448-1.42 3.321c-.873.807-2.024 1.297-3.321 1.297z"/>
-                    </svg>
-                  </a>
-                  <a
-                    href="#"
-                    className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center text-white 
-                             hover:bg-white/20 hover:scale-110 transition-all duration-500 magnetic-hover"
-                    aria-label="Twitter"
-                  >
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                    </svg>
-                  </a>
-                  <a
-                    href="#"
-                    className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center text-white 
-                             hover:bg-white/20 hover:scale-110 transition-all duration-500 magnetic-hover"
-                    aria-label="LinkedIn"
-                  >
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>

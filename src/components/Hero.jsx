@@ -18,47 +18,48 @@ const Hero = () => {
       ref={heroRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black"
     >
-      {/* Floating Elements */}
-      <div className="absolute top-20 left-20 w-32 h-32 bg-white/10 rounded-full blur-xl floating opacity-30"></div>
-      <div className="absolute bottom-20 right-20 w-24 h-24 bg-white/5 rounded-full blur-xl floating-delayed opacity-30"></div>
-      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white/8 rounded-full blur-lg floating opacity-20"></div>
+      {/* Floating Elements - Responsive positioning */}
+      <div className="absolute top-10 sm:top-20 left-4 sm:left-20 w-16 h-16 sm:w-24 sm:h-24 lg:w-32 lg:h-32 bg-white/10 rounded-full blur-xl floating opacity-30"></div>
+      <div className="absolute bottom-10 sm:bottom-20 right-4 sm:right-20 w-12 h-12 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-white/5 rounded-full blur-xl floating-delayed opacity-30"></div>
+      <div className="absolute top-1/2 left-1/6 sm:left-1/4 w-8 h-8 sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-white/8 rounded-full blur-lg floating opacity-20"></div>
 
-      {/* Main Content */}
-      <div className="relative z-10 text-center max-w-6xl mx-auto px-6">
-        {/* Badge */}
-        <div className={`inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm font-medium mb-8 transition-all duration-1000 ${
+      {/* Main Content - Mobile-first responsive */}
+      <div className="relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Badge - Mobile responsive */}
+        <div className={`inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-xs sm:text-sm font-medium mb-6 sm:mb-8 transition-all duration-1000 ${
           isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
         }`}>
           <span className="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></span>
-          Wildlife Photography Portfolio
+          <span className="hidden xs:inline">Wildlife Photography Portfolio</span>
+          <span className="xs:hidden">Photography Portfolio</span>
         </div>
 
-        {/* Main Heading */}
-        <h1 className={`text-responsive-xl font-display font-bold text-white mb-6 transition-all duration-1000 delay-200 ${
+        {/* Main Heading - Responsive typography */}
+        <h1 className={`text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-bold text-white mb-4 sm:mb-6 leading-none transition-all duration-1000 delay-200 ${
           isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <span className="block">Bobby</span>
           <span className="block hero-gradient-dark">Lohia</span>
         </h1>
 
-        {/* Subtitle */}
-        <p className={`text-responsive-md text-white/80 max-w-3xl mx-auto mb-12 leading-relaxed transition-all duration-1000 delay-400 ${
+        {/* Subtitle - Mobile optimized */}
+        <p className={`text-base sm:text-lg md:text-xl lg:text-2xl text-white/80 max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed px-4 sm:px-0 transition-all duration-1000 delay-400 ${
           isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           Documenting raw stories of the wild and the timeless rhythm of nature.
         </p>
 
-        {/* CTA Buttons */}
-        <div className={`flex flex-col sm:flex-row gap-6 justify-center items-center transition-all duration-1000 delay-600 ${
+        {/* CTA Buttons - Mobile-first responsive */}
+        <div className={`flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center transition-all duration-1000 delay-600 ${
           isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <Link 
             to="/gallery" 
-            className="relative overflow-hidden rounded-full px-8 py-4 bg-white text-black font-medium transition-all duration-500 hover:bg-black hover:text-white transform hover:scale-105 group"
+            className="relative overflow-hidden rounded-full px-6 sm:px-8 py-3 sm:py-4 bg-white text-black font-medium transition-all duration-500 hover:bg-black hover:text-white transform hover:scale-105 group w-full sm:w-auto max-w-xs touch-manipulation"
           >
-            <span className="relative z-10 flex items-center">
-              Explore Gallery
-              <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <span className="relative z-10 flex items-center justify-center">
+              <span className="text-sm sm:text-base">Explore Gallery</span>
+              <svg className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </span>
@@ -66,32 +67,32 @@ const Hero = () => {
           
           <Link 
             to="/contact" 
-            className="relative overflow-hidden rounded-full px-8 py-4 border border-white/30 text-white font-medium transition-all duration-500 hover:bg-white hover:text-black transform hover:scale-105 group"
+            className="relative overflow-hidden rounded-full px-6 sm:px-8 py-3 sm:py-4 border border-white/30 text-white font-medium transition-all duration-500 hover:bg-white hover:text-black transform hover:scale-105 group w-full sm:w-auto max-w-xs touch-manipulation"
           >
-            <span className="relative z-10 flex items-center">
-              Get In Touch
-              <svg className="ml-2 w-5 h-5 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <span className="relative z-10 flex items-center justify-center">
+              <span className="text-sm sm:text-base">Get In Touch</span>
+              <svg className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
               </svg>
             </span>
           </Link>
         </div>
 
-        {/* Stats */}
-        <div className={`grid grid-cols-3 gap-8 mt-20 max-w-2xl mx-auto transition-all duration-1000 delay-800 ${
+        {/* Stats - Mobile responsive grid */}
+        <div className={`grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-12 sm:mt-16 lg:mt-20 max-w-2xl mx-auto px-4 sm:px-0 transition-all duration-1000 delay-800 ${
           isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <div className="text-center">
-            <div className="text-3xl font-bold text-white mb-2">15+</div>
-            <div className="text-sm text-white/60">Years Experience</div>
+            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1 sm:mb-2">15+</div>
+            <div className="text-xs sm:text-sm text-white/60">Years Experience</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-white mb-2">1000+</div>
-            <div className="text-sm text-white/60">Photos Captured</div>
+            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1 sm:mb-2">1000+</div>
+            <div className="text-xs sm:text-sm text-white/60">Photos Captured</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-white mb-2">50+</div>
-            <div className="text-sm text-white/60">Countries Visited</div>
+            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1 sm:mb-2">50+</div>
+            <div className="text-xs sm:text-sm text-white/60">Countries Visited</div>
           </div>
         </div>
       </div>

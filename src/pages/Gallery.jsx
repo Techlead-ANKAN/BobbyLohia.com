@@ -20,55 +20,55 @@ const ModernLightbox = ({ image, isOpen, onClose, onNext, onPrev }) => {
   if (!isOpen || !image) return null;
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/98 backdrop-blur-xl flex items-center justify-center p-4
+    <div className="fixed inset-0 z-50 bg-black/98 backdrop-blur-xl flex items-center justify-center p-2 sm:p-4
          animate-[fadeIn_0.3s_ease-in-out]">
-      {/* Modern Close Button */}
+      {/* Modern Close Button - Responsive positioning */}
       <button
         onClick={onClose}
-        className="absolute top-8 right-8 w-12 h-12 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm
-                   flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-500 z-10"
+        className="absolute top-4 right-4 sm:top-8 sm:right-8 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm
+                   flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-500 z-10 touch-manipulation"
         aria-label="Close"
       >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
 
-      {/* Navigation Buttons */}
+      {/* Navigation Buttons - Responsive positioning */}
       <button
         onClick={onPrev}
-        className="absolute left-8 top-1/2 transform -translate-y-1/2 w-14 h-14 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm
-                   flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-500"
+        className="absolute left-2 sm:left-8 top-1/2 transform -translate-y-1/2 w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm
+                   flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-500 touch-manipulation"
         aria-label="Previous"
       >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
         </svg>
       </button>
 
       <button
         onClick={onNext}
-        className="absolute right-8 top-1/2 transform -translate-y-1/2 w-14 h-14 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm
-                   flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-500"
+        className="absolute right-2 sm:right-8 top-1/2 transform -translate-y-1/2 w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm
+                   flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-500 touch-manipulation"
         aria-label="Next"
       >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
       </button>
 
-      {/* Image Container */}
-      <div className="max-w-7xl w-full flex flex-col items-center">
-        <div className="relative">
+      {/* Image Container - Improved mobile responsiveness */}
+      <div className="max-w-7xl w-full flex flex-col items-center px-12 sm:px-16">
+        <div className="relative w-full flex justify-center">
           {!imageLoaded && (
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-8 h-8 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+              <div className="w-6 h-6 sm:w-8 sm:h-8 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
             </div>
           )}
           <img
             src={image.image}
             alt={image.title}
-            className={`max-w-full max-h-[75vh] object-contain rounded-2xl shadow-2xl transition-all duration-700 ${
+            className={`w-full max-w-full h-auto max-h-[60vh] sm:max-h-[70vh] lg:max-h-[75vh] object-contain rounded-lg sm:rounded-2xl shadow-2xl transition-all duration-700 ${
               imageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
             }`}
             onLoad={() => setImageLoaded(true)}
@@ -148,10 +148,10 @@ const Gallery = () => {
       {/* Enhanced Search and Filter Section */}
       <section className="py-10 px-6 sticky top-0 z-30 glass-ultra border-b border-white/20">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-8 items-center justify-between">
-            {/* Enhanced Search */}
-            <div className="relative flex-1 max-w-lg">
-              <svg className="absolute left-5 top-1/2 transform -translate-y-1/2 w-6 h-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="flex flex-col space-y-6 lg:flex-row lg:space-y-0 lg:gap-8 items-center justify-between">
+            {/* Enhanced Search - Mobile-first responsive */}
+            <div className="relative w-full max-w-lg lg:flex-1">
+              <svg className="absolute left-4 sm:left-5 top-1/2 transform -translate-y-1/2 w-5 h-5 sm:w-6 sm:h-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
               <input
@@ -159,20 +159,20 @@ const Gallery = () => {
                 placeholder="Search wildlife..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="input-ultra w-full pl-14 pr-6 py-4 rounded-full hover:scale-[1.02] focus:scale-[1.02]
+                className="input-ultra w-full pl-12 sm:pl-14 pr-4 sm:pr-6 py-3 sm:py-4 text-sm sm:text-base rounded-full hover:scale-[1.02] focus:scale-[1.02]
                            bg-white/10 border border-white/30 backdrop-blur-xl transform-gpu transition-all duration-500 
-                           text-white placeholder-white/60 focus:text-white hover:text-white font-mangro"
+                           text-white placeholder-white/60 focus:text-white hover:text-white font-mangro touch-manipulation"
               />
             </div>
 
-            {/* Enhanced Category Filter */}
-            <div className="flex flex-wrap gap-3 justify-center">
+            {/* Enhanced Category Filter - Improved mobile layout */}
+            <div className="flex flex-wrap gap-2 sm:gap-3 justify-center w-full lg:w-auto">
               {categories.map((category) => (
                 <button
                   key={category}
                   onClick={() => setFilter(category)}
-                  className={`px-8 py-3 rounded-full font-mangro text-sm font-semibold tracking-wide transition-all duration-500 
-                    transform hover:scale-105 hover:shadow-lg hover:shadow-white/10 magnetic-hover relative overflow-hidden ${
+                  className={`px-4 sm:px-6 lg:px-8 py-2 sm:py-3 rounded-full font-mangro text-xs sm:text-sm font-semibold tracking-wide transition-all duration-500 
+                    transform hover:scale-105 hover:shadow-lg hover:shadow-white/10 magnetic-hover relative overflow-hidden touch-manipulation ${
                     filter === category
                       ? 'bg-white text-black hover:bg-gray-100 hover:text-black shadow-xl'
                       : 'bg-white/10 text-white hover:text-white hover:bg-white/20 border border-white/30 backdrop-blur-sm hover:border-white/50'
@@ -193,11 +193,11 @@ const Gallery = () => {
         </div>
       </section>
 
-      {/* Ultra-Modern Gallery Grid */}
-      <section className="py-20 px-6">
+      {/* Ultra-Modern Gallery Grid - Enhanced Responsiveness */}
+      <section className="py-12 sm:py-20 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           {filteredImages.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 sm:gap-6 lg:gap-8">
               {filteredImages.map((image, index) => (
                 <div
                   key={index}
