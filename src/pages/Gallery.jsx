@@ -17,42 +17,74 @@ const ModernLightbox = ({ image, isOpen, onClose, onNext, onPrev }) => {
     };
   }, [isOpen]);
 
+  // Keyboard event handling
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (!isOpen) return;
+      
+      switch (e.key) {
+        case 'Escape':
+          onClose();
+          break;
+        case 'ArrowLeft':
+          onPrev();
+          break;
+        case 'ArrowRight':
+          onNext();
+          break;
+        default:
+          break;
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose, onNext, onPrev]);
+
   if (!isOpen || !image) return null;
 
   return (
     <div className="fixed inset-0 z-50 bg-black/98 backdrop-blur-xl flex items-center justify-center p-2 sm:p-4
          animate-[fadeIn_0.3s_ease-in-out]">
-      {/* Modern Close Button - Responsive positioning */}
+      {/* Background Overlay - Click to close */}
+      <div 
+        className="absolute inset-0 bg-transparent cursor-pointer"
+        onClick={onClose}
+        aria-label="Close lightbox"
+      />
+      
+      {/* Responsive Close Button - Positioned Below Navbar */}
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 sm:top-8 sm:right-8 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm
-                   flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-500 z-10 touch-manipulation"
+        className="fixed top-20 right-4 sm:top-24 sm:right-6 md:top-28 md:right-8 lg:top-32 lg:right-10 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white/10 hover:bg-white/20 border-2 border-white/20 hover:border-white/40 backdrop-blur-sm
+                   flex items-center justify-center text-white hover:scale-110 transition-all duration-300 z-50 touch-manipulation shadow-lg hover:shadow-white/10 safe-area-inset-right safe-area-inset-top"
         aria-label="Close"
+        title="Close (Press Esc)"
       >
-        <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
 
-      {/* Navigation Buttons - Responsive positioning */}
+      {/* Navigation Buttons - Fully Responsive Positioning */}
       <button
         onClick={onPrev}
-        className="absolute left-2 sm:left-8 top-1/2 transform -translate-y-1/2 w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm
-                   flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-500 touch-manipulation"
+        className="fixed left-2 sm:left-4 md:left-6 lg:left-8 top-1/2 transform -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm
+                   flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-300 z-40 touch-manipulation safe-area-inset-left"
         aria-label="Previous"
       >
-        <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
         </svg>
       </button>
 
       <button
         onClick={onNext}
-        className="absolute right-2 sm:right-8 top-1/2 transform -translate-y-1/2 w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm
-                   flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-500 touch-manipulation"
+        className="fixed right-2 sm:right-4 md:right-6 lg:right-8 top-1/2 transform -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm
+                   flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-300 z-40 touch-manipulation safe-area-inset-right"
         aria-label="Next"
       >
-        <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
       </button>

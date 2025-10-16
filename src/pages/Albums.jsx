@@ -23,10 +23,10 @@ const Albums = () => {
 
       {/* Ultra-Modern Albums Grid - Enhanced Responsiveness */}
       <section className="py-12 sm:py-20 px-4 sm:px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 lg:gap-10">
             {photoAlbums.map((album, index) => (
-              <div key={index} className="group scroll-reveal touch-manipulation" style={{ animationDelay: `${index * 200}ms` }}>
+              <div key={index} className="group scroll-reveal touch-manipulation w-full sm:w-[calc(50%-1rem)] lg:w-[calc(45%-1.25rem)] max-w-md mx-auto" style={{ animationDelay: `${index * 200}ms` }}>
                 <Link to={`/albums/${album.id}`} className="block">
                   <div className="card-ultra-modern overflow-hidden image-reveal magnetic-hover">
                     <div className="relative h-48 sm:h-56 md:h-64 lg:h-72 overflow-hidden">
@@ -55,7 +55,7 @@ const Albums = () => {
                       </p>
                       <div className="flex items-center justify-between">
                         <span className="text-xs sm:text-sm text-white/60 font-copperplate truncate">
-                          {album.location || 'Multiple Locations'}
+                          Multiple Locations
                         </span>
                         <div className="flex items-center space-x-1 text-white/70 group-hover:text-white transition-colors flex-shrink-0 ml-2">
                           <span className="text-xs sm:text-sm">View Album</span>
@@ -74,27 +74,27 @@ const Albums = () => {
       </section>
 
       {/* Enhanced Call to Action */}
-      <section className="py-32 px-6">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-5xl md:text-6xl font-copperplate font-bold text-white mb-8 text-shadow-glow">
+      <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-copperplate font-bold text-white mb-6 sm:mb-8 text-shadow-glow">
             Explore More Photography
           </h2>
-          <p className="text-xl text-white/80 font-copperplate mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg lg:text-xl text-white/80 font-copperplate mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
             Discover individual masterpieces in our main gallery
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
             <Link to="/gallery" 
-                  className="relative overflow-hidden px-8 py-4 bg-white text-black font-semibold rounded-full
+                  className="relative overflow-hidden px-6 sm:px-8 py-3 sm:py-4 bg-white text-black font-semibold font-copperplate rounded-full
                              magnetic-hover group transition-all duration-500 transform hover:scale-105
                              hover:bg-gray-800 hover:text-white border-2 border-transparent hover:border-white/20
-                             hover:shadow-lg hover:shadow-white/20">
+                             hover:shadow-lg hover:shadow-white/20 w-full sm:w-auto text-center">
               <span className="relative z-10">View Gallery</span>
             </Link>
             <Link to="/contact" 
-                  className="relative overflow-hidden px-8 py-4 bg-transparent text-white font-semibold rounded-full
+                  className="relative overflow-hidden px-6 sm:px-8 py-3 sm:py-4 bg-transparent text-white font-semibold font-copperplate rounded-full
                              magnetic-hover group transition-all duration-500 transform hover:scale-105
                              border-2 border-white/30 hover:border-white/60 hover:bg-white/10
-                             hover:shadow-lg hover:shadow-white/10">
+                             hover:shadow-lg hover:shadow-white/10 w-full sm:w-auto text-center">
               <span className="relative z-10">Get In Touch</span>
             </Link>
           </div>

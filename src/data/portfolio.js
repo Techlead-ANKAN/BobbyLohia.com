@@ -6,8 +6,6 @@ export const wildlifeImages = [
     "title": "Elephant Herd",
     "description": "An elephant herd gathers on the savanna near a dust devil under a blue sky.",
     "category": "Wildlife",
-    "location": "Maasai Mara, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles00.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles00.jpg"
   },
@@ -16,8 +14,6 @@ export const wildlifeImages = [
     "title": "Sunset Silhouettes",
     "description": "Elephant silhouettes stand against a vibrant orange and yellow African sunset.",
     "category": "Landscape",
-    "location": "Amboseli National Park, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles01.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles01.jpg"
   },
@@ -26,8 +22,6 @@ export const wildlifeImages = [
     "title": "Elephant on the Plains",
     "description": "A single African elephant stands in an open, bright green field.",
     "category": "Wildlife",
-    "location": "Serengeti National Park, Tanzania",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles02.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles02.jpg"
   },
@@ -36,8 +30,6 @@ export const wildlifeImages = [
     "title": "Tusker in Golden Light",
     "description": "An elephant walks towards the viewer in golden morning light on the grassy plains.",
     "category": "Wildlife",
-    "location": "Serengeti National Park, Tanzania",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles03.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles03.jpg"
   },
@@ -46,8 +38,6 @@ export const wildlifeImages = [
     "title": "Elephant Portrait",
     "description": "A close-up vertical shot of an elephant in tall, dry grass.",
     "category": "Wildlife",
-    "location": "Himalayas, Nepal",
-    "year": "2023",
     "image": "/images/WildlifeAlbumFiles04.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles04.jpg"
   },
@@ -56,8 +46,6 @@ export const wildlifeImages = [
     "title": "Hippo Pod",
     "description": "A large group of hippos rests closely together in a body of water.",
     "category": "Wildlife",
-    "location": "Kruger National Park, South Africa",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles05.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles05.jpg"
   },
@@ -66,8 +54,6 @@ export const wildlifeImages = [
     "title": "Lion Family",
     "description": "Two lionesses and a small cub interact on the grassy savanna.",
     "category": "Wildlife",
-    "location": "Lake Naivasha, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles06.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles06.jpg"
   },
@@ -76,8 +62,6 @@ export const wildlifeImages = [
     "title": "Lion Resting",
     "description": "A young male lion lies down on burnt ground next to a clump of dry grass.",
     "category": "Wildlife",
-    "location": "Ol Pejeta Conservancy, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles07.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles07.jpg"
   },
@@ -86,8 +70,6 @@ export const wildlifeImages = [
     "title": "Scarred Male Lion",
     "description": "A striking close-up portrait of a male lion with battle scars on a dark background.",
     "category": "Wildlife",
-    "location": "Samburu National Reserve, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles08.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles08.jpg"
   },
@@ -96,8 +78,6 @@ export const wildlifeImages = [
     "title": "Lion on Burnt Ground",
     "description": "A lion walks across a dark, recently burned field.",
     "category": "Wildlife",
-    "location": "Maasai Mara, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles09.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles09.jpg"
   },
@@ -106,8 +86,6 @@ export const wildlifeImages = [
     "title": "Tiger walking",
     "description": "A tiger walks through tall grass in a natural setting.",
     "category": "Wildlife",
-    "location": "Lake Nakuru, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles10.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles10.jpg"
   },
@@ -116,8 +94,6 @@ export const wildlifeImages = [
     "title": "Hippo Pod Under Clouds",
     "description": "A group of hippos rests on a small island surrounded by water and bare trees under a cloudy sky.",
     "category": "Wildlife",
-    "location": "Mara River, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles11.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles11.jpg"
   },
@@ -126,8 +102,6 @@ export const wildlifeImages = [
     "title": "Leopard with Kill in Tree",
     "description": "A leopard rests on a tree branch next to its carcass, looking directly at the camera.",
     "category": "Wildlife",
-    "location": "Amboseli, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles12.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles12.jpg"
   },
@@ -136,8 +110,6 @@ export const wildlifeImages = [
     "title": "Vulture Perch",
     "description": "A hooded vulture perches on the top of a leafy green bush against a plain sky.",
     "category": "Wildlife",
-    "location": "Maasai Mara, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles13.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles13.jpg"
   },
@@ -146,8 +118,6 @@ export const wildlifeImages = [
     "title": "Lioness Grooming",
     "description": "A lioness with a bloody muzzle licks her paw while lying on dark, burnt ground.",
     "category": "Wildlife",
-    "location": "Serengeti, Tanzania",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles14.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles14.jpg"
   },
@@ -156,8 +126,6 @@ export const wildlifeImages = [
     "title": "Hippo Eyes",
     "description": "The eyes and nostrils of a hippo barely break the surface of the water in a black and white image.",
     "category": "Wildlife",
-    "location": "Maasai Mara, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles15.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles15.jpg"
   },
@@ -166,8 +134,6 @@ export const wildlifeImages = [
     "title": "Ostrich Head Close-up",
     "description": "A close-up vertical portrait of an ostrich's head and neck.",
     "category": "Wildlife",
-    "location": "Kruger National Park, South Africa",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles16.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles16.jpg"
   },
@@ -176,8 +142,6 @@ export const wildlifeImages = [
     "title": "Lion Pride Feeding",
     "description": "A lioness and several cubs feed on a carcass in the grass.",
     "category": "Wildlife",
-    "location": "Tsavo National Park, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles17.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles17.jpg"
   },
@@ -186,8 +150,6 @@ export const wildlifeImages = [
     "title": "Two Rhinos",
     "description": "Two rhinos graze in a grassy, bushy area with two white cattle egrets nearby.",
     "category": "Wildlife",
-    "location": "Maasai Mara, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles18.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles18.jpg"
   },
@@ -196,8 +158,6 @@ export const wildlifeImages = [
     "title": "Lioness Drinking",
     "description": "A lioness bends down to lap water from a puddle in a dirt road.",
     "category": "Wildlife",
-    "location": "Mara River, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles19.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles19.jpg"
   },
@@ -206,8 +166,6 @@ export const wildlifeImages = [
     "title": "Fish Eagle in Flight",
     "description": "An African Fish Eagle flies past a dead, vertical tree trunk under a cloudy sky.",
     "category": "Wildlife",
-    "location": "Sabi Sands, South Africa",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles20.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles20.jpg"
   },
@@ -216,8 +174,6 @@ export const wildlifeImages = [
     "title": "Battle-Scarred Lion Portrait",
     "description": "A close-up, intense portrait of a male lion with visible facial scars and wounds.",
     "category": "Wildlife",
-    "location": "Samburu, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles21.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles21.jpg"
   },
@@ -226,8 +182,6 @@ export const wildlifeImages = [
     "title": "Fish Eagle on Deadwood",
     "description": "An African Fish Eagle perches on a bare, thick tree branch against a pale sky.",
     "category": "Wildlife",
-    "location": "Mara River, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles22.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles22.jpg"
   },
@@ -236,8 +190,6 @@ export const wildlifeImages = [
     "title": "Cheetah on Burnt Grass",
     "description": "A cheetah walks slowly across a field of dark, recently burned grass.",
     "category": "Wildlife",
-    "location": "Samburu, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles23.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles23.jpg"
   },
@@ -246,8 +198,6 @@ export const wildlifeImages = [
     "title": "Lion with Fresh Wounds",
     "description": "A male lion, showing fresh blood on its face, walks through tall, dry grass.",
     "category": "Wildlife",
-    "location": "Kruger National Park, South Africa",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles24.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles24.jpg"
   },
@@ -256,8 +206,6 @@ export const wildlifeImages = [
     "title": "Lioness in Tall Grass",
     "description": "A lioness walks through the savanna's long, golden-brown grass.",
     "category": "Wildlife",
-    "location": "Tarangire, Tanzania",
-    "year": "2023",
     "image": "/images/WildlifeAlbumFiles25.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles25.jpg"
   },
@@ -266,8 +214,6 @@ export const wildlifeImages = [
     "title": "Lion Cubs with Bone",
     "description": "Two lion cubs play with a bone on dark, recently burned ground.",
     "category": "Wildlife",
-    "location": "Maasai Mara, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles26.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles26.jpg"
   },
@@ -276,8 +222,6 @@ export const wildlifeImages = [
     "title": "Tawny Eagle Perch",
     "description": "A raptor perches high on a leafy acacia tree against an overcast sky.",
     "category": "Wildlife",
-    "location": "Rift Valley, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles27.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles27.jpg"
   },
@@ -286,8 +230,6 @@ export const wildlifeImages = [
     "title": "Elephant Herd Grazing",
     "description": "A large elephant herd feeds in a lush green field with a hazy mountain background.",
     "category": "Wildlife",
-    "location": "Serengeti, Tanzania",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles28.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles28.jpg"
   },
@@ -296,8 +238,6 @@ export const wildlifeImages = [
     "title": "Savanna Dawn with Lions",
     "description": "Two lions rest by a puddle on the savanna at sunrise/sunset with distant hills.",
     "category": "Landscape",
-    "location": "Arabuko Sokoke Forest, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles29.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles29.jpg"
   },
@@ -306,8 +246,6 @@ export const wildlifeImages = [
     "title": "Giraffe Silhouette at Dawn",
     "description": "A giraffe walks across the savanna, silhouetted against a pale golden sky.",
     "category": "Landscape",
-    "location": "Kalahari Desert, Botswana",
-    "year": "2023",
     "image": "/images/WildlifeAlbumFiles30.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles30.jpg"
   },
@@ -316,8 +254,6 @@ export const wildlifeImages = [
     "title": "Kilimanjaro and Elephants",
     "description": "A snowy Mount Kilimanjaro looms over elephants grazing in the foreground.",
     "category": "Wildlife",
-    "location": "Boteti River, Botswana",
-    "year": "2023",
     "image": "/images/WildlifeAlbumFiles31.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles31.jpg"
   },
@@ -326,8 +262,6 @@ export const wildlifeImages = [
     "title": "Elephant with Kilimanjaro at Sunset",
     "description": "An elephant with its trunk raised stands before a purple-hued Mount Kilimanjaro at twilight.",
     "category": "Landscape",
-    "location": "Kruger National Park, South Africa",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles32.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles32.jpg"
   },
@@ -336,8 +270,6 @@ export const wildlifeImages = [
     "title": "Lioness Resting",
     "description": "A lioness rests directly facing the camera on a patch of bare, reddish-brown earth.",
     "category": "Wildlife",
-    "location": "Samburu, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles33.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles33.jpg"
   },
@@ -346,8 +278,6 @@ export const wildlifeImages = [
     "title": "Cheetah on Muddy Path",
     "description": "A cheetah stands on a muddy path in a field of dark, dry grass and burned patches.",
     "category": "Wildlife",
-    "location": "Serengeti, Tanzania",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles34.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles34.jpg"
   },
@@ -356,8 +286,6 @@ export const wildlifeImages = [
     "title": "Two Lionesses Watching",
     "description": "Two lionesses sit in the tall grass, looking alertly at something in the distance.",
     "category": "Wildlife",
-    "location": "Maasai Mara, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles35.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles35.jpg"
   },
@@ -366,8 +294,6 @@ export const wildlifeImages = [
     "title": "Young Lion Profile",
     "description": "A close-up profile of a young male lion's head and mane in the savanna.",
     "category": "Wildlife",
-    "location": "Karoo Desert, South Africa",
-    "year": "2023",
     "image": "/images/WildlifeAlbumFiles36.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles36.jpg"
   },
@@ -376,8 +302,6 @@ export const wildlifeImages = [
     "title": "Black Rhino in Bush",
     "description": "An endangered black rhinoceros with a prominent horn stands partially hidden in dense green bushes.",
     "category": "Wildlife",
-    "location": "Lake Baringo, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles37.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles37.jpg"
   },
@@ -386,8 +310,6 @@ export const wildlifeImages = [
     "title": "Cheetah in Tall Grass",
     "description": "A cheetah stands in extremely tall, dry yellow grass with its tongue slightly out.",
     "category": "Wildlife",
-    "location": "Okavango Delta, Botswana",
-    "year": "2023",
     "image": "/images/WildlifeAlbumFiles38.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles38.jpg"
   },
@@ -396,8 +318,6 @@ export const wildlifeImages = [
     "title": "Zebra Stripe Detail",
     "description": "An abstract, close-up pattern of black and white zebra stripes.",
     "category": "Macro",
-    "location": "Nairobi National Park, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles39.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles39.jpg"
   },
@@ -406,8 +326,6 @@ export const wildlifeImages = [
     "title": "Pelican Gathering",
     "description": "A dense group of Great White Pelicans stands on the edge of a lake by a line of trees.",
     "category": "Wildlife",
-    "location": "Maasai Mara, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles40.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles40.jpg"
   },
@@ -416,8 +334,6 @@ export const wildlifeImages = [
     "title": "Young Lion Profile",
     "description": "A close-up profile of a young male lion looking to the right in dry grass.",
     "category": "Wildlife",
-    "location": "Lake Naivasha, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles41.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles41.jpg"
   },
@@ -426,8 +342,6 @@ export const wildlifeImages = [
     "title": "Flamingo Feeding",
     "description": "A Greater Flamingo stands in the water with its wing partially spread while drinking.",
     "category": "Wildlife",
-    "location": "Kalahari Desert, Botswana",
-    "year": "2023",
     "image": "/images/WildlifeAlbumFiles42.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles42.jpg"
   },
@@ -436,8 +350,6 @@ export const wildlifeImages = [
     "title": "Lioness Walking",
     "description": "A lioness walks directly forward, raising a paw on a grassy, brown savanna.",
     "category": "Wildlife",
-    "location": "Namib Desert, Namibia",
-    "year": "2023",
     "image": "/images/WildlifeAlbumFiles43.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles43.jpg"
   },
@@ -446,8 +358,6 @@ export const wildlifeImages = [
     "title": "Spotted Hyena",
     "description": "A spotted hyena walks straight toward the camera through dry savanna grass.",
     "category": "Wildlife",
-    "location": "Queen Elizabeth National Park, Uganda",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles44.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles44.jpg"
   },
@@ -456,8 +366,6 @@ export const wildlifeImages = [
     "title": "Elephant Sunset Silhouette",
     "description": "A group of elephants are silhouetted against a brilliant orange sunset on the horizon.",
     "category": "Landscape",
-    "location": "Central Kalahari, Botswana",
-    "year": "2023",
     "image": "/images/WildlifeAlbumFiles45.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles45.jpg"
   },
@@ -466,8 +374,6 @@ export const wildlifeImages = [
     "title": "Lioness Resting on Hill",
     "description": "A lioness lies down in long yellow grass, looking directly at the camera.",
     "category": "Wildlife",
-    "location": "Private Reserve, South Africa",
-    "year": "2023",
     "image": "/images/WildlifeAlbumFiles46.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles46.jpg"
   },
@@ -476,8 +382,6 @@ export const wildlifeImages = [
     "title": "Male Lion Strolling",
     "description": "A young male lion walks through the tall, dry grass, looking to the right.",
     "category": "Wildlife",
-    "location": "Samburu, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles47.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles47.jpg"
   },
@@ -486,8 +390,6 @@ export const wildlifeImages = [
     "title": "Elephant Tusk Greeting",
     "description": "Two large elephants stand facing each other, crossing trunks in a palm-tree background.",
     "category": "Wildlife",
-    "location": "Addo Elephant Park, South Africa",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles48.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles48.jpg"
   },
@@ -496,8 +398,6 @@ export const wildlifeImages = [
     "title": "Lonely Acacia at Dusk",
     "description": "A single acacia tree stands silhouetted against a dramatic, dark-clouded sky at twilight.",
     "category": "Landscape",
-    "location": "Namib Desert, Namibia",
-    "year": "2023",
     "image": "/images/WildlifeAlbumFiles49.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles49.jpg"
   },
@@ -506,8 +406,6 @@ export const wildlifeImages = [
     "title": "Young Male Lion Portrait",
     "description": "A close-up portrait of a young male lion looking directly at the camera in dry grass.",
     "category": "Wildlife",
-    "location": "Kruger National Park, South Africa",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles50.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles50.jpg"
   },
@@ -516,8 +414,6 @@ export const wildlifeImages = [
     "title": "Fiery Sunset Sky",
     "description": "A dark silhouette of trees against an intensely red and orange streaked sunset sky.",
     "category": "Landscape",
-    "location": "Etosha National Park, Namibia",
-    "year": "2023",
     "image": "/images/WildlifeAlbumFiles51.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles51.jpg"
   },
@@ -526,8 +422,6 @@ export const wildlifeImages = [
     "title": "Lioness Standing Alert",
     "description": "A lioness stands alert in the dry, golden grass looking straight ahead.",
     "category": "Wildlife",
-    "location": "Okavango Delta, Botswana",
-    "year": "2023",
     "image": "/images/WildlifeAlbumFiles52.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles52.jpg"
   },
@@ -536,8 +430,6 @@ export const wildlifeImages = [
     "title": "Scarred Male Lion Portrait",
     "description": "A fierce, close-up portrait of a male lion with severe battle wounds on its face.",
     "category": "Wildlife",
-    "location": "Tsavo East, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles53.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles53.jpg"
   },
@@ -546,8 +438,6 @@ export const wildlifeImages = [
     "title": "Cheetah Running",
     "description": "A cheetah runs low to the ground through tall, dry yellow grass.",
     "category": "Wildlife",
-    "location": "Samburu, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles54.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles54.jpg"
   },
@@ -556,8 +446,6 @@ export const wildlifeImages = [
     "title": "Oxpeckers on Giraffe",
     "description": "Several yellow-billed oxpeckers perch on the neck and back of a giraffe.",
     "category": "Wildlife",
-    "location": "Lake Nakuru, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles55.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles55.jpg"
   },
@@ -566,8 +454,6 @@ export const wildlifeImages = [
     "title": "Elephant Dust Bath",
     "description": "An elephant sprays dust over itself in a grassy field with white egrets nearby.",
     "category": "Wildlife",
-    "location": "Coastal Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles56.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles56.jpg"
   },
@@ -576,8 +462,6 @@ export const wildlifeImages = [
     "title": "Lioness on Path",
     "description": "A lioness with a bloody face walks directly down a dirt track in tall grass.",
     "category": "Wildlife",
-    "location": "Central Kalahari, Botswana",
-    "year": "2023",
     "image": "/images/WildlifeAlbumFiles57.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles57.jpg"
   },
@@ -586,8 +470,6 @@ export const wildlifeImages = [
     "title": "Lioness Profile on Black",
     "description": "A lioness lies in profile on dark, recently burned ground.",
     "category": "Wildlife",
-    "location": "Lake Naivasha, Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles58.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles58.jpg"
   },
@@ -596,8 +478,6 @@ export const wildlifeImages = [
     "title": "Hot Air Balloons at Dawn",
     "description": "Hot air balloons are inflated and glow at dawn against a dark, cloudy sky.",
     "category": "Landscape",
-    "location": "Northern Kenya",
-    "year": "2024",
     "image": "/images/WildlifeAlbumFiles59.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles59.jpg"
   } 
