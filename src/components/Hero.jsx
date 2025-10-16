@@ -35,15 +35,15 @@ const Hero = () => {
         </div>
 
         {/* Main Heading - Responsive typography */}
-        <h1 className={`text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-bold text-white mb-4 sm:mb-6 leading-none transition-all duration-1000 delay-200 ${
+        <h1 className={`text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-copperplate font-bold text-white mb-4 sm:mb-6 leading-none transition-all duration-1000 delay-200 ${
           isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
-          <span className="block">Bobby</span>
-          <span className="block hero-gradient-dark">Lohia</span>
+          <span className="block">Bobby Lohia</span>
+          {/* <span className="block hero-gradient-dark">Lohia</span> */}
         </h1>
 
         {/* Subtitle - Mobile optimized */}
-        <p className={`text-base sm:text-lg md:text-xl lg:text-2xl text-white/80 max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed px-4 sm:px-0 transition-all duration-1000 delay-400 ${
+        <p className={`text-sm xs:text-base sm:text-lg md:text-lg lg:text-xl text-white/80 max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed px-4 sm:px-0 transition-all duration-1000 delay-400 ${
           isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           Documenting raw stories of the wild and the timeless rhythm of nature.
@@ -83,16 +83,16 @@ const Hero = () => {
           isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <div className="text-center">
-            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1 sm:mb-2">15+</div>
-            <div className="text-xs sm:text-sm text-white/60">Years Experience</div>
+            <div className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-1 sm:mb-2">15+</div>
+            <div className="text-xs xs:text-sm sm:text-sm md:text-base text-white/60">Years Experience</div>
           </div>
           <div className="text-center">
-            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1 sm:mb-2">1000+</div>
-            <div className="text-xs sm:text-sm text-white/60">Photos Captured</div>
+            <div className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-1 sm:mb-2">1000+</div>
+            <div className="text-xs xs:text-sm sm:text-sm md:text-base text-white/60">Photos Captured</div>
           </div>
           <div className="text-center">
-            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1 sm:mb-2">50+</div>
-            <div className="text-xs sm:text-sm text-white/60">Countries Visited</div>
+            <div className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-1 sm:mb-2">50+</div>
+            <div className="text-xs xs:text-sm sm:text-sm md:text-base text-white/60">Countries Visited</div>
           </div>
         </div>
       </div>

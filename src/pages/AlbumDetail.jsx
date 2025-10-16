@@ -61,11 +61,11 @@ const AlbumDetail = () => {
 
           {/* Album Header */}
           <div className="text-center mb-12 xs:mb-14 md:mb-16">
-            <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-mangro font-bold text-white mb-6 xs:mb-8 text-shadow-glow leading-tight">
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-copperplate font-bold text-white mb-6 xs:mb-8 text-shadow-glow leading-tight">
               <span className="block">{album.title}</span>
               <span className="text-gradient-ultra">Collection</span>
             </h1>
-            <p className="text-base xs:text-lg sm:text-xl text-white/80 font-mangro max-w-4xl mx-auto leading-relaxed mb-6 xs:mb-8 px-4">
+            <p className="text-base xs:text-lg sm:text-xl text-white/80 font-copperplate max-w-4xl mx-auto leading-relaxed mb-6 xs:mb-8 px-4">
               {album.description}
             </p>
             <div className="inline-flex items-center px-4 xs:px-6 py-2 xs:py-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm xs:text-base">
@@ -97,11 +97,11 @@ const AlbumDetail = () => {
       {/* Back to Albums Section */}
       <section className="py-20 xs:py-24 md:py-32 px-4 xs:px-6">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl xs:text-4xl sm:text-4xl md:text-5xl font-mangro font-bold text-white mb-6 xs:mb-8 text-shadow-glow leading-tight">
+          <h2 className="text-3xl xs:text-4xl sm:text-4xl md:text-5xl font-copperplate font-bold text-white mb-6 xs:mb-8 text-shadow-glow leading-tight">
             <span className="block">Explore More</span>
             <span className="text-gradient-ultra">Collections</span>
           </h2>
-          <p className="text-base xs:text-lg sm:text-xl text-white/80 font-mangro mb-8 xs:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed px-4">
+          <p className="text-base xs:text-lg sm:text-xl text-white/80 font-copperplate mb-8 xs:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed px-4">
             Discover more curated photography collections showcasing different aspects of wildlife and nature.
           </p>
           <div className="flex flex-col xs:flex-col sm:flex-row gap-4 xs:gap-6 justify-center max-w-md xs:max-w-lg sm:max-w-none mx-auto">

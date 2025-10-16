@@ -1,7 +1,20 @@
+/* Montserrat Font - Main Typography */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Keep backup fonts for fallback */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 
-/* Custom Mangro Font */
+/* Copperplate Font - Primary Typography */
+@font-face {
+  font-family: 'Copperplate';
+  src: url('/fonts/copperplate/Copperplate.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Custom Mangro Font - Now replaced by Copperplate but keeping for compatibility */
 @font-face {
   font-family: 'Mangro';
   src: url('/fonts/mangro/mangro.otf') format('opentype');
@@ -155,12 +168,23 @@
   
   html {
     @apply scroll-smooth;
+    font-family: 'Copperplate', system-ui, sans-serif;
   }
   
   body {
-    @apply bg-black text-white font-sans antialiased;
+    @apply bg-black text-white antialiased;
+    font-family: 'Copperplate', system-ui, sans-serif;
     font-feature-settings: "rlig" 1, "calt" 1;
     position: relative;
+  }
+  
+  /* Apply Copperplate to all text elements */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Copperplate', system-ui, sans-serif;
+  }
+  
+  p, span, div, a, button, input, textarea, label {
+    font-family: 'Copperplate', system-ui, sans-serif;
   }
   
   /* Global Grid Pattern - hidden under black, revealed by mask */
@@ -581,17 +605,37 @@
 .animate-delay-700 { animation-delay: 0.7s; }
 .animate-delay-800 { animation-delay: 0.8s; }
 
-/* Responsive Typography */
+/* Responsive Typography - Optimized for all screen sizes */
+.text-responsive-hero {
+  @apply text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl;
+}
+
 .text-responsive-xl {
-  @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
+  @apply text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
 }
 
 .text-responsive-lg {
-  @apply text-2xl md:text-3xl lg:text-4xl xl:text-5xl;
+  @apply text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
 }
 
 .text-responsive-md {
-  @apply text-lg md:text-xl lg:text-2xl xl:text-3xl;
+  @apply text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl;
+}
+
+.text-responsive-sm {
+  @apply text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl;
+}
+
+.text-responsive-xs {
+  @apply text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl;
+}
+
+.text-responsive-body {
+  @apply text-sm xs:text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl;
+}
+
+.text-responsive-caption {
+  @apply text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl;
 }
 
 /* Footer Grid Always Visible */

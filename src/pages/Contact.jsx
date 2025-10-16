@@ -24,18 +24,35 @@ const Contact = () => {
         current_time: new Date().toLocaleTimeString(),
       };
 
-      // Send email using EmailJS
+      // Debug: Log the values being used
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_eirqppc';
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_oiz1o9b';
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '3NyLqOGtvYdpovGxA';
+      
+      console.log('EmailJS Configuration:', {
+        serviceId,
+        templateId,
+        publicKey: publicKey.substring(0, 8) + '...',
+        templateParams
+      });
+
+      // Send email using EmailJS with correct template ID
       await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_eirqppc',
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_vwsh3gi',
+        serviceId,
+        templateId, // Now uses your correct template: template_oiz1o9b
         templateParams,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '3NyLqOGtvYdpovGxA'
+        publicKey
       );
 
       setSubmitStatus('success');
       form.current.reset();
     } catch (error) {
-      console.error('EmailJS Error:', error);
+      console.error('EmailJS Error Details:', {
+        error,
+        message: error.message,
+        status: error.status,
+        text: error.text
+      });
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -50,8 +67,8 @@ const Contact = () => {
         </svg>
       ),
       label: 'Email',
-      value: 'plohia@yahoo.com',
-      link: 'mailto:plohia@yahoo.com'
+      value: 'bobbylohia@gmail.com',
+      link: 'mailto:bobbylohia@gmail.com'
     },
     {
       icon: (
@@ -60,8 +77,8 @@ const Contact = () => {
         </svg>
       ),
       label: 'Phone',
-      value: '+91 98312 55000',
-      link: 'tel:+919831255000'
+      value: '+91 70038 42077',
+      link: 'tel:+917003842077'
     },
     {
       icon: (

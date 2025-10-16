@@ -57,9 +57,9 @@ const ModernLightbox = ({ image, isOpen, onClose, onNext, onPrev }) => {
         </svg>
       </button>
 
-      {/* Image Container - Improved mobile responsiveness */}
-      <div className="max-w-7xl w-full flex flex-col items-center px-12 sm:px-16">
-        <div className="relative w-full flex justify-center">
+      {/* Image Container - Properly Responsive and Contained */}
+      <div className="w-full h-full flex flex-col items-center justify-center px-4 sm:px-8 md:px-12 lg:px-16 py-4 sm:py-6">
+        <div className="relative w-full flex justify-center items-center" style={{ maxHeight: 'calc(100vh - 180px)' }}>
           {!imageLoaded && (
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-6 h-6 sm:w-8 sm:h-8 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
@@ -68,20 +68,24 @@ const ModernLightbox = ({ image, isOpen, onClose, onNext, onPrev }) => {
           <img
             src={image.image}
             alt={image.title}
-            className={`w-full max-w-full h-auto max-h-[60vh] sm:max-h-[70vh] lg:max-h-[75vh] object-contain rounded-lg sm:rounded-2xl shadow-2xl transition-all duration-700 ${
+            className={`w-auto h-auto object-contain rounded-lg sm:rounded-2xl shadow-2xl transition-all duration-700 ${
               imageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
             }`}
+            style={{ 
+              maxHeight: 'calc(60vh - 120px)',
+              maxWidth: 'calc(80vw - 60px)'
+            }}
             onLoad={() => setImageLoaded(true)}
           />
         </div>
         
-        {/* Image Info */}
-        <div className={`mt-8 text-center transition-all duration-700 delay-300 ${
+        {/* Image Info - Compact and Responsive */}
+        <div className={`mt-3 sm:mt-4 md:mt-6 text-center px-4 sm:px-6 max-w-4xl mx-auto transition-all duration-700 delay-300 ${
           imageLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-4'
         }`}>
-          <h3 className="text-3xl font-mangro text-white mb-2">{image.title}</h3>
-          <p className="text-lg text-white/70 font-mangro mb-1">{image.location}</p>
-          <p className="text-sm text-white/50 font-mangro">{image.description}</p>
+          <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl font-copperplate text-white mb-1 sm:mb-2 leading-tight">{image.title}</h3>
+          <p className="text-sm xs:text-base sm:text-lg text-white/70 font-copperplate mb-1">{image.location}</p>
+          <p className="text-xs xs:text-sm sm:text-base text-white/50 font-copperplate max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto leading-relaxed line-clamp-2">{image.description}</p>
         </div>
       </div>
     </div>

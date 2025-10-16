@@ -46,13 +46,13 @@ const Home = () => {
       <Hero />
 
       {/* Featured Work Section */}
-      <Section background="bg-black" padding="py-32">
+      <Section background="bg-black" padding="py-16 sm:py-20 md:py-24 lg:py-32">
         <div className="text-center mb-16">
-          <h2 className="text-responsive-lg font-display font-bold text-white mb-6">
+          <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-copperplate font-bold text-white mb-6">
             Featured
             <span className="block hero-gradient-dark">Work</span>
           </h2>
-          <p className="text-responsive-md text-white/70 max-w-3xl mx-auto">
+          <p className="text-sm xs:text-base sm:text-lg md:text-lg lg:text-xl text-white/70 max-w-3xl mx-auto">
             A showcase of selected wildlife photography that captures raw moments from the field.
           </p>
         </div>
@@ -71,16 +71,16 @@ const Home = () => {
         <div className="text-center mt-20">
           <div className="inline-flex flex-col items-center space-y-4">
             <Link to="/gallery">
-              <Button variant="primary" size="xl" className="px-12 py-6 text-lg font-semibold tracking-wide">
+              <Button variant="primary" size="xl" className="px-8 sm:px-12 py-4 sm:py-6 text-sm xs:text-base sm:text-lg font-semibold tracking-wide">
                 <span className="flex items-center">
                   View All Work
-                  <svg className="ml-3 w-6 h-6 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="ml-2 sm:ml-3 w-4 sm:w-6 h-4 sm:h-6 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </span>
               </Button>
             </Link>
-            <p className="text-white/60 text-sm font-medium tracking-wider uppercase">
+            <p className="text-white/60 text-xs xs:text-sm sm:text-base font-medium tracking-wider uppercase">
               Discover the complete collection
             </p>
           </div>
@@ -88,14 +88,14 @@ const Home = () => {
       </Section>
 
       {/* About Section */}
-      <Section background="bg-black" padding="py-32">
+      <Section background="bg-black" padding="py-16 sm:py-20 md:py-24 lg:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-responsive-lg font-display font-bold text-white mb-8">
+            <h2 className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-copperplate font-bold text-white mb-8">
               A Journey Framed by the Wild
               {/* <span className="block hero-gradient-dark">The Lens</span> */}
             </h2>
-            <div className="space-y-6 text-lg text-white/70 leading-relaxed">
+            <div className="space-y-6 text-sm xs:text-base sm:text-base md:text-lg lg:text-lg text-white/70 leading-relaxed">
               <p>
                 Over 15 years ago, Bobby Lohia picked up a camera in the forests of Kanha and pressed the shutter on his very first tiger. The photo came out entirely blue - an amusing mistake that, instead of discouraging him, sparked a lifelong journey into wildlife photography. What began as an imperfect frame soon became the perfect reason to return to the wild again and again.
               </p>
@@ -124,10 +124,10 @@ const Home = () => {
                 style={{ height: 'auto', width: '100%' }}
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 glass-card p-6">
+            <div className="absolute -bottom-6 -right-6 glass-card p-4 sm:p-6">
               <div className="text-center">
-                <div className="text-3xl font-display font-bold text-white">15+</div>
-                <div className="text-sm text-white/70">Years Experience</div>
+                <div className="text-lg xs:text-xl sm:text-2xl font-copperplate font-bold text-white">15+</div>
+                <div className="text-xs xs:text-sm sm:text-sm text-white/70">Years Experience</div>
               </div>
             </div>
           </div>
@@ -135,7 +135,7 @@ const Home = () => {
       </Section>
 
       {/* Philosophy Section */}
-      <Section background="bg-black" padding="py-32">
+      <Section background="bg-black" padding="py-16 sm:py-20 md:py-24 lg:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative lg:order-1">
             <div className="glass-card p-4">
@@ -146,20 +146,20 @@ const Home = () => {
                 style={{ height: 'auto', width: '100%' }}
               />
             </div>
-            <div className="absolute -bottom-6 -left-6 glass-card p-6">
+            <div className="absolute -bottom-6 -left-6 glass-card p-4 sm:p-6">
               <div className="text-center">
-                <div className="text-3xl font-display font-bold text-white">500+</div>
-                <div className="text-sm text-white/70">Species Captured</div>
+                <div className="text-lg xs:text-xl sm:text-2xl font-copperplate font-bold text-white">200+</div>
+                <div className="text-xs xs:text-sm sm:text-sm text-white/70">Species Captured</div>
               </div>
             </div>
           </div>
 
           <div className="lg:order-2">
-            <h2 className="text-responsive-lg font-display font-bold text-white mb-8">
+            <h2 className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-copperplate font-bold text-white mb-8">
               Conservation Through
               <span className="block hero-gradient-dark">Photography</span>
             </h2>
-            <div className="space-y-6 text-lg text-white/70 leading-relaxed">
+            <div className="space-y-6 text-sm xs:text-base sm:text-base md:text-lg lg:text-lg text-white/70 leading-relaxed">
               <p>
                 Every photograph tells a story, but wildlife photography tells stories that matter for the future of our planet. Through each frame, Bobby captures not just the beauty of nature, but also its fragility and the urgent need for conservation.
               </p>
@@ -182,14 +182,14 @@ const Home = () => {
       </Section>
 
       {/* Wild By Nature Section */}
-      <Section background="bg-black" padding="py-32">
+      <Section background="bg-black" padding="py-16 sm:py-20 md:py-24 lg:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           <div>
-            <h2 className="text-responsive-lg font-display font-bold text-white mb-8">
+            <h2 className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-copperplate font-bold text-white mb-8">
               Wild By Nature:
               <span className="block hero-gradient-dark">Building a Movement</span>
             </h2>
-            <div className="space-y-6 text-lg text-white/70 leading-relaxed">
+            <div className="space-y-6 text-sm xs:text-base sm:text-base md:text-lg lg:text-lg text-white/70 leading-relaxed">
               <p>
                 Wild By Nature grew from Mr. Lohia's realization that wildlife photography in India needed more than passion, it needed a community. After years in the field, he saw scattered talent, limited mentorship, and little space for ethical conversations. What began as his personal pursuit soon evolved into a larger vision: to create a platform where learning, storytelling, and conservation could come together.
               </p>
@@ -205,14 +205,14 @@ const Home = () => {
                 href="https://wildbynatureglobal.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="relative overflow-hidden px-8 py-4 bg-white text-black font-semibold rounded-full
+                className="relative overflow-hidden px-6 sm:px-8 py-3 sm:py-4 bg-white text-black font-semibold rounded-full
                            magnetic-hover group transition-all duration-500 transform hover:scale-105
                            hover:bg-gray-800 hover:text-white border-2 border-transparent hover:border-white/20
                            hover:shadow-lg hover:shadow-white/20"
               >
-                <span className="relative z-10 flex items-center">
-                  Visit Wild By Nature
-                  <svg className="ml-2 w-5 h-5 transform transition-transform group-hover:translate-x-1" 
+                <span className="relative z-10 flex items-center text-sm sm:text-base">
+                  Visit Wild By Nature Global
+                  <svg className="ml-2 w-4 sm:w-5 h-4 sm:h-5 transform transition-transform group-hover:translate-x-1" 
                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
@@ -222,14 +222,14 @@ const Home = () => {
                 href="https://wildbynatureglobal.com/login" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="relative overflow-hidden px-8 py-4 bg-transparent text-white font-semibold rounded-full
+                className="relative overflow-hidden px-6 sm:px-8 py-3 sm:py-4 bg-transparent text-white font-semibold rounded-full
                            magnetic-hover group transition-all duration-500 transform hover:scale-105
                            border-2 border-white/30 hover:border-white/60 hover:bg-white/10
                            hover:shadow-lg hover:shadow-white/10"
               >
-                <span className="relative z-10 flex items-center">
+                <span className="relative z-10 flex items-center text-sm sm:text-base">
                   Join the Community
-                  <svg className="ml-2 w-5 h-5 transform transition-transform group-hover:rotate-45" 
+                  <svg className="ml-2 w-4 sm:w-5 h-4 sm:h-5 transform transition-transform group-hover:rotate-45" 
                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                   </svg>
@@ -239,17 +239,17 @@ const Home = () => {
           </div>
 
           <div className="relative flex justify-center items-center">
-            <div className="w-82 h-82 overflow-hidden rounded-full">
+            <div className="w-64 h-64 xs:w-72 xs:h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 overflow-hidden rounded-full">
               <img
                 src={WBNLOGO}
                 alt="Wild By Nature Logo"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -left-6 glass-card p-6">
+            <div className="absolute -bottom-4 sm:-bottom-6 -left-4 sm:-left-6 glass-card p-4 sm:p-6">
               <div className="text-center">
-                <div className="text-3xl font-display font-bold text-white">Global</div>
-                <div className="text-sm text-white/70">Movement</div>
+                <div className="text-lg xs:text-xl sm:text-2xl font-copperplate font-bold text-white">Global</div>
+                <div className="text-xs xs:text-sm sm:text-sm text-white/70">Movement</div>
               </div>
             </div>
           </div>

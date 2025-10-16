@@ -20,10 +20,12 @@ export default {
         'foldclosed': '380px', // Foldable devices when closed
       },
       fontFamily: {
-        'sans': ['Inter', 'system-ui', 'sans-serif'],
-        'display': ['Playfair Display', 'serif'],
+        'sans': ['Copperplate', 'system-ui', 'sans-serif'],
+        'display': ['Copperplate', 'sans-serif'],
         'mono': ['JetBrains Mono', 'monospace'],
-        'mangro': ['Mangro', 'serif'],
+        'mangro': ['Copperplate', 'sans-serif'], // Replace Mangro with Copperplate
+        'montserrat': ['Montserrat', 'sans-serif'], // Keep Montserrat for compatibility
+        'copperplate': ['Copperplate', 'sans-serif'], // Add dedicated Copperplate class
       },
       colors: {
         border: 'hsl(var(--border))',

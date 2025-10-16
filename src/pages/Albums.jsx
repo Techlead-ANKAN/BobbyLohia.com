@@ -10,12 +10,12 @@ const Albums = () => {
       {/* Ultra-Modern Hero Section - Mobile optimized */}
       <section className="pt-24 sm:pt-32 pb-12 sm:pb-20 px-4 sm:px-6 relative">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-mangro font-bold text-white mb-8 sm:mb-12 text-shadow-glow leading-tight">
+          <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-copperplate font-bold text-white mb-8 sm:mb-12 text-shadow-glow leading-tight">
             Photography
             <br />
             <span className="text-gradient-ultra">Albums</span>
           </h1>
-          <p className="text-base sm:text-lg lg:text-xl text-white/80 font-mangro max-w-4xl mx-auto leading-relaxed px-4">
+          <p className="text-base sm:text-lg lg:text-xl text-white/80 font-copperplate max-w-4xl mx-auto leading-relaxed px-4">
             Curated collections of wildlife encounters, organized to highlight unique perspectives of the natural world.
           </p>
         </div>
@@ -47,14 +47,14 @@ const Albums = () => {
                       </div>
                     </div>
                     <div className="p-4 sm:p-6 lg:p-8">
-                      <h3 className="text-lg sm:text-xl lg:text-2xl font-mangro text-white mb-2 sm:mb-3 group-hover:text-primary-200 transition-colors text-shadow-glow">
+                      <h3 className="text-lg sm:text-xl lg:text-2xl font-copperplate text-white mb-2 sm:mb-3 group-hover:text-primary-200 transition-colors text-shadow-glow">
                         {album.title}
                       </h3>
-                      <p className="text-sm sm:text-base text-white/80 font-mangro mb-3 sm:mb-4 leading-relaxed line-clamp-3">
+                      <p className="text-sm sm:text-base text-white/80 font-copperplate mb-3 sm:mb-4 leading-relaxed line-clamp-3">
                         {album.description}
                       </p>
                       <div className="flex items-center justify-between">
-                        <span className="text-xs sm:text-sm text-white/60 font-mangro truncate">
+                        <span className="text-xs sm:text-sm text-white/60 font-copperplate truncate">
                           {album.location || 'Multiple Locations'}
                         </span>
                         <div className="flex items-center space-x-1 text-white/70 group-hover:text-white transition-colors flex-shrink-0 ml-2">
@@ -76,10 +76,10 @@ const Albums = () => {
       {/* Enhanced Call to Action */}
       <section className="py-32 px-6">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-5xl md:text-6xl font-mangro font-bold text-white mb-8 text-shadow-glow">
+          <h2 className="text-5xl md:text-6xl font-copperplate font-bold text-white mb-8 text-shadow-glow">
             Explore More Photography
           </h2>
-          <p className="text-xl text-white/80 font-mangro mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-white/80 font-copperplate mb-12 max-w-3xl mx-auto leading-relaxed">
             Discover individual masterpieces in our main gallery
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
