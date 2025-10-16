@@ -83,7 +83,7 @@ const Footer = () => {
             </h4>
             <div className="space-y-2 sm:space-y-3">
               <a href="mailto:plohia@yahoo.com" className="block text-white/70 hover:text-white font-mangro transition-colors duration-300 text-sm sm:text-base break-words touch-manipulation">
-                plohia@yahoo.com
+                bobbylohia@gmail.com
               </a>
               <a href="tel:+919831255000" className="block text-white/70 hover:text-white font-mangro transition-colors duration-300 text-sm sm:text-base touch-manipulation">
                 +91 98312 55000
