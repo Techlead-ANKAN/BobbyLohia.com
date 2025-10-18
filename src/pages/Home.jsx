@@ -45,17 +45,18 @@ const Home = () => {
       {/* Hero Section */}
       <Hero />
 
-      {/* Featured Work Section */}
-      <Section background="bg-black" padding="py-16 sm:py-20 md:py-24 lg:py-32">
-        <div className="text-center mb-16">
-          <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-copperplate font-bold text-white mb-6">
-            Featured
-            <span className="block hero-gradient-dark">Work</span>
-          </h2>
-          <p className="text-sm xs:text-base sm:text-lg md:text-lg lg:text-xl text-white/70 max-w-3xl mx-auto">
-            A showcase of selected wildlife photography that captures raw moments from the field.
-          </p>
-        </div>
+      {/* Featured Work Section - White Background with Dark Grid */}
+      <section className="relative py-16 sm:py-20 md:py-24 lg:py-32 bg-white text-black overflow-hidden featured-work-section">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-copperplate font-bold text-black mb-6">
+              Featured
+              <span className="block text-gray-800">Work</span>
+            </h2>
+            <p className="text-sm xs:text-base sm:text-lg md:text-lg lg:text-xl text-black/70 max-w-3xl mx-auto">
+              A showcase of selected wildlife photography that captures raw moments from the field.
+            </p>
+          </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredImages.map((image, index) => (
@@ -68,24 +69,25 @@ const Home = () => {
           ))}
         </div>
 
-        <div className="text-center mt-20">
-          <div className="inline-flex flex-col items-center space-y-4">
-            <Link to="/gallery">
-              <Button variant="primary" size="xl" className="px-8 sm:px-12 py-4 sm:py-6 text-sm xs:text-base sm:text-lg font-semibold tracking-wide">
-                <span className="flex items-center">
-                  View All Work
-                  <svg className="ml-2 sm:ml-3 w-4 sm:w-6 h-4 sm:h-6 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </span>
-              </Button>
-            </Link>
-            <p className="text-white/60 text-xs xs:text-sm sm:text-base font-medium tracking-wider uppercase">
-              Discover the complete collection
-            </p>
+          <div className="text-center mt-20">
+            <div className="inline-flex flex-col items-center space-y-4">
+              <Link to="/gallery">
+                <Button variant="primary" size="xl" className="px-8 sm:px-12 py-4 sm:py-6 text-sm xs:text-base sm:text-lg font-semibold tracking-wide">
+                  <span className="flex items-center">
+                    View All Work
+                    <svg className="ml-2 sm:ml-3 w-4 sm:w-6 h-4 sm:h-6 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </span>
+                </Button>
+              </Link>
+              <p className="text-black/60 text-xs xs:text-sm sm:text-base font-medium tracking-wider uppercase">
+                Discover the complete collection
+              </p>
+            </div>
           </div>
         </div>
-      </Section>
+      </section>
 
       {/* About Section */}
       <Section background="bg-black" padding="py-16 sm:py-20 md:py-24 lg:py-32">

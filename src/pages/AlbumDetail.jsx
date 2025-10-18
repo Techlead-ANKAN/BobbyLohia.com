@@ -78,10 +78,10 @@ const AlbumDetail = () => {
         </div>
       </section>
 
-      {/* Photo Grid */}
+      {/* Photo Grid - Exact 3-Column Layout Like Featured Work */}
       <section className="py-12 xs:py-16 md:py-20 px-4 xs:px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-4 xs:gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
             {album.images.map((image, index) => (
               <GalleryCard
                 key={image.id}

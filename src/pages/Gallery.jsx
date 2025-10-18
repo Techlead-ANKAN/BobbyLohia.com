@@ -44,7 +44,7 @@ const ModernLightbox = ({ image, isOpen, onClose, onNext, onPrev }) => {
   if (!isOpen || !image) return null;
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/98 backdrop-blur-xl flex items-center justify-center p-2 sm:p-4
+    <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex items-center justify-center p-2 sm:p-4
          animate-[fadeIn_0.3s_ease-in-out]">
       {/* Background Overlay - Click to close */}
       <div 
@@ -53,7 +53,7 @@ const ModernLightbox = ({ image, isOpen, onClose, onNext, onPrev }) => {
         aria-label="Close lightbox"
       />
       
-      {/* Responsive Close Button - Positioned Below Navbar */}
+      {/* Responsive Close Button - White for visibility on dark background */}
       <button
         onClick={onClose}
         className="fixed top-20 right-4 sm:top-24 sm:right-6 md:top-28 md:right-8 lg:top-32 lg:right-10 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white/10 hover:bg-white/20 border-2 border-white/20 hover:border-white/40 backdrop-blur-sm
@@ -66,7 +66,7 @@ const ModernLightbox = ({ image, isOpen, onClose, onNext, onPrev }) => {
         </svg>
       </button>
 
-      {/* Navigation Buttons - Fully Responsive Positioning */}
+      {/* Navigation Buttons - White for visibility on dark background */}
       <button
         onClick={onPrev}
         className="fixed left-2 sm:left-4 md:left-6 lg:left-8 top-1/2 transform -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm
@@ -111,13 +111,13 @@ const ModernLightbox = ({ image, isOpen, onClose, onNext, onPrev }) => {
           />
         </div>
         
-        {/* Image Info - Compact and Responsive */}
+        {/* Image Info - White text on dark background */}
         <div className={`mt-3 sm:mt-4 md:mt-6 text-center px-4 sm:px-6 max-w-4xl mx-auto transition-all duration-700 delay-300 ${
           imageLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-4'
         }`}>
           <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl font-copperplate text-white mb-1 sm:mb-2 leading-tight">{image.title}</h3>
           <p className="text-sm xs:text-base sm:text-lg text-white/70 font-copperplate mb-1">{image.location}</p>
-          <p className="text-xs xs:text-sm sm:text-base text-white/50 font-copperplate max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto leading-relaxed line-clamp-2">{image.description}</p>
+          <p className="text-xs xs:text-sm sm:text-base text-white/60 font-copperplate max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto leading-relaxed line-clamp-2">{image.description}</p>
         </div>
       </div>
     </div>
@@ -229,20 +229,23 @@ const Gallery = () => {
         </div>
       </section>
 
-      {/* Ultra-Modern Gallery Grid - Enhanced Responsiveness */}
-      <section className="py-12 sm:py-20 px-4 sm:px-6">
-        <div className="max-w-7xl mx-auto">
+      {/* Ultra-Modern Gallery Grid - White Background with Dark Grid Pattern */}
+      <section className="relative py-12 sm:py-20 px-4 sm:px-6 bg-white text-black overflow-hidden gallery-grid-section">
+        <div className="max-w-7xl mx-auto relative z-10">
           {filteredImages.length > 0 ? (
-            <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 sm:gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
               {filteredImages.map((image, index) => (
                 <div
                   key={index}
-                  className="card-ultra-modern group cursor-pointer h-80 image-reveal magnetic-hover
-                           hover:shadow-2xl hover:shadow-white/10 transition-all duration-700"
+                  className="card-ultra-modern group cursor-pointer image-reveal magnetic-hover
+                           hover:shadow-2xl hover:shadow-black/10 transition-all duration-700 w-full max-w-[435px]"
                   onClick={() => openLightbox(image, index)}
-                  style={{ animationDelay: `${index * 50}ms` }}
+                  style={{ 
+                    animationDelay: `${index * 50}ms`,
+                    aspectRatio: '435/285'
+                  }}
                 >
-                  <div className="relative h-full overflow-hidden rounded-3xl">
+                  <div className="relative w-full h-full overflow-hidden rounded-3xl">
                     <img
                       src={image.image}
                       alt={image.title}
@@ -274,13 +277,13 @@ const Gallery = () => {
             </div>
           ) : (
             <div className="text-center py-32">
-              <div className="w-32 h-32 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-8 morphing-blob">
-                <svg className="w-16 h-16 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-32 h-32 bg-black/10 rounded-full flex items-center justify-center mx-auto mb-8 morphing-blob">
+                <svg className="w-16 h-16 text-black/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
               </div>
-              <h3 className="text-3xl font-mangro text-white mb-6 text-shadow-glow">No images found</h3>
-              <p className="text-white/80 font-mangro text-lg">Try adjusting your search or filter criteria</p>
+              <h3 className="text-3xl font-mangro text-black mb-6">No images found</h3>
+              <p className="text-black/80 font-mangro text-lg">Try adjusting your search or filter criteria</p>
             </div>
           )}
         </div>

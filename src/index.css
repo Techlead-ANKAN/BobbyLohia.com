@@ -745,3 +745,135 @@ footer::before {
     top: 0.5rem !important;
   }
 }
+
+/* Custom Gallery Image Dimensions - 435x285 Aspect Ratio */
+.gallery-image-container {
+  width: 100%;
+  max-width: 435px;
+  aspect-ratio: 435/285;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments for gallery images */
+@media (max-width: 435px) {
+  .gallery-image-container {
+    max-width: 100%;
+    width: calc(100vw - 2rem);
+  }
+}
+
+@media (min-width: 436px) and (max-width: 768px) {
+  .gallery-image-container {
+    max-width: calc(50vw - 1.5rem);
+    min-width: 300px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .gallery-image-container {
+    max-width: calc(50vw - 2rem);
+    min-width: 350px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .gallery-image-container {
+    max-width: calc(33.333vw - 2.5rem);
+    min-width: 380px;
+  }
+}
+
+@media (min-width: 1441px) {
+  .gallery-image-container {
+    max-width: 435px;
+    min-width: 400px;
+  }
+}
+
+/* Featured Work Section - Inverted Grid Pattern */
+.featured-work-section {
+  position: relative;
+  background: white;
+  overflow: hidden;
+}
+
+.featured-work-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.featured-work-section:hover::before {
+  opacity: 1;
+}
+
+/* Enhanced grid pattern on hover - more visible */
+.featured-work-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.featured-work-section:hover::after {
+  opacity: 0.5;
+}
+
+/* Gallery Grid Section - Same Inverted Grid Pattern as Featured Work */
+.gallery-grid-section {
+  position: relative;
+  background: white;
+  overflow: hidden;
+}
+
+.gallery-grid-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-grid-section:hover::before {
+  opacity: 1;
+}
+
+/* Enhanced grid pattern on hover - more visible */
+.gallery-grid-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-grid-section:hover::after {
+  opacity: 0.5;
+}

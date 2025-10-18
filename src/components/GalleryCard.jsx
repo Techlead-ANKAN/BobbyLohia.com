@@ -6,13 +6,16 @@ const GalleryCard = ({ image, index, onClick }) => {
 
   return (
     <div
-      className={`group cursor-pointer animate-fade-in-up touch-manipulation`}
-      style={{ animationDelay: `${index * 100}ms` }}
+      className={`group cursor-pointer animate-fade-in-up touch-manipulation w-full max-w-[435px] mx-auto`}
+      style={{ 
+        animationDelay: `${index * 100}ms`,
+        aspectRatio: '435/285'
+      }}
       onClick={() => onClick(image, index)}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="glass-card p-2 sm:p-4 h-48 xs:h-56 sm:h-64 md:h-72 lg:h-80 overflow-hidden">
+      <div className="glass-card p-2 sm:p-4 h-full overflow-hidden">
         <div className="relative h-full">
           {/* Image */}
           <div className="image-hover h-full">
