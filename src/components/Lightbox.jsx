@@ -113,9 +113,7 @@ const Lightbox = ({ image, isOpen, onClose, onNext, onPrev, currentIndex, totalI
         <div className={`mt-3 sm:mt-4 md:mt-6 text-center px-4 sm:px-6 max-w-4xl mx-auto transition-all duration-500 delay-300 ${
           imageLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-4'
         }`}>
-          <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl font-copperplate text-white mb-1 sm:mb-2 leading-tight">{image.title}</h3>
           <p className="text-sm xs:text-base sm:text-lg text-white/70 mb-1">{image.location}</p>
-          <p className="text-xs xs:text-sm sm:text-base text-white/50 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto leading-relaxed line-clamp-2">{image.description}</p>
           
           {/* Image Counter - Compact */}
           <div className="mt-2 sm:mt-3 text-xs xs:text-sm text-white/60">

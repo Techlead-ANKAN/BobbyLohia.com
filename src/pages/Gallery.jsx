@@ -115,9 +115,7 @@ const ModernLightbox = ({ image, isOpen, onClose, onNext, onPrev }) => {
         <div className={`mt-3 sm:mt-4 md:mt-6 text-center px-4 sm:px-6 max-w-4xl mx-auto transition-all duration-700 delay-300 ${
           imageLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-4'
         }`}>
-          <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl font-copperplate text-white mb-1 sm:mb-2 leading-tight">{image.title}</h3>
           <p className="text-sm xs:text-base sm:text-lg text-white/70 font-copperplate mb-1">{image.location}</p>
-          <p className="text-xs xs:text-sm sm:text-base text-white/60 font-copperplate max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto leading-relaxed line-clamp-2">{image.description}</p>
         </div>
       </div>
     </div>
@@ -139,8 +137,8 @@ const Gallery = () => {
     return matchesFilter && matchesSearch;
   });
 
-  // Get unique categories
-  const categories = ['all', ...new Set(wildlifeImages.map(img => img.category))];
+  // Get only the three categories we want
+  const categories = ['all', 'Wildlife', 'Landscape'];
 
   const openLightbox = (image, index) => {
     setSelectedImage(image);
@@ -256,12 +254,8 @@ const Gallery = () => {
                     <div className="image-overlay">
                       <div className="absolute bottom-0 left-0 right-0 p-8">
                         <div className="transform translate-y-6 group-hover:translate-y-0 transition-transform duration-700">
-                          <h3 className="text-xl font-mangro text-white mb-2 text-shadow-glow">{image.title}</h3>
                           <p className="text-white/90 font-mangro text-sm mb-4">{image.location}</p>
-                          <div className="flex items-center justify-between">
-                            <span className="text-xs text-white/80 bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm">
-                              {image.category}
-                            </span>
+                          <div className="flex items-center justify-end">
                             <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300">
                               <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
