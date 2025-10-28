@@ -26,14 +26,6 @@ export const wildlifeImages = [
     "thumbnail": "/images/WildlifeAlbumFiles02.jpg"
   },
   {
-    "id": 4,
-    "title": "",
-    "description": "",
-    "category": "Wildlife",
-    "image": "/images/WildlifeAlbumFiles03.jpg",
-    "thumbnail": "/images/WildlifeAlbumFiles03.jpg"
-  },
-  {
     "id": 5,
     "title": "",
     "description": "",
@@ -64,14 +56,6 @@ export const wildlifeImages = [
     "category": "Wildlife",
     "image": "/images/WildlifeAlbumFiles07.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles07.jpg"
-  },
-  {
-    "id": 9,
-    "title": "",
-    "description": "",
-    "category": "Wildlife",
-    "image": "/images/WildlifeAlbumFiles08.jpg",
-    "thumbnail": "/images/WildlifeAlbumFiles08.jpg"
   },
   {
     "id": 10,
@@ -426,14 +410,6 @@ export const wildlifeImages = [
     "thumbnail": "/images/WildlifeAlbumFiles52.jpg"
   },
   {
-    "id": 54,
-    "title": "",
-    "description": "",
-    "category": "Wildlife",
-    "image": "/images/WildlifeAlbumFiles53.jpg",
-    "thumbnail": "/images/WildlifeAlbumFiles53.jpg"
-  },
-  {
     "id": 55,
     "title": "",
     "description": "",
@@ -618,14 +594,6 @@ export const wildlifeImages = [
     "thumbnail": "/images/TP5230175.jpeg"
   },
   {
-    "id": 78,
-    "title": "",
-    "description": "",
-    "category": "Landscape",
-    "image": "/images/TP5230180.jpeg",
-    "thumbnail": "/images/TP5230180.jpeg"
-  },
-  {
     "id": 79,
     "title": "",
     "description": "",
@@ -634,28 +602,12 @@ export const wildlifeImages = [
     "thumbnail": "/images/TP5230195.jpeg"
   },
   {
-    "id": 80,
-    "title": "",
-    "description": "",
-    "category": "Landscape",
-    "image": "/images/TP5230196.jpeg",
-    "thumbnail": "/images/TP5230196.jpeg"
-  },
-  {
     "id": 81,
     "title": "",
     "description": "",
     "category": "Landscape",
     "image": "/images/TP5230197.jpeg",
     "thumbnail": "/images/TP5230197.jpeg"
-  },
-  {
-    "id": 82,
-    "title": "",
-    "description": "",
-    "category": "Landscape",
-    "image": "/images/TP5230198.jpeg",
-    "thumbnail": "/images/TP5230198.jpeg"
   },
   {
     "id": 83,
