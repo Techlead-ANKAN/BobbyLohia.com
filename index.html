@@ -38,10 +38,10 @@
     <meta property="og:url" content="https://bobbylohia.com" />
     <meta property="og:title" content="Bobby Lohia - Professional Wildlife Photographer | Nature Photography India" />
     <meta property="og:description" content="Award-winning wildlife photographer from India with 15+ years experience. Specializing in African safaris, Bengal tigers, and conservation photography. View stunning galleries and book photography workshops." />
-    <meta property="og:image" content="https://bobbylohia.com/images/WildlifeAlbumFiles39.jpg" />
+    <meta property="og:image" content="https://bobbylohia.com/bobby-lohia-portrait.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Bobby Lohia Wildlife Photography - Professional nature photographer capturing stunning wildlife moments" />
+    <meta property="og:image:alt" content="Bobby Lohia - Professional Wildlife Photographer, Award-winning nature photographer from India" />
     <meta property="og:site_name" content="Bobby Lohia Photography" />
     <meta property="og:locale" content="en_US" />
     <meta property="fb:app_id" content="your-facebook-app-id" />
@@ -52,8 +52,8 @@
     <meta name="twitter:creator" content="@bobbylohiaphoto" />
     <meta name="twitter:title" content="Bobby Lohia - Professional Wildlife Photographer | Nature Photography India" />
     <meta name="twitter:description" content="Award-winning wildlife photographer from India capturing African safaris, Bengal tigers, and conservation photography for 15+ years." />
-    <meta name="twitter:image" content="https://bobbylohia.com/images/WildlifeAlbumFiles39.jpg" />
-    <meta name="twitter:image:alt" content="Bobby Lohia Wildlife Photography Portfolio" />
+    <meta name="twitter:image" content="https://bobbylohia.com/bobby-lohia-portrait.jpg" />
+    <meta name="twitter:image:alt" content="Bobby Lohia - Professional Wildlife Photographer Portrait" />
     
     <!-- LinkedIn -->
     <meta property="og:type" content="article" />
@@ -147,9 +147,193 @@
       "areaServed": "Worldwide"
     }
     </script>
+    
+    <!-- Image Protection Styles -->
+    <style>
+      /* Image Protection Styles */
+      img {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-user-drag: none;
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: transparent;
+        pointer-events: none;
+      }
+      
+      /* Re-enable pointer events for interactive elements */
+      button, a, input, textarea, select {
+        pointer-events: auto;
+      }
+      
+      /* Prevent text selection globally */
+      * {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      
+      /* Allow text selection for input fields */
+      input, textarea {
+        -webkit-user-select: text;
+        -moz-user-select: text;
+        -ms-user-select: text;
+        user-select: text;
+      }
+      
+      /* Disable highlighting */
+      ::selection {
+        background: transparent;
+      }
+      
+      ::-moz-selection {
+        background: transparent;
+      }
+      
+      /* Additional image protection */
+      .gallery-image, .lightbox-image {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+        user-drag: none;
+        position: relative;
+      }
+      
+      /* Invisible watermark overlay */
+      .gallery-image::after, .lightbox-image::after {
+        content: '© Bobby Lohia Photography';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: transparent;
+        color: transparent;
+        font-size: 1px;
+        z-index: 10;
+        pointer-events: none;
+      }
+      
+      /* Prevent screenshot tools */
+      @media print {
+        .gallery-image, .lightbox-image {
+          display: none !important;
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Image Protection and Security Script -->
+    <script>
+      // Disable right-click context menu
+      document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        return false;
+      });
+
+      // Disable text selection
+      document.addEventListener('selectstart', function(e) {
+        e.preventDefault();
+        return false;
+      });
+
+      // Disable drag and drop
+      document.addEventListener('dragstart', function(e) {
+        e.preventDefault();
+        return false;
+      });
+
+      // Disable F12, Ctrl+Shift+I, Ctrl+U, Ctrl+S
+      document.addEventListener('keydown', function(e) {
+        // Disable F12 (Developer Tools)
+        if (e.key === 'F12') {
+          e.preventDefault();
+          return false;
+        }
+        
+        // Disable Ctrl+Shift+I (Developer Tools)
+        if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+          e.preventDefault();
+          return false;
+        }
+        
+        // Disable Ctrl+Shift+C (Inspect Element)
+        if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+          e.preventDefault();
+          return false;
+        }
+        
+        // Disable Ctrl+U (View Source)
+        if (e.ctrlKey && e.key === 'u') {
+          e.preventDefault();
+          return false;
+        }
+        
+        // Disable Ctrl+S (Save Page)
+        if (e.ctrlKey && e.key === 's') {
+          e.preventDefault();
+          return false;
+        }
+        
+        // Disable Ctrl+A (Select All)
+        if (e.ctrlKey && e.key === 'a') {
+          e.preventDefault();
+          return false;
+        }
+        
+        // Disable Ctrl+P (Print)
+        if (e.ctrlKey && e.key === 'p') {
+          e.preventDefault();
+          return false;
+        }
+        
+        // Disable Alt+PrintScreen
+        if (e.altKey && e.key === 'PrintScreen') {
+          e.preventDefault();
+          return false;
+        }
+        
+        // Disable Windows+Shift+S (Windows Snipping Tool)
+        if (e.metaKey && e.shiftKey && e.key === 'S') {
+          e.preventDefault();
+          return false;
+        }
+      });
+
+      // Disable print screen
+      document.addEventListener('keyup', function(e) {
+        if (e.key === 'PrintScreen') {
+          e.preventDefault();
+          return false;
+        }
+      });
+
+      // Clear clipboard when print screen is pressed
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'PrintScreen') {
+          navigator.clipboard.writeText('');
+          e.preventDefault();
+          return false;
+        }
+      });
+
+      // Console warning message
+      console.clear();
+      console.log('%c⚠️ WARNING!', 'color: red; font-size: 30px; font-weight: bold;');
+      console.log('%cThis is a browser feature intended for developers. Content on this website is protected by copyright law.', 'color: red; font-size: 16px;');
+      console.log('%c© Bobby Lohia Photography - All Rights Reserved', 'color: #444; font-size: 14px; font-weight: bold;');
+    </script>
   </body>
 </html>
