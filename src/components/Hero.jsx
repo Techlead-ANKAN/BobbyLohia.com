@@ -16,15 +16,23 @@ const Hero = () => {
   return (
     <section 
       ref={heroRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      style={{
+        backgroundImage: 'url(/images/WildlifeAlbumFiles39.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
     >
+      {/* Dark overlay to ensure text readability */}
+      <div className="absolute inset-0 bg-black/50"></div>
       {/* Floating Elements - Responsive positioning */}
-      <div className="absolute top-10 sm:top-20 left-4 sm:left-20 w-16 h-16 sm:w-24 sm:h-24 lg:w-32 lg:h-32 bg-white/10 rounded-full blur-xl floating opacity-30"></div>
-      <div className="absolute bottom-10 sm:bottom-20 right-4 sm:right-20 w-12 h-12 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-white/5 rounded-full blur-xl floating-delayed opacity-30"></div>
-      <div className="absolute top-1/2 left-1/6 sm:left-1/4 w-8 h-8 sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-white/8 rounded-full blur-lg floating opacity-20"></div>
+      <div className="absolute top-10 sm:top-20 left-4 sm:left-20 w-16 h-16 sm:w-24 sm:h-24 lg:w-32 lg:h-32 bg-white/10 rounded-full blur-xl floating opacity-30 z-10"></div>
+      <div className="absolute bottom-10 sm:bottom-20 right-4 sm:right-20 w-12 h-12 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-white/5 rounded-full blur-xl floating-delayed opacity-30 z-10"></div>
+      <div className="absolute top-1/2 left-1/6 sm:left-1/4 w-8 h-8 sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-white/8 rounded-full blur-lg floating opacity-20 z-10"></div>
 
       {/* Main Content - Mobile-first responsive */}
-      <div className="relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-20 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Badge - Mobile responsive */}
         <div className={`inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-xs sm:text-sm font-medium mb-6 sm:mb-8 transition-all duration-1000 ${
           isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'

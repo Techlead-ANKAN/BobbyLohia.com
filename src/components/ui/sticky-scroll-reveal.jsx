@@ -30,7 +30,7 @@ export const StickyScroll = ({ content, contentClassName }) => {
           {content.map((item, index) => (
             <div 
               key={item.title + index} 
-              className="min-h-screen flex flex-col justify-center py-16 sm:py-20 md:py-24 lg:py-32" 
+              className="min-h-[80vh] flex flex-col justify-center py-8 sm:py-12 md:py-16 lg:py-20" 
               data-card={index}
             >
               <div className={`transition-all duration-500 ${

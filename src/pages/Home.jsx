@@ -50,7 +50,7 @@ const Home = () => {
               <span className="block text-gray-800">Work</span>
             </h2>
             <p className="text-sm xs:text-base sm:text-lg md:text-lg lg:text-xl text-black/70 max-w-3xl mx-auto">
-              A showcase of selected wildlife photography that captures raw moments from the field.
+              A showcase of selected wildlife photography that captures raw moments from the wild.
             </p>
           </div>
 

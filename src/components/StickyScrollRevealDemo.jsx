@@ -64,7 +64,7 @@ const content = [
           Every photograph tells a story, but wildlife photography tells stories that matter for the future of our planet. Through each frame, Bobby captures not just the beauty of nature, but also its fragility and the urgent need for conservation.
         </p>
         <p>
-          His work has contributed to various conservation initiatives across India and Africa, raising awareness about endangered species and their diminishing habitats. From documenting the majestic tigers of Ranthambore to the gentle giants of the African savanna, each image serves as a powerful voice for the voiceless.
+          His work has contributed to various conservation activities, raising awareness about endangered species and their diminishing habitats. From documenting the majestic tigers of Ranthambore to the gentle giants of the African savanna, each image serves as a powerful voice for the voiceless.
         </p>
         <p>
           Photography becomes a bridge between the wild and civilization, inspiring viewers to become guardians of nature. Through exhibitions, workshops, and collaborations with conservation organizations, Bobby continues to use his art as a tool for positive environmental change.
