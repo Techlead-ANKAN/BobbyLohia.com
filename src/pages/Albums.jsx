@@ -1,13 +1,22 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { photoAlbums } from '../data/portfolio';
+import SEO from '../components/SEO';
 
 const Albums = () => {
   const [selectedAlbum, setSelectedAlbum] = useState(null);
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Ultra-Modern Hero Section - Mobile optimized */}
+    <>
+      <SEO 
+        title="Photography Albums | Bobby Lohia - Wildlife & Landscape Collections"
+        description="Explore curated photography albums by Bobby Lohia featuring wildlife and landscape collections. Organized galleries showcasing the best of nature photography, African safaris, and conservation photography projects."
+        keywords="photography albums, Bobby Lohia albums, wildlife photography collections, landscape photography albums, nature photography gallery, African safari albums, conservation photography, curated wildlife photos"
+        image="/images/WildlifeAlbumFiles1.jpg"
+        type="website"
+      />
+      <div className="min-h-screen bg-black text-white relative overflow-hidden">
+        {/* Ultra-Modern Hero Section - Mobile optimized */}
       <section className="pt-24 sm:pt-32 pb-12 sm:pb-20 px-4 sm:px-6 relative">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-copperplate font-bold text-white mb-8 sm:mb-12 text-shadow-glow leading-tight">
@@ -100,7 +109,8 @@ const Albums = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

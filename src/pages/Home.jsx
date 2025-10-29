@@ -6,6 +6,7 @@ import GalleryCard from '../components/GalleryCard';
 import Button from '../components/Button';
 import Lightbox from '../components/Lightbox';
 import { StickyScrollRevealDemo } from '../components/StickyScrollRevealDemo';
+import SEO from '../components/SEO';
 
 const Home = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -37,9 +38,17 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
-      {/* Hero Section */}
-      <Hero />
+    <>
+      <SEO 
+        title="Bobby Lohia - Professional Wildlife Photographer | Nature Photography Portfolio"
+        description="Discover stunning wildlife photography by Bobby Lohia, professional nature photographer from India with 15+ years experience. Featuring African safaris, Bengal tigers, conservation photography, and breathtaking nature galleries."
+        keywords="Bobby Lohia wildlife photographer, nature photography India, professional wildlife photographer, African safari photography, Bengal tiger photography, conservation photography, wildlife photography portfolio, nature photographer Kolkata"
+        image="/images/WildlifeAlbumFiles39.jpg"
+        type="website"
+      />
+      <div className="min-h-screen bg-black text-white">
+        {/* Hero Section */}
+        <Hero />
 
       {/* Featured Work Section - White Background with Dark Grid */}
       <section className="relative py-16 sm:py-20 md:py-24 lg:py-32 bg-white text-black overflow-hidden featured-work-section">
@@ -98,7 +107,8 @@ const Home = () => {
         currentIndex={currentImageIndex}
         totalImages={featuredImages.length}
       />
-    </div>
+      </div>
+    </>
   );
 };
 

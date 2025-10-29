@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import SEO from '../components/SEO';
 
 const Contact = () => {
   const form = useRef();
@@ -94,14 +95,21 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Ultra-Modern Hero Section - Mobile optimized */}
+    <>
+      <SEO 
+        title="Contact Bobby Lohia - Professional Wildlife Photographer | Photography Services"
+        description="Get in touch with Bobby Lohia for wildlife photography services, conservation projects, photography workshops, and custom photography assignments. Professional nature photographer available for commissions worldwide."
+        keywords="contact Bobby Lohia photographer, wildlife photography services, photography workshops booking, nature photography commissions, conservation photography projects, professional photographer contact, photography consultation"
+        image="/images/WildlifeAlbumFiles39.jpg"
+        type="website"
+      />
+      <div className="min-h-screen bg-black text-white relative overflow-hidden">
+        {/* Ultra-Modern Hero Section - Mobile optimized */}
       <section className="pt-24 sm:pt-32 pb-12 sm:pb-20 px-4 sm:px-6 relative">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-mangro font-bold text-white mb-8 sm:mb-12 text-shadow-glow leading-tight">
             Get In
-            <br />
-            <span className="text-gradient-ultra">Touch</span>
+            <span className="text-gradient-ultra"> Touch</span>
           </h1>
           <p className="text-base sm:text-lg lg:text-xl text-white/80 font-mangro max-w-4xl mx-auto leading-relaxed px-4">
             Reach out to discuss projects, collaborations, or conservation ideas.
@@ -158,9 +166,9 @@ const Contact = () => {
                     type="email"
                     name="email"
                     required
-                    className="w-full px-6 py-4 bg-white/10 border border-white/30 rounded-xl text-white placeholder-white/60
+                    className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-white/10 border border-white/30 rounded-lg sm:rounded-xl text-white placeholder-white/60
                              focus:border-white/50 focus:ring-2 focus:ring-white/30 transition-all duration-500 font-mangro
-                             backdrop-blur-xl text-lg focus:text-white hover:text-white focus:bg-white/10 hover:bg-white/10"
+                             backdrop-blur-xl text-base sm:text-lg focus:text-white hover:text-white focus:bg-white/10 hover:bg-white/10 touch-manipulation"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -172,9 +180,9 @@ const Contact = () => {
                   <input
                     type="tel"
                     name="phone"
-                    className="w-full px-6 py-4 bg-white/10 border border-white/30 rounded-xl text-white placeholder-white/60
+                    className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-white/10 border border-white/30 rounded-lg sm:rounded-xl text-white placeholder-white/60
                              focus:border-white/50 focus:ring-2 focus:ring-white/30 transition-all duration-500 font-mangro
-                             backdrop-blur-xl text-lg focus:text-white hover:text-white focus:bg-white/10 hover:bg-white/10"
+                             backdrop-blur-xl text-base sm:text-lg focus:text-white hover:text-white focus:bg-white/10 hover:bg-white/10 touch-manipulation"
                     placeholder="+91 98765 43210"
                   />
                 </div>
@@ -187,9 +195,9 @@ const Contact = () => {
                     type="text"
                     name="subject"
                     required
-                    className="w-full px-6 py-4 bg-white/10 border border-white/30 rounded-xl text-white placeholder-white/60
+                    className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-white/10 border border-white/30 rounded-lg sm:rounded-xl text-white placeholder-white/60
                              focus:border-white/50 focus:ring-2 focus:ring-white/30 transition-all duration-500 font-mangro
-                             backdrop-blur-xl text-lg focus:text-white hover:text-white focus:bg-white/10 hover:bg-white/10"
+                             backdrop-blur-xl text-base sm:text-lg focus:text-white hover:text-white focus:bg-white/10 hover:bg-white/10 touch-manipulation"
                     placeholder="What's this about?"
                   />
                 </div>
@@ -202,9 +210,9 @@ const Contact = () => {
                     name="message"
                     required
                     rows="6"
-                    className="w-full px-6 py-4 bg-white/10 border border-white/30 rounded-xl text-white placeholder-white/60
+                    className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-white/10 border border-white/30 rounded-lg sm:rounded-xl text-white placeholder-white/60
                              focus:border-white/50 focus:ring-2 focus:ring-white/30 transition-all duration-500 font-mangro
-                             backdrop-blur-xl resize-vertical text-lg focus:text-white hover:text-white focus:bg-white/10 hover:bg-white/10"
+                             backdrop-blur-xl resize-vertical text-base sm:text-lg focus:text-white hover:text-white focus:bg-white/10 hover:bg-white/10 touch-manipulation"
                     placeholder="Tell me more about your project or inquiry..."
                   ></textarea>
                 </div>
@@ -213,11 +221,11 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="relative overflow-hidden px-8 py-4 bg-white text-black font-semibold rounded-full
+                  className="relative overflow-hidden px-6 sm:px-8 py-3 sm:py-4 bg-white text-black font-semibold rounded-full
                            w-full disabled:opacity-50 disabled:cursor-not-allowed magnetic-hover
-                           transition-all duration-500 transform hover:scale-105
+                           transition-all duration-500 transform hover:scale-105 text-base sm:text-lg
                            hover:bg-gray-800 hover:text-white border-2 border-transparent hover:border-white/20
-                           hover:shadow-lg hover:shadow-white/20"
+                           hover:shadow-lg hover:shadow-white/20 touch-manipulation"
                 >
                   {isSubmitting ? (
                     <div className="flex items-center justify-center space-x-3">
@@ -247,7 +255,7 @@ const Contact = () => {
             {/* Enhanced Contact Information */}
             <div className="space-y-10">
               <div>
-                <h2 className="text-4xl font-mangro font-bold text-white mb-10 text-shadow-glow">Let's Connect</h2>
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-mangro font-bold text-white mb-6 sm:mb-8 lg:mb-10 text-shadow-glow">Let's Connect</h2>
                 <p className="text-lg text-white/80 font-mangro leading-relaxed mb-10">
                   For commissions, conservation discussions, or collaborations, I’d be glad to hear from you.
                 </p>
@@ -284,7 +292,7 @@ const Contact = () => {
       {/* Enhanced Call to Action */}
       <section className="py-32 px-6">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-5xl md:text-6xl font-mangro font-bold text-white mb-8 text-shadow-glow">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-mangro font-bold text-white mb-6 sm:mb-8 text-shadow-glow">
             Let's Create Something
             <br />
             <span className="text-gradient-ultra">Extraordinary</span>
@@ -322,7 +330,8 @@ const Contact = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

@@ -1,0 +1,32 @@
+<!-- Apple Touch Icon SVG - 180x180 optimized -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="180" height="180">
+  <!-- Background with gradient -->
+  <defs>
+    <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="180" height="180" rx="40" fill="url(#bgGradient)"/>
+  
+  <!-- Main camera lens -->
+  <circle cx="90" cy="90" r="50" fill="none" stroke="#f8fafc" stroke-width="6"/>
+  <circle cx="90" cy="90" r="35" fill="none" stroke="#e2e8f0" stroke-width="4"/>
+  
+  <!-- Lens center -->
+  <circle cx="90" cy="90" r="20" fill="#64748b"/>
+  <circle cx="90" cy="90" r="12" fill="#1e293b"/>
+  <circle cx="90" cy="90" r="6" fill="#f8fafc"/>
+  
+  <!-- Camera body elements -->
+  <rect x="30" y="70" width="20" height="40" rx="8" fill="#374151"/>
+  <rect x="130" y="70" width="20" height="40" rx="8" fill="#374151"/>
+  
+  <!-- Letter B -->
+  <text x="150" y="45" font-family="serif" font-size="32" font-weight="bold" fill="#f8fafc">B</text>
+  
+  <!-- Lens reflection -->
+  <ellipse cx="80" cy="80" rx="8" ry="12" fill="#ffffff" fill-opacity="0.3"/>
+</svg>

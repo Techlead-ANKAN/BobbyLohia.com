@@ -3,27 +3,33 @@
 export const wildlifeImages = [
   {
     "id": 1,
-    "title": "",
-    "description": "",
+    "title": "Majestic Lion Portrait",
+    "description": "Powerful African lion in natural habitat showcasing wild beauty and strength",
+    "alt": "African lion close-up portrait by Bobby Lohia - wildlife photography",
     "category": "Wildlife",
     "image": "/images/WildlifeAlbumFiles00.jpg",
-    "thumbnail": "/images/WildlifeAlbumFiles00.jpg"
+    "thumbnail": "/images/WildlifeAlbumFiles00.jpg",
+    "location": "African Safari"
   },
   {
     "id": 2,
-    "title": "",
-    "description": "",
+    "title": "Elephant Family Bond",
+    "description": "Heartwarming moment of elephant family interaction in the wild",
+    "alt": "Elephant family group in African savanna - Bobby Lohia wildlife photography",
     "category": "Wildlife",
     "image": "/images/WildlifeAlbumFiles01.jpg",
-    "thumbnail": "/images/WildlifeAlbumFiles01.jpg"
+    "thumbnail": "/images/WildlifeAlbumFiles01.jpg",
+    "location": "African Safari"
   },
   {
     "id": 3,
-    "title": "",
-    "description": "",
+    "title": "Leopard in Golden Hour",
+    "description": "Stunning leopard captured during golden hour lighting in natural environment",
+    "alt": "Leopard golden hour portrait by Bobby Lohia - professional nature photography",
     "category": "Wildlife",
     "image": "/images/WildlifeAlbumFiles02.jpg",
-    "thumbnail": "/images/WildlifeAlbumFiles02.jpg"
+    "thumbnail": "/images/WildlifeAlbumFiles02.jpg",
+    "location": "African Safari"
   },
   {
     "id": 5,
@@ -824,6 +830,422 @@ export const wildlifeImages = [
     "category": "Landscape",
     "image": "/images/TP5240467.jpeg",
     "thumbnail": "/images/TP5240467.jpeg"
+  },
+  {
+    "id": 110,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9250030.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9250030.jpeg"
+  },
+  {
+    "id": 111,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9250110.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9250110.jpeg"
+  },
+  {
+    "id": 112,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9250307.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9250307.jpeg"
+  },
+  {
+    "id": 113,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9260329.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9260329.jpeg"
+  },
+  {
+    "id": 114,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9260394.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9260394.jpeg"
+  },
+  {
+    "id": 115,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9270435.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9270435.jpeg"
+  },
+  {
+    "id": 116,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9280455.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9280455.jpeg"
+  },
+  {
+    "id": 117,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9280458.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9280458.jpeg"
+  },
+  {
+    "id": 118,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9280464.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9280464.jpeg"
+  },
+  {
+    "id": 119,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9280478.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9280478.jpeg"
+  },
+  {
+    "id": 120,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9280482.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9280482.jpeg"
+  },
+  {
+    "id": 121,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9280489.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9280489.jpeg"
+  },
+  {
+    "id": 122,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9280490.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9280490.jpeg"
+  },
+  {
+    "id": 123,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9280494.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9280494.jpeg"
+  },
+  {
+    "id": 124,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9280506.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9280506.jpeg"
+  },
+  {
+    "id": 125,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9280511.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9280511.jpeg"
+  },
+  {
+    "id": 126,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9280514.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9280514.jpeg"
+  },
+  {
+    "id": 127,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9280519.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9280519.jpeg"
+  },
+  {
+    "id": 128,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9280534.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9280534.jpeg"
+  },
+  {
+    "id": 129,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9280535.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9280535.jpeg"
+  },
+  {
+    "id": 130,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9280542.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9280542.jpeg"
+  },
+  {
+    "id": 131,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9280569.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9280569.jpeg"
+  },
+  {
+    "id": 132,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9280605.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9280605.jpeg"
+  },
+  {
+    "id": 133,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9280614.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9280614.jpeg"
+  },
+  {
+    "id": 134,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9280616.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9280616.jpeg"
+  },
+  {
+    "id": 135,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9280643.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9280643.jpeg"
+  },
+  {
+    "id": 136,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9280648.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9280648.jpeg"
+  },
+  {
+    "id": 137,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9280655.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9280655.jpeg"
+  },
+  {
+    "id": 138,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9280661.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9280661.jpeg"
+  },
+  {
+    "id": 139,
+    "title": "",
+    "description": "",
+    "category": "Landscape",
+    "image": "/images/landscapes_new/T_9300728.jpeg",
+    "thumbnail": "/images/landscapes_new/T_9300728.jpeg"
+  },
+  {
+    "id": 140,
+    "title": "",
+    "description": "",
+    "category": "Wildlife",
+    "image": "/images/widlife_new/1L6A0701On1-Resize.jpg",
+    "thumbnail": "/images/widlife_new/1L6A0701On1-Resize.jpg"
+  },
+  {
+    "id": 141,
+    "title": "",
+    "description": "",
+    "category": "Wildlife",
+    "image": "/images/widlife_new/H-Images07.jpg",
+    "thumbnail": "/images/widlife_new/H-Images07.jpg"
+  },
+  {
+    "id": 142,
+    "title": "",
+    "description": "",
+    "category": "Wildlife",
+    "image": "/images/widlife_new/H-Images18.jpg",
+    "thumbnail": "/images/widlife_new/H-Images18.jpg"
+  },
+  {
+    "id": 143,
+    "title": "",
+    "description": "",
+    "category": "Wildlife",
+    "image": "/images/widlife_new/PA151380.jpg",
+    "thumbnail": "/images/widlife_new/PA151380.jpg"
+  },
+  {
+    "id": 144,
+    "title": "",
+    "description": "",
+    "category": "Wildlife",
+    "image": "/images/widlife_new/PA151473.jpg",
+    "thumbnail": "/images/widlife_new/PA151473.jpg"
+  },
+  {
+    "id": 145,
+    "title": "",
+    "description": "",
+    "category": "Wildlife",
+    "image": "/images/widlife_new/PA151989.jpg",
+    "thumbnail": "/images/widlife_new/PA151989.jpg"
+  },
+  {
+    "id": 146,
+    "title": "",
+    "description": "",
+    "category": "Wildlife",
+    "image": "/images/widlife_new/PA152001.jpg",
+    "thumbnail": "/images/widlife_new/PA152001.jpg"
+  },
+  {
+    "id": 147,
+    "title": "",
+    "description": "",
+    "category": "Wildlife",
+    "image": "/images/widlife_new/TDSCF0107.jpeg",
+    "thumbnail": "/images/widlife_new/TDSCF0107.jpeg"
+  },
+  {
+    "id": 148,
+    "title": "",
+    "description": "",
+    "category": "Wildlife",
+    "image": "/images/widlife_new/TDSCF0195.jpeg",
+    "thumbnail": "/images/widlife_new/TDSCF0195.jpeg"
+  },
+  {
+    "id": 149,
+    "title": "",
+    "description": "",
+    "category": "Wildlife",
+    "image": "/images/widlife_new/TDSCF0206.jpeg",
+    "thumbnail": "/images/widlife_new/TDSCF0206.jpeg"
+  },
+  {
+    "id": 150,
+    "title": "",
+    "description": "",
+    "category": "Wildlife",
+    "image": "/images/widlife_new/TDSCF2012.jpeg",
+    "thumbnail": "/images/widlife_new/TDSCF2012.jpeg"
+  },
+  {
+    "id": 151,
+    "title": "",
+    "description": "",
+    "category": "Wildlife",
+    "image": "/images/widlife_new/TKenya-Thumbnail.jpeg",
+    "thumbnail": "/images/widlife_new/TKenya-Thumbnail.jpeg"
+  },
+  {
+    "id": 152,
+    "title": "",
+    "description": "",
+    "category": "Wildlife",
+    "image": "/images/widlife_new/TPA091072Processed.jpeg",
+    "thumbnail": "/images/widlife_new/TPA091072Processed.jpeg"
+  },
+  {
+    "id": 153,
+    "title": "",
+    "description": "",
+    "category": "Wildlife",
+    "image": "/images/widlife_new/TRhinos.jpeg",
+    "thumbnail": "/images/widlife_new/TRhinos.jpeg"
+  },
+  {
+    "id": 154,
+    "title": "",
+    "description": "",
+    "category": "Wildlife",
+    "image": "/images/widlife_new/TTuskerB&W2.jpeg",
+    "thumbnail": "/images/widlife_new/TTuskerB&W2.jpeg"
+  },
+  {
+    "id": 155,
+    "title": "",
+    "description": "",
+    "category": "Wildlife",
+    "image": "/images/widlife_new/TWebGallery5.jpeg",
+    "thumbnail": "/images/widlife_new/TWebGallery5.jpeg"
+  },
+  {
+    "id": 156,
+    "title": "",
+    "description": "",
+    "category": "Wildlife",
+    "image": "/images/widlife_new/TWhite Lion.jpeg",
+    "thumbnail": "/images/widlife_new/TWhite Lion.jpeg"
+  },
+  {
+    "id": 157,
+    "title": "",
+    "description": "",
+    "category": "Wildlife",
+    "image": "/images/widlife_new/T_3050265.jpeg",
+    "thumbnail": "/images/widlife_new/T_3050265.jpeg"
+  },
+  {
+    "id": 158,
+    "title": "",
+    "description": "",
+    "category": "Wildlife",
+    "image": "/images/widlife_new/T_6010276On1.jpeg",
+    "thumbnail": "/images/widlife_new/T_6010276On1.jpeg"
+  },
+  {
+    "id": 159,
+    "title": "",
+    "description": "",
+    "category": "Wildlife",
+    "image": "/images/widlife_new/V-Images05.jpg",
+    "thumbnail": "/images/widlife_new/V-Images05.jpg"
+  },
+  {
+    "id": 160,
+    "title": "",
+    "description": "",
+    "category": "Wildlife",
+    "image": "/images/widlife_new/V-Tigers01.jpg",
+    "thumbnail": "/images/widlife_new/V-Tigers01.jpg"
+  },
+  {
+    "id": 161,
+    "title": "",
+    "description": "",
+    "category": "Wildlife",
+    "image": "/images/widlife_new/_9250130.jpg",
+    "thumbnail": "/images/widlife_new/_9250130.jpg"
   } 
 ];
 

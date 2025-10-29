@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://bobbylohia.com/</loc>
+    <lastmod>2025-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://bobbylohia.com/images/WildlifeAlbumFiles39.jpg</image:loc>
+      <image:title>Bobby Lohia - Professional Wildlife Photographer</image:title>
+      <image:caption>Award-winning wildlife photographer capturing nature's beauty</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Gallery Page -->
+  <url>
+    <loc>https://bobbylohia.com/gallery</loc>
+    <lastmod>2025-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://bobbylohia.com/images/WildlifeAlbumFiles1.jpg</image:loc>
+      <image:title>Wildlife Photography Gallery</image:title>
+      <image:caption>Stunning wildlife and landscape photography collection</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Albums Page -->
+  <url>
+    <loc>https://bobbylohia.com/albums</loc>
+    <lastmod>2025-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Wildlife Album -->
+  <url>
+    <loc>https://bobbylohia.com/albums/wildlife</loc>
+    <lastmod>2025-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://bobbylohia.com/images/WildlifeAlbumFiles1.jpg</image:loc>
+      <image:title>Wildlife Photography Collection</image:title>
+      <image:caption>Diverse wildlife species captured in their natural habitat</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Landscape Album -->
+  <url>
+    <loc>https://bobbylohia.com/albums/landscape</loc>
+    <lastmod>2025-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bobbylohia.com/images/LandscapeAlbumFiles1.jpg</image:loc>
+      <image:title>Landscape Photography Collection</image:title>
+      <image:caption>Breathtaking landscapes and natural scenery photography</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Contact Page -->
+  <url>
+    <loc>https://bobbylohia.com/contact</loc>
+    <lastmod>2025-10-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+</urlset>

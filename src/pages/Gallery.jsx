@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { wildlifeImages } from '../data/portfolio';
+import SEO from '../components/SEO';
+import { GallerySchema } from '../components/ImageSchema';
 
 const ModernLightbox = ({ image, isOpen, onClose, onNext, onPrev }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -44,19 +46,28 @@ const ModernLightbox = ({ image, isOpen, onClose, onNext, onPrev }) => {
   if (!isOpen || !image) return null;
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex items-center justify-center p-2 sm:p-4
-         animate-[fadeIn_0.3s_ease-in-out]">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4
+         animate-[fadeIn_0.3s_ease-in-out]"
+         style={{
+           backgroundImage: 'url(/images/wall-texture.jpg)',
+           backgroundSize: 'cover',
+           backgroundPosition: 'center',
+           backgroundRepeat: 'no-repeat'
+         }}>
+      {/* Wall Texture Overlay for depth */}
+      <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+      
       {/* Background Overlay - Click to close */}
       <div 
-        className="absolute inset-0 bg-transparent cursor-pointer"
+        className="absolute inset-0 bg-transparent cursor-pointer z-10"
         onClick={onClose}
         aria-label="Close lightbox"
       />
       
-      {/* Responsive Close Button - White for visibility on dark background */}
+      {/* Responsive Close Button - Light for visibility on dark background */}
       <button
         onClick={onClose}
-        className="fixed top-20 right-4 sm:top-24 sm:right-6 md:top-28 md:right-8 lg:top-32 lg:right-10 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white/10 hover:bg-white/20 border-2 border-white/20 hover:border-white/40 backdrop-blur-sm
+        className="fixed top-20 right-4 sm:top-24 sm:right-6 md:top-28 md:right-8 lg:top-32 lg:right-10 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white/10 hover:bg-white/20 border-2 border-white/20 hover:border-white/40
                    flex items-center justify-center text-white hover:scale-110 transition-all duration-300 z-50 touch-manipulation shadow-lg hover:shadow-white/10 safe-area-inset-right safe-area-inset-top"
         aria-label="Close"
         title="Close (Press Esc)"
@@ -66,10 +77,10 @@ const ModernLightbox = ({ image, isOpen, onClose, onNext, onPrev }) => {
         </svg>
       </button>
 
-      {/* Navigation Buttons - White for visibility on dark background */}
+      {/* Navigation Buttons - Light for visibility on dark background */}
       <button
         onClick={onPrev}
-        className="fixed left-2 sm:left-4 md:left-6 lg:left-8 top-1/2 transform -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm
+        className="fixed left-2 sm:left-4 md:left-6 lg:left-8 top-1/2 transform -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white/10 border border-white/20
                    flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-300 z-40 touch-manipulation safe-area-inset-left"
         aria-label="Previous"
       >
@@ -80,7 +91,7 @@ const ModernLightbox = ({ image, isOpen, onClose, onNext, onPrev }) => {
 
       <button
         onClick={onNext}
-        className="fixed right-2 sm:right-4 md:right-6 lg:right-8 top-1/2 transform -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm
+        className="fixed right-2 sm:right-4 md:right-6 lg:right-8 top-1/2 transform -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white/10 border border-white/20
                    flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-300 z-40 touch-manipulation safe-area-inset-right"
         aria-label="Next"
       >
@@ -89,29 +100,108 @@ const ModernLightbox = ({ image, isOpen, onClose, onNext, onPrev }) => {
         </svg>
       </button>
 
-      {/* Image Container - Properly Responsive and Contained */}
-      <div className="w-full h-full flex flex-col items-center justify-center px-4 sm:px-8 md:px-12 lg:px-16 py-4 sm:py-6">
-        <div className="relative w-full flex justify-center items-center" style={{ maxHeight: 'calc(100vh - 180px)' }}>
-          {!imageLoaded && (
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-6 h-6 sm:w-8 sm:h-8 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+      {/* Photo Frame Container */}
+      <div className="w-full h-full flex flex-col items-center justify-center px-4 sm:px-8 md:px-12 lg:px-16 py-4 sm:py-6 relative z-20">
+        <div className="relative flex justify-center items-center" style={{ maxHeight: 'calc(100vh - 120px)' }}>
+          
+          {/* Realistic Dark Frame with Sharp Corners & Deep Beveling */}
+          <div className="relative p-4 sm:p-5 md:p-6 shadow-2xl"
+               style={{ 
+                 background: `
+                   linear-gradient(135deg, 
+                     #110B11 0%, #1A1216 15%, #0E090E 25%, #151015 35%, 
+                     #110B11 45%, #1C171C 55%, #110B11 65%, #0F0A0F 75%,
+                     #141014 85%, #110B11 95%, #0D080D 100%
+                   )
+                 `,
+                 boxShadow: `
+                   inset 0 0 0 1px #3A353A,
+                   inset 0 0 0 2px #050205,
+                   inset 0 0 0 4px #2A252A,
+                   inset 0 0 0 5px #0A050A,
+                   inset 4px 4px 16px rgba(0,0,0,0.9),
+                   inset -4px -4px 16px rgba(255,255,255,0.08),
+                   inset 8px 0 24px rgba(0,0,0,0.5),
+                   inset -8px 0 24px rgba(0,0,0,0.5),
+                   inset 0 8px 24px rgba(0,0,0,0.5),
+                   inset 0 -8px 24px rgba(255,255,255,0.03),
+                   0 0 0 2px #050205,
+                   0 16px 48px rgba(0,0,0,0.7),
+                   0 24px 72px rgba(0,0,0,0.5)
+                 `,
+                 border: '2px solid #050205',
+                 borderRadius: '0px',
+                 position: 'relative'
+               }}>
+            
+            {/* Outer Beveled Edge */}
+            <div className="absolute -inset-2 border-4"
+                 style={{
+                   borderColor: '#3A353A #050205 #050205 #3A353A',
+                   borderRadius: '0px',
+                   boxShadow: `
+                     2px 2px 6px rgba(0,0,0,0.6),
+                     -2px -2px 6px rgba(255,255,255,0.03)
+                   `
+                 }}></div>
+            
+            {/* Inner Beveled Groove */}
+            <div className="absolute inset-3 border-2"
+                 style={{
+                   borderColor: '#050205 #3A353A #3A353A #050205',
+                   borderRadius: '0px',
+                   boxShadow: `
+                     inset 2px 2px 8px rgba(255,255,255,0.05),
+                     inset -2px -2px 8px rgba(0,0,0,0.8)
+                   `
+                 }}></div>
+            
+            {/* Deep Center Groove */}
+            <div className="absolute inset-6 border"
+                 style={{
+                   borderColor: '#0A050A #2A252A #2A252A #0A050A',
+                   borderRadius: '0px',
+                   boxShadow: `
+                     inset 1px 1px 4px rgba(255,255,255,0.02),
+                     inset -1px -1px 4px rgba(0,0,0,0.9)
+                   `
+                 }}></div>
+            
+            {/* Inner White Matting - Reduced by 30% */}
+            <div className="bg-white p-5 sm:p-8 md:p-11 shadow-inner"
+                 style={{ 
+                   boxShadow: 'inset 0 0 30px rgba(0,0,0,0.1), inset 0 0 50px rgba(0,0,0,0.05)' 
+                 }}>
+              
+              {/* Image Container */}
+              <div className="relative bg-white">
+                {!imageLoaded && (
+                  <div className="absolute inset-0 flex items-center justify-center z-10">
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 border-2 border-amber-700/30 border-t-amber-700 rounded-full animate-spin"></div>
+                  </div>
+                )}
+                
+                <img
+                  src={image.image}
+                  alt={image.alt || `${image.title || 'Wildlife photography'} - High-resolution nature photography by Bobby Lohia showcasing ${image.category?.toLowerCase()} from ${image.location}`}
+                  title={image.title || `Professional ${image.category} Photography by Bobby Lohia`}
+                  className={`block max-w-full object-contain mx-auto transition-all duration-700 ${
+                    imageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+                  }`}
+                  style={{ 
+                    maxHeight: 'calc(65vh - 100px)',
+                    maxWidth: 'calc(85vw - 150px)',
+                    minHeight: 'clamp(200px, 30vh, 400px)'
+                  }}
+                  onLoad={() => setImageLoaded(true)}
+                  draggable={false}
+                />
+              </div>
             </div>
-          )}
-          <img
-            src={image.image}
-            alt={image.title}
-            className={`w-auto h-auto object-contain rounded-lg sm:rounded-2xl shadow-2xl transition-all duration-700 ${
-              imageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-            }`}
-            style={{ 
-              maxHeight: 'calc(60vh - 120px)',
-              maxWidth: 'calc(80vw - 60px)'
-            }}
-            onLoad={() => setImageLoaded(true)}
-          />
+          </div>
         </div>
         
-        {/* Image Info - White text on dark background */}
+        {/* Image Info - Light text on dark background */}
         <div className={`mt-3 sm:mt-4 md:mt-6 text-center px-4 sm:px-6 max-w-4xl mx-auto transition-all duration-700 delay-300 ${
           imageLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-4'
         }`}>
@@ -164,11 +254,24 @@ const Gallery = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Ultra-Modern Hero Header */}
+    <>
+      <SEO 
+        title="Wildlife Photography Gallery | Bobby Lohia - Professional Nature Photographer"
+        description="Browse Bobby Lohia's extensive wildlife photography gallery featuring 160+ stunning images of African safaris, Bengal tigers, exotic wildlife, and breathtaking landscapes. Professional nature photography with search and filter options."
+        keywords="wildlife photography gallery, Bobby Lohia gallery, nature photography collection, African safari photos, wildlife images, Bengal tiger photography, landscape photography, conservation photography, professional wildlife photographer"
+        image="/images/WildlifeAlbumFiles1.jpg"
+        type="website"
+      />
+      <GallerySchema 
+        name="Wildlife Photography Gallery"
+        description="Complete collection of Bobby Lohia's wildlife photography featuring tigers, elephants, birds, and diverse wildlife from India's premier national parks."
+        images={wildlifeImages}
+      />
+      <div className="min-h-screen bg-black text-white relative overflow-hidden">
+        {/* Ultra-Modern Hero Header */}
       <section className="pt-32 pb-20 px-6 relative">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-xl md:text-7xl font-mangro font-bold text-white mb-12 text-shadow-glow">
+          <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-mangro font-bold text-white mb-12 text-shadow-glow">
             Wildlife
             <br />
             <span className="text-gradient-ultra">Gallery</span>
@@ -231,7 +334,7 @@ const Gallery = () => {
       <section className="relative py-12 sm:py-20 px-4 sm:px-6 bg-white text-black overflow-hidden gallery-grid-section">
         <div className="max-w-7xl mx-auto relative z-10">
           {filteredImages.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 justify-items-center">
               {filteredImages.map((image, index) => (
                 <div
                   key={index}
@@ -246,7 +349,8 @@ const Gallery = () => {
                   <div className="relative w-full h-full overflow-hidden rounded-3xl">
                     <img
                       src={image.image}
-                      alt={image.title}
+                      alt={image.alt || `${image.title || 'Wildlife photography'} - Professional nature photography by Bobby Lohia featuring ${image.category?.toLowerCase()} from ${image.location}`}
+                      title={image.title || `${image.category} Photography by Bobby Lohia`}
                       className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 
                                transform-gpu group-hover:rotate-1 filter group-hover:brightness-110"
                       loading="lazy"
@@ -276,7 +380,7 @@ const Gallery = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
               </div>
-              <h3 className="text-3xl font-mangro text-black mb-6">No images found</h3>
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-mangro text-black mb-4 sm:mb-6">No images found</h3>
               <p className="text-black/80 font-mangro text-lg">Try adjusting your search or filter criteria</p>
             </div>
           )}
@@ -286,7 +390,7 @@ const Gallery = () => {
       {/* Enhanced Call to Action */}
       <section className="py-32 px-6 relative overflow-hidden">
         <div className="max-w-5xl mx-auto text-center relative z-10">
-          <h2 className="text-5xl md:text-6xl font-mangro font-bold text-white mb-8 text-shadow-glow
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-mangro font-bold text-white mb-6 sm:mb-8 text-shadow-glow
                          animate-[fadeInUp_0.6s_ease-out] hover:scale-105 transition-transform duration-500">
             Inspired by Nature?
           </h2>
@@ -332,7 +436,8 @@ const Gallery = () => {
         onNext={nextImage}
         onPrev={prevImage}
       />
-    </div>
+      </div>
+    </>
   );
 };
 

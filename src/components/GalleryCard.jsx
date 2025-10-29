@@ -24,7 +24,8 @@ const GalleryCard = ({ image, index, onClick }) => {
           )}
             <img
               src={image.image}
-              alt={image.title}
+              alt={image.alt || `${image.title} - Wildlife photography by Bobby Lohia featuring ${image.category?.toLowerCase()} in ${image.location}`}
+              title={image.title || `Wildlife Photography - ${image.category} by Bobby Lohia`}
               className={`w-full h-full object-cover rounded-md sm:rounded-lg transition-all duration-500 ${
                 imageLoaded ? 'opacity-100' : 'opacity-0'
               }`}
