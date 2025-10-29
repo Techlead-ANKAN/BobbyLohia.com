@@ -267,9 +267,33 @@ const Gallery = () => {
         description="Complete collection of Bobby Lohia's wildlife photography featuring tigers, elephants, birds, and diverse wildlife from India's premier national parks."
         images={wildlifeImages}
       />
-      <div className="min-h-screen bg-black text-white relative overflow-hidden">
+      <div className="min-h-screen text-white relative overflow-hidden"
+           style={{
+             background: `
+               linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.65) 50%, rgba(0,0,0,0.8) 100%),
+               url('/images/TextureBlack4.jpg')
+             `,
+             backgroundSize: 'cover, cover',
+             backgroundPosition: 'center, center',
+             backgroundRepeat: 'no-repeat, no-repeat',
+             backgroundAttachment: 'fixed, fixed'
+           }}>
+        
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          {/* Subtle animated leaves/particles */}
+          <div className="absolute top-20 left-10 w-2 h-2 bg-green-500/10 rounded-full animate-pulse"></div>
+          <div className="absolute top-40 right-20 w-1 h-1 bg-amber-500/15 rounded-full animate-ping" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute bottom-40 left-1/4 w-1.5 h-1.5 bg-orange-500/10 rounded-full animate-pulse" style={{ animationDelay: '4s' }}></div>
+          <div className="absolute bottom-60 right-1/3 w-1 h-1 bg-emerald-500/15 rounded-full animate-ping" style={{ animationDelay: '6s' }}></div>
+          
+          {/* Organic flowing shapes */}
+          <div className="absolute top-1/4 left-0 w-96 h-96 bg-gradient-to-r from-green-900/5 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }}></div>
+          <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-gradient-to-l from-amber-900/5 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDuration: '12s', animationDelay: '4s' }}></div>
+        </div>
+        
         {/* Ultra-Modern Hero Header */}
-      <section className="pt-32 pb-20 px-6 relative">
+      <section className="pt-32 pb-20 px-6 relative z-10">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-mangro font-bold text-white mb-12 text-shadow-glow">
             Wildlife
@@ -330,45 +354,45 @@ const Gallery = () => {
         </div>
       </section>
 
-      {/* Ultra-Modern Gallery Grid - White Background with Dark Grid Pattern */}
-      <section className="relative py-12 sm:py-20 px-4 sm:px-6 bg-white text-black overflow-hidden gallery-grid-section">
+      {/* Ultra-Modern Gallery Grid - Texture Background */}
+      <section className="relative py-12 sm:py-20 px-4 sm:px-6 text-black overflow-hidden gallery-grid-section"
+               style={{
+                 background: `
+                   linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,249,250,0.9) 50%, rgba(255,255,255,0.9) 100%),
+                   url('/images/Texture6172297.jpg')
+                 `,
+                 backgroundSize: 'cover, cover',
+                 backgroundPosition: 'center, center',
+                 backgroundRepeat: 'no-repeat, repeat',
+                 backgroundAttachment: 'local, fixed'
+               }}>
+        
+        {/* Subtle overlay for better contrast */}
+        <div className="absolute inset-0 bg-white/20"></div>
+        
         <div className="max-w-7xl mx-auto relative z-10">
           {filteredImages.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 justify-items-center">
               {filteredImages.map((image, index) => (
                 <div
                   key={index}
-                  className="card-ultra-modern group cursor-pointer image-reveal magnetic-hover
-                           hover:shadow-2xl hover:shadow-black/10 transition-all duration-700 w-full max-w-[435px]"
+                  className="cursor-pointer w-full max-w-[435px]"
                   onClick={() => openLightbox(image, index)}
                   style={{ 
                     animationDelay: `${index * 50}ms`,
-                    aspectRatio: '435/285'
+                    aspectRatio: '435/285',
+                    boxShadow: '0 10px 30px rgba(0, 0, 0, 0.35), 0 6px 16px rgba(0, 0, 0, 0.25), 0 3px 8px rgba(0, 0, 0, 0.17)',
+                    borderRadius: '0.75rem'
                   }}
                 >
-                  <div className="relative w-full h-full overflow-hidden rounded-3xl">
+                  <div className="relative w-full h-full overflow-hidden rounded-xl">
                     <img
                       src={image.image}
                       alt={image.alt || `${image.title || 'Wildlife photography'} - Professional nature photography by Bobby Lohia featuring ${image.category?.toLowerCase()} from ${image.location}`}
                       title={image.title || `${image.category} Photography by Bobby Lohia`}
-                      className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 
-                               transform-gpu group-hover:rotate-1 filter group-hover:brightness-110"
+                      className="w-full h-full object-cover"
                       loading="lazy"
                     />
-                    <div className="image-overlay">
-                      <div className="absolute bottom-0 left-0 right-0 p-8">
-                        <div className="transform translate-y-6 group-hover:translate-y-0 transition-transform duration-700">
-                          <p className="text-white/90 font-mangro text-sm mb-4">{image.location}</p>
-                          <div className="flex items-center justify-end">
-                            <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300">
-                              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                              </svg>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               ))}
@@ -389,6 +413,29 @@ const Gallery = () => {
 
       {/* Enhanced Call to Action */}
       <section className="py-32 px-6 relative overflow-hidden">
+        {/* Enhanced Background */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-gray-900/40 to-transparent"></div>
+        <div className="absolute inset-0" 
+             style={{
+               backgroundImage: `
+                 radial-gradient(circle at 30% 20%, rgba(139,69,19,0.15) 0%, transparent 40%),
+                 radial-gradient(circle at 70% 80%, rgba(34,139,34,0.12) 0%, transparent 40%),
+                 linear-gradient(45deg, transparent 48%, rgba(255,255,255,0.01) 50%, transparent 52%)
+               `
+             }}></div>
+        
+        {/* Floating wildlife silhouettes */}
+        <div className="absolute top-10 left-1/4 opacity-5">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" className="text-white animate-float">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 1.74.5 3.37 1.41 4.84.95 1.48 2.27 2.71 3.92 3.53.82.41 1.73.63 2.67.63s1.85-.22 2.67-.63c1.65-.82 2.97-2.05 3.92-3.53C20.5 12.37 21 10.74 21 9c0-3.87-3.13-7-9-7z"/>
+          </svg>
+        </div>
+        <div className="absolute bottom-20 right-1/4 opacity-5">
+          <svg width="35" height="35" viewBox="0 0 24 24" fill="currentColor" className="text-white animate-float" style={{ animationDelay: '2s' }}>
+            <path d="M18.5 2.5c0 1.93-1.57 3.5-3.5 3.5S11.5 4.43 11.5 2.5 13.07-1 15-1s3.5 1.57 3.5 3.5zM12 8c-3.31 0-6 2.69-6 6v8h4v-8c0-1.1.9-2 2-2s2 .9 2 2v8h4v-8c0-3.31-2.69-6-6-6z"/>
+          </svg>
+        </div>
+        
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-mangro font-bold text-white mb-6 sm:mb-8 text-shadow-glow
                          animate-[fadeInUp_0.6s_ease-out] hover:scale-105 transition-transform duration-500">

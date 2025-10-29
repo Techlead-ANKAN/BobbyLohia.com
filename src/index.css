@@ -374,17 +374,17 @@
     animation: textReveal 0.8s ease forwards;
   }
   
-  /* Image Hover Effects */
+  /* Image Hover Effects - DISABLED */
   .image-hover {
     @apply relative overflow-hidden rounded-xl;
-    transition: transform 0.3s ease;
+    /* transition: transform 0.3s ease; */
   }
   
-  .image-hover:hover {
+  /* .image-hover:hover {
     transform: scale(1.05);
-  }
+  } */
   
-  .image-hover::after {
+  /* .image-hover::after {
     content: '';
     position: absolute;
     top: 0;
@@ -398,7 +398,7 @@
   
   .image-hover:hover::after {
     opacity: 1;
-  }
+  } */
   
   /* Navigation */
   .nav-link {
@@ -834,13 +834,14 @@ footer::before {
   opacity: 0.5;
 }
 
-/* Gallery Grid Section - Same Inverted Grid Pattern as Featured Work */
+/* Gallery Grid Section - DISABLED GRID PATTERN */
 .gallery-grid-section {
   position: relative;
   background: white;
   overflow: hidden;
 }
 
+/* DISABLED - No more grid on hover
 .gallery-grid-section::before {
   content: '';
   position: absolute;
@@ -859,7 +860,6 @@ footer::before {
   opacity: 1;
 }
 
-/* Enhanced grid pattern on hover - more visible */
 .gallery-grid-section::after {
   content: '';
   position: absolute;
@@ -877,3 +877,4 @@ footer::before {
 .gallery-grid-section:hover::after {
   opacity: 0.5;
 }
+*/
