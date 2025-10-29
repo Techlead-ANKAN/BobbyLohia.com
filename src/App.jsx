@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import MouseTracker from './components/MouseTracker';
+import ImageProtection from './components/ImageProtection';
 import Home from './pages/Home';
 import Gallery from './pages/Gallery';
 import Albums from './pages/Albums';
@@ -41,23 +42,25 @@ function App() {
     };
   }, []);
   return (
-    <Router>
-      <div className="min-h-screen bg-black text-white">
-        <MouseTracker />
-        <Navigation />
-        <main className="relative z-10">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/albums" element={<Albums />} />
-            <Route path="/albums/:albumId" element={<AlbumDetail />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <ImageProtection>
+      <Router>
+        <div className="min-h-screen bg-black text-white">
+          <MouseTracker />
+          <Navigation />
+          <main className="relative z-10">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/albums" element={<Albums />} />
+              <Route path="/albums/:albumId" element={<AlbumDetail />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </ImageProtection>
   );
 }
 

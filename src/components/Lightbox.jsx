@@ -181,16 +181,21 @@ const Lightbox = ({ image, isOpen, onClose, onNext, onPrev, currentIndex, totalI
                   src={image.image}
                   alt={image.alt || `${image.title || 'Wildlife photography'} - Professional nature photography by Bobby Lohia featuring ${image.category?.toLowerCase()} wildlife from ${image.location}`}
                   title={image.title || `${image.category} Photography by Bobby Lohia - Professional Wildlife Photographer`}
-                  className={`block max-w-full object-contain mx-auto transition-all duration-500 ${
+                  className={`lightbox-image block max-w-full object-contain mx-auto transition-all duration-500 ${
                     imageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
                   }`}
                   style={{ 
                     maxHeight: 'calc(65vh - 100px)',
                     maxWidth: 'calc(85vw - 150px)',
-                    minHeight: 'clamp(200px, 30vh, 400px)'
+                    minHeight: 'clamp(200px, 30vh, 400px)',
+                    userSelect: 'none',
+                    WebkitUserSelect: 'none'
                   }}
                   onLoad={() => setImageLoaded(true)}
-                  draggable={false}
+                  draggable="false"
+                  onContextMenu={(e) => e.preventDefault()}
+                  onDragStart={(e) => e.preventDefault()}
+                  onSelectStart={(e) => e.preventDefault()}
                 />
               </div>
             </div>
