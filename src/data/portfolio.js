@@ -1253,7 +1253,7 @@ export const photoAlbums = [
   {
     id: 'wildlife',
     title: 'Wildlife',
-    description: 'Intimate portraits of Africa\'s magnificent creatures in their natural habitat - from majestic elephants to powerful lions, graceful birds to gentle giants',
+    description: 'Intimate portraits of magnificent creatures in their natural habitat - from majestic elephants to powerful lions, graceful birds to gentle giants',
     coverImage: '/images/WildlifeAlbumFiles00.jpg',
     imageCount: wildlifeImages.filter(img => img.category === 'Wildlife').length,
     images: wildlifeImages.filter(img => img.category === 'Wildlife')

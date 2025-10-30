@@ -217,18 +217,15 @@ const Gallery = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [filter, setFilter] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
 
-  // Filter and search logic
+  // Filter logic - fixed to work with case insensitive matching
   const filteredImages = wildlifeImages.filter(image => {
-    const matchesFilter = filter === 'all' || image.category === filter;
-    const matchesSearch = image.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         image.location.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesFilter && matchesSearch;
+    if (filter === 'all') return true;
+    return image.category && image.category.toLowerCase() === filter.toLowerCase();
   });
 
   // Get only the three categories we want
-  const categories = ['all', 'Wildlife', 'Landscape'];
+  const categories = ['all', 'wildlife', 'landscape'];
 
   const openLightbox = (image, index) => {
     setSelectedImage(image);
@@ -306,28 +303,12 @@ const Gallery = () => {
         </div>
       </section>
 
-      {/* Enhanced Search and Filter Section */}
+      {/* Category Filter Section */}
       <section className="py-10 px-6 sticky top-0 z-30 glass-ultra border-b border-white/20">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col space-y-6 lg:flex-row lg:space-y-0 lg:gap-8 items-center justify-between">
-            {/* Enhanced Search - Mobile-first responsive */}
-            <div className="relative w-full max-w-lg lg:flex-1">
-              <svg className="absolute left-4 sm:left-5 top-1/2 transform -translate-y-1/2 w-5 h-5 sm:w-6 sm:h-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-              <input
-                type="text"
-                placeholder="Search wildlife..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="input-ultra w-full pl-12 sm:pl-14 pr-4 sm:pr-6 py-3 sm:py-4 text-sm sm:text-base rounded-full hover:scale-[1.02] focus:scale-[1.02]
-                           bg-white/10 border border-white/30 backdrop-blur-xl transform-gpu transition-all duration-500 
-                           text-white placeholder-white/60 focus:text-white hover:text-white font-mangro touch-manipulation"
-              />
-            </div>
-
-            {/* Enhanced Category Filter - Improved mobile layout */}
-            <div className="flex flex-wrap gap-2 sm:gap-3 justify-center w-full lg:w-auto">
+          <div className="flex justify-center">
+            {/* Category Filter Buttons */}
+            <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
               {categories.map((category) => (
                 <button
                   key={category}
