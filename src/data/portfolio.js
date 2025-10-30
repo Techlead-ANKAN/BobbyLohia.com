@@ -248,14 +248,6 @@ export const wildlifeImages = [
     "thumbnail": "/images/WildlifeAlbumFiles31.jpg"
   },
   {
-    "id": 33,
-    "title": "Elephant with Kilimanjaro at Sunset",
-    "description": "An elephant with its trunk raised stands before a purple-hued Mount Kilimanjaro at twilight.",
-    "category": "Wildlife",
-    "image": "/images/WildlifeAlbumFiles32.jpg",
-    "thumbnail": "/images/WildlifeAlbumFiles32.jpg"
-  },
-  {
     "id": 34,
     "title": "Lioness Resting",
     "description": "A lioness rests directly facing the camera on a patch of bare, reddish-brown earth.",
@@ -520,14 +512,6 @@ export const wildlifeImages = [
     "thumbnail": "/images/TP5220095.jpeg"
   },
   {
-    "id": 68,
-    "title": "",
-    "description": "",
-    "category": "Landscape",
-    "image": "/images/TP5220103.jpeg",
-    "thumbnail": "/images/TP5220103.jpeg"
-  },
-  {
     "id": 69,
     "title": "",
     "description": "",
@@ -598,14 +582,6 @@ export const wildlifeImages = [
     "category": "Landscape",
     "image": "/images/TP5230175.jpeg",
     "thumbnail": "/images/TP5230175.jpeg"
-  },
-  {
-    "id": 79,
-    "title": "",
-    "description": "",
-    "category": "Landscape",
-    "image": "/images/TP5230195.jpeg",
-    "thumbnail": "/images/TP5230195.jpeg"
   },
   {
     "id": 81,
@@ -832,14 +808,6 @@ export const wildlifeImages = [
     "thumbnail": "/images/TP5240467.jpeg"
   },
   {
-    "id": 110,
-    "title": "",
-    "description": "",
-    "category": "Landscape",
-    "image": "/images/landscapes_new/T_9250030.jpeg",
-    "thumbnail": "/images/landscapes_new/T_9250030.jpeg"
-  },
-  {
     "id": 111,
     "title": "",
     "description": "",
@@ -910,14 +878,6 @@ export const wildlifeImages = [
     "category": "Landscape",
     "image": "/images/landscapes_new/T_9280478.jpeg",
     "thumbnail": "/images/landscapes_new/T_9280478.jpeg"
-  },
-  {
-    "id": 120,
-    "title": "",
-    "description": "",
-    "category": "Landscape",
-    "image": "/images/landscapes_new/T_9280482.jpeg",
-    "thumbnail": "/images/landscapes_new/T_9280482.jpeg"
   },
   {
     "id": 121,

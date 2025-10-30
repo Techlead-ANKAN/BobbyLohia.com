@@ -290,11 +290,9 @@ const Gallery = () => {
         </div>
         
         {/* Ultra-Modern Hero Header */}
-      <section className="pt-60 pb-44 px-6 relative z-10">
+      <section className="pt-72 pb-56 px-6 relative z-10">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-mangro font-bold text-white mb-12 text-shadow-glow">
-            Wildlife
-            <br />
             <span className="text-gradient-ultra">Gallery</span>
           </h1>
           <p className="text-xl text-white/80 font-mangro max-w-4xl mx-auto leading-relaxed">
