@@ -79,9 +79,24 @@ const ImageProtection = ({ children }) => {
 
   return (
     <div 
-      onContextMenu={(e) => e.preventDefault()}
-      onSelectStart={(e) => e.preventDefault()}
-      onDragStart={(e) => e.preventDefault()}
+      onContextMenu={(e) => {
+        // Only prevent context menu on images, not on buttons
+        if (e.target.tagName === 'IMG') {
+          e.preventDefault();
+        }
+      }}
+      onSelectStart={(e) => {
+        // Only prevent selection on images, not on buttons
+        if (e.target.tagName === 'IMG') {
+          e.preventDefault();
+        }
+      }}
+      onDragStart={(e) => {
+        // Only prevent drag on images, not on buttons
+        if (e.target.tagName === 'IMG') {
+          e.preventDefault();
+        }
+      }}
       style={{ userSelect: 'none', webkitUserSelect: 'none' }}
     >
       {children}

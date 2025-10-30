@@ -290,7 +290,7 @@ const Gallery = () => {
         </div>
         
         {/* Ultra-Modern Hero Header */}
-      <section className="pt-32 pb-20 px-6 relative z-10">
+      <section className="pt-60 pb-44 px-6 relative z-10">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-mangro font-bold text-white mb-12 text-shadow-glow">
             Wildlife
@@ -303,37 +303,7 @@ const Gallery = () => {
         </div>
       </section>
 
-      {/* Category Filter Section */}
-      <section className="py-10 px-6 sticky top-0 z-30 glass-ultra border-b border-white/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex justify-center">
-            {/* Category Filter Buttons */}
-            <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setFilter(category)}
-                  className={`px-4 sm:px-6 lg:px-8 py-2 sm:py-3 rounded-full font-mangro text-xs sm:text-sm font-semibold tracking-wide transition-all duration-500 
-                    transform hover:scale-105 hover:shadow-lg hover:shadow-white/10 magnetic-hover relative overflow-hidden touch-manipulation ${
-                    filter === category
-                      ? 'bg-white text-black hover:bg-gray-100 hover:text-black shadow-xl'
-                      : 'bg-white/10 text-white hover:text-white hover:bg-white/20 border border-white/30 backdrop-blur-sm hover:border-white/50'
-                  }`}
-                >
-                  {category.charAt(0).toUpperCase() + category.slice(1)}
-                </button>
-              ))}
-            </div>
-          </div>
 
-          {/* Enhanced Results Count */}
-          <div className="mt-6 text-center">
-            <p className="text-white/70 font-mangro text-base">
-              Showing {filteredImages.length} of {wildlifeImages.length} images
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* Ultra-Modern Gallery Grid - Texture Background */}
       <section className="relative py-12 sm:py-20 px-4 sm:px-6 text-black overflow-hidden gallery-grid-section"
@@ -347,6 +317,52 @@ const Gallery = () => {
                  backgroundRepeat: 'no-repeat, repeat',
                  backgroundAttachment: 'local, fixed'
                }}>
+        
+        {/* Category Filter Section - Fixed */}
+        <div className="max-w-7xl mx-auto mb-12 z-50 relative">
+          <div className="flex justify-center">
+            {/* Category Filter Buttons */}
+            <div className="flex flex-wrap gap-3 justify-center">
+              <button
+                onClick={() => setFilter('all')}
+                className={`px-6 py-3 rounded-full font-mangro text-sm font-semibold transition-all duration-300 cursor-pointer ${
+                  filter === 'all'
+                    ? 'bg-black text-white shadow-lg'
+                    : 'bg-gray-100 text-black hover:bg-gray-200 border border-gray-300'
+                }`}
+              >
+                All
+              </button>
+              <button
+                onClick={() => setFilter('wildlife')}
+                className={`px-6 py-3 rounded-full font-mangro text-sm font-semibold transition-all duration-300 cursor-pointer ${
+                  filter === 'wildlife'
+                    ? 'bg-black text-white shadow-lg'
+                    : 'bg-gray-100 text-black hover:bg-gray-200 border border-gray-300'
+                }`}
+              >
+                Wildlife
+              </button>
+              <button
+                onClick={() => setFilter('landscape')}
+                className={`px-6 py-3 rounded-full font-mangro text-sm font-semibold transition-all duration-300 cursor-pointer ${
+                  filter === 'landscape'
+                    ? 'bg-black text-white shadow-lg'
+                    : 'bg-gray-100 text-black hover:bg-gray-200 border border-gray-300'
+                }`}
+              >
+                Landscape
+              </button>
+            </div>
+          </div>
+
+          {/* Enhanced Results Count */}
+          <div className="mt-6 text-center">
+            <p className="text-black/70 font-mangro text-base">
+              Showing {filteredImages.length} of {wildlifeImages.length} images
+            </p>
+          </div>
+        </div>
         
         {/* Subtle overlay for better contrast */}
         <div className="absolute inset-0 bg-white/20"></div>

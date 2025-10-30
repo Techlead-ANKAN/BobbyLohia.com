@@ -15,7 +15,7 @@ const GalleryCard = ({ image, index, onClick }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="glass-card p-2 sm:p-4 h-full overflow-hidden">
+      <div className="h-full overflow-hidden rounded-md sm:rounded-lg">
         <div className="relative h-full">
           {/* Image */}
           <div className="image-hover h-full">
@@ -49,7 +49,6 @@ const GalleryCard = ({ image, index, onClick }) => {
               <div className={`transform transition-all duration-300 ${
                 isHovered ? 'translate-y-0' : 'translate-y-2 sm:translate-y-0 md:translate-y-4'
               }`}>
-                <p className="text-white/80 text-xs sm:text-sm mb-2 sm:mb-3 truncate">{image.location}</p>
                 <div className="flex items-center justify-end">
                   <div className="w-6 h-6 sm:w-8 sm:h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <svg className="w-3 h-3 sm:w-4 sm:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

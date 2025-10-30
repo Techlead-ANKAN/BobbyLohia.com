@@ -44,7 +44,7 @@ const AlbumDetail = () => {
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* Album Hero Section */}
-      <section className="pt-24 xs:pt-28 md:pt-32 pb-12 xs:pb-16 md:pb-20 px-4 xs:px-6 relative">
+      <section className="pt-24 xs:pt-28 md:pt-32 pb-5 xs:pb-9 md:pb-14 px-4 xs:px-6 relative">
         <div className="max-w-7xl mx-auto">
           {/* Breadcrumb */}
           <div className="mb-6 xs:mb-8">
@@ -79,7 +79,7 @@ const AlbumDetail = () => {
       </section>
 
       {/* Photo Grid - Exact 3-Column Layout Like Featured Work */}
-      <section className="py-12 xs:py-16 md:py-20 px-4 xs:px-6">
+      <section className="pt-6 xs:pt-8 md:pt-10 pb-12 xs:pb-16 md:pb-20 px-4 xs:px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
             {album.images.map((image, index) => (

@@ -3,8 +3,8 @@
 export const wildlifeImages = [
   {
     "id": 1,
-    "title": "Majestic Lion Portrait",
-    "description": "Powerful African lion in natural habitat showcasing wild beauty and strength",
+    "title": "",
+    "description": "",
     "alt": "African lion close-up portrait by Bobby Lohia - wildlife photography",
     "category": "Wildlife",
     "image": "/images/WildlifeAlbumFiles00.jpg",
@@ -13,8 +13,8 @@ export const wildlifeImages = [
   },
   {
     "id": 2,
-    "title": "Elephant Family Bond",
-    "description": "Heartwarming moment of elephant family interaction in the wild",
+    "title": "",
+    "description": "",
     "alt": "Elephant family group in African savanna - Bobby Lohia wildlife photography",
     "category": "Wildlife",
     "image": "/images/WildlifeAlbumFiles01.jpg",
@@ -23,8 +23,8 @@ export const wildlifeImages = [
   },
   {
     "id": 3,
-    "title": "Leopard in Golden Hour",
-    "description": "Stunning leopard captured during golden hour lighting in natural environment",
+    "title": "",
+    "description": "",
     "alt": "Leopard golden hour portrait by Bobby Lohia - professional nature photography",
     "category": "Wildlife",
     "image": "/images/WildlifeAlbumFiles02.jpg",
@@ -161,16 +161,16 @@ export const wildlifeImages = [
   },
   {
     "id": 22,
-    "title": "Battle-Scarred Lion Portrait",
-    "description": "A close-up, intense portrait of a male lion with visible facial scars and wounds.",
+    "title": "",
+    "description": "",
     "category": "Wildlife",
     "image": "/images/WildlifeAlbumFiles21.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles21.jpg"
   },
   {
     "id": 23,
-    "title": "Fish Eagle on Deadwood",
-    "description": "An African Fish Eagle perches on a bare, thick tree branch against a pale sky.",
+    "title": "",
+    "description": "",
     "category": "Wildlife",
     "image": "/images/WildlifeAlbumFiles22.jpg",
     "thumbnail": "/images/WildlifeAlbumFiles22.jpg"

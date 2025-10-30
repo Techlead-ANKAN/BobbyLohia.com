@@ -187,29 +187,7 @@
     font-family: 'Copperplate', system-ui, sans-serif;
   }
   
-  /* Global Grid Pattern - hidden under black, revealed by mask */
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-      linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-    background-size: 20px 20px;
-    pointer-events: none;
-    z-index: 30;
-    opacity: 0; /* hidden until hover */
-    -webkit-mask-image: radial-gradient(340px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.95) 42%, rgba(255,255,255,0) 62%);
-            mask-image: radial-gradient(340px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.95) 42%, rgba(255,255,255,0) 62%);
-    transition: opacity 0.25s ease;
-  }
-
-  body:hover::before {
-    opacity: 1;
-  }
+  /* Global Grid Pattern - REMOVED - Only keeping spotlight effect */
   
   /* Global Spotlight Effect */
   body::after {
@@ -638,19 +616,7 @@
   @apply text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl;
 }
 
-/* Footer Grid Always Visible */
-footer::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-  background-size: 20px 20px;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 1;
-}
+/* Footer Grid - REMOVED - Only keeping clean background */
 
 /* Subtle Lightbox Close Button Styles - Black & White Aesthetic */
 .lightbox-close-button {
@@ -790,91 +756,16 @@ footer::before {
   }
 }
 
-/* Featured Work Section - Inverted Grid Pattern */
+/* Featured Work Section - Clean Background Only */
 .featured-work-section {
   position: relative;
   background: white;
   overflow: hidden;
 }
 
-.featured-work-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
-  background-size: 20px 20px;
-  pointer-events: none;
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.featured-work-section:hover::before {
-  opacity: 1;
-}
-
-/* Enhanced grid pattern on hover - more visible */
-.featured-work-section::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
-  background-size: 40px 40px;
-  pointer-events: none;
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.featured-work-section:hover::after {
-  opacity: 0.5;
-}
-
-/* Gallery Grid Section - DISABLED GRID PATTERN */
+/* Gallery Grid Section - Clean Background Only */
 .gallery-grid-section {
   position: relative;
   background: white;
   overflow: hidden;
 }
-
-/* DISABLED - No more grid on hover
-.gallery-grid-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
-  background-size: 20px 20px;
-  pointer-events: none;
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.gallery-grid-section:hover::before {
-  opacity: 1;
-}
-
-.gallery-grid-section::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
-  background-size: 40px 40px;
-  pointer-events: none;
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.gallery-grid-section:hover::after {
-  opacity: 0.5;
-}
-*/
