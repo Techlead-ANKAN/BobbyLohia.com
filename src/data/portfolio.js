@@ -1305,8 +1305,8 @@ export const wildlifeImages = [
         "description": "",
         "alt": "",
         "category": "Wildlife",
-        "image": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife1.jpg",
-        "thumbnail": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife1.jpg"
+        "image": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife82.jpg",
+        "thumbnail": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife82.jpg"
     },
     {
         "id": 3,
@@ -1876,15 +1876,6 @@ export const wildlifeImages = [
         "thumbnail": "/images/NEWUPDATED/LandscapeBLWebsite/Landscape38.jpg"
     },
     {
-        "id": 67,
-        "title": "",
-        "description": "",
-        "alt": "",
-        "category": "Wildlife",
-        "image": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife29.jpg",
-        "thumbnail": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife29.jpg"
-    },
-    {
         "id": 68,
         "title": "",
         "description": "",
@@ -2452,24 +2443,6 @@ export const wildlifeImages = [
         "thumbnail": "/images/NEWUPDATED/LandscapeBLWebsite/Landscape75.jpg"
     },
     {
-        "id": 133,
-        "title": "",
-        "description": "",
-        "alt": "",
-        "category": "Wildlife",
-        "image": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife57.jpg",
-        "thumbnail": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife57.jpg"
-    },
-    {
-        "id": 134,
-        "title": "",
-        "description": "",
-        "alt": "",
-        "category": "Landscape",
-        "image": "/images/NEWUPDATED/LandscapeBLWebsite/Landscape76.jpg",
-        "thumbnail": "/images/NEWUPDATED/LandscapeBLWebsite/Landscape76.jpg"
-    },
-    {
         "id": 135,
         "title": "",
         "description": "",
@@ -2945,6 +2918,212 @@ export const wildlifeImages = [
         "category": "Landscape",
         "image": "/images/NEWUPDATED/LandscapeBLWebsite/Landscape129.jpg",
         "thumbnail": "/images/NEWUPDATED/LandscapeBLWebsite/Landscape129.jpg"
+    },    {
+        "id": 188,
+        "title": "",
+        "description": "",
+        "alt": "",
+        "category": "Wildlife",
+        "image": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife60.jpg",
+        "thumbnail": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife60.jpg"
+    },
+    {
+        "id": 189,
+        "title": "",
+        "description": "",
+        "alt": "",
+        "category": "Wildlife",
+        "image": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife61.jpg",
+        "thumbnail": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife61.jpg"
+    },
+    {
+        "id": 190,
+        "title": "",
+        "description": "",
+        "alt": "",
+        "category": "Wildlife",
+        "image": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife62.jpg",
+        "thumbnail": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife62.jpg"
+    },
+    {
+        "id": 191,
+        "title": "",
+        "description": "",
+        "alt": "",
+        "category": "Wildlife",
+        "image": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife63.jpg",
+        "thumbnail": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife63.jpg"
+    },
+    {
+        "id": 192,
+        "title": "",
+        "description": "",
+        "alt": "",
+        "category": "Wildlife",
+        "image": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife64.jpg",
+        "thumbnail": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife64.jpg"
+    },
+    {
+        "id": 193,
+        "title": "",
+        "description": "",
+        "alt": "",
+        "category": "Wildlife",
+        "image": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife65.jpg",
+        "thumbnail": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife65.jpg"
+    },
+    {
+        "id": 194,
+        "title": "",
+        "description": "",
+        "alt": "",
+        "category": "Wildlife",
+        "image": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife66.jpg",
+        "thumbnail": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife66.jpg"
+    },
+    {
+        "id": 195,
+        "title": "",
+        "description": "",
+        "alt": "",
+        "category": "Wildlife",
+        "image": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife67.jpg",
+        "thumbnail": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife67.jpg"
+    },
+    {
+        "id": 196,
+        "title": "",
+        "description": "",
+        "alt": "",
+        "category": "Wildlife",
+        "image": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife68.jpg",
+        "thumbnail": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife68.jpg"
+    },
+    {
+        "id": 197,
+        "title": "",
+        "description": "",
+        "alt": "",
+        "category": "Wildlife",
+        "image": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife69.jpg",
+        "thumbnail": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife69.jpg"
+    },
+    {
+        "id": 198,
+        "title": "",
+        "description": "",
+        "alt": "",
+        "category": "Wildlife",
+        "image": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife70.jpg",
+        "thumbnail": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife70.jpg"
+    },
+    {
+        "id": 199,
+        "title": "",
+        "description": "",
+        "alt": "",
+        "category": "Wildlife",
+        "image": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife71.jpg",
+        "thumbnail": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife71.jpg"
+    },
+    {
+        "id": 200,
+        "title": "",
+        "description": "",
+        "alt": "",
+        "category": "Wildlife",
+        "image": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife72.jpg",
+        "thumbnail": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife72.jpg"
+    },
+    {
+        "id": 201,
+        "title": "",
+        "description": "",
+        "alt": "",
+        "category": "Wildlife",
+        "image": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife73.jpg",
+        "thumbnail": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife73.jpg"
+    },
+    {
+        "id": 202,
+        "title": "",
+        "description": "",
+        "alt": "",
+        "category": "Wildlife",
+        "image": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife74.jpg",
+        "thumbnail": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife74.jpg"
+    },
+    {
+        "id": 203,
+        "title": "",
+        "description": "",
+        "alt": "",
+        "category": "Wildlife",
+        "image": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife75.jpg",
+        "thumbnail": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife75.jpg"
+    },
+    {
+        "id": 204,
+        "title": "",
+        "description": "",
+        "alt": "",
+        "category": "Wildlife",
+        "image": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife76.jpg",
+        "thumbnail": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife76.jpg"
+    },
+    {
+        "id": 205,
+        "title": "",
+        "description": "",
+        "alt": "",
+        "category": "Wildlife",
+        "image": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife77.jpg",
+        "thumbnail": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife77.jpg"
+    },
+    {
+        "id": 206,
+        "title": "",
+        "description": "",
+        "alt": "",
+        "category": "Wildlife",
+        "image": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife78.jpg",
+        "thumbnail": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife78.jpg"
+    },
+    {
+        "id": 207,
+        "title": "",
+        "description": "",
+        "alt": "",
+        "category": "Wildlife",
+        "image": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife79.jpg",
+        "thumbnail": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife79.jpg"
+    },
+    {
+        "id": 208,
+        "title": "",
+        "description": "",
+        "alt": "",
+        "category": "Wildlife",
+        "image": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife80.jpg",
+        "thumbnail": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife80.jpg"
+    },
+    {
+        "id": 209,
+        "title": "",
+        "description": "",
+        "alt": "",
+        "category": "Wildlife",
+        "image": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife81.jpg",
+        "thumbnail": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife81.jpg"
+    },
+    {
+        "id": 210,
+        "title": "",
+        "description": "",
+        "alt": "",
+        "category": "Wildlife",
+        "image": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife1.jpg",
+        "thumbnail": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife1.jpg"
     }
 ];
 
