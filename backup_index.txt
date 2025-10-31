@@ -2,12 +2,10 @@
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
   <head>
     <meta charset="UTF-8" />
-    
-    <!-- Consolidated Favicon Declarations -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     
@@ -17,7 +15,7 @@
     <meta name="author" content="Bobby Lohia" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    <meta name="language" content="en" />
+    <meta name="language" content="English" />
     <meta name="geo.region" content="IN-WB" />
     <meta name="geo.placename" content="Kolkata, India" />
     <meta name="geo.position" content="22.5726;88.3639" />
@@ -57,9 +55,16 @@
     <meta name="twitter:image" content="https://bobbylohia.com/bobby-lohia-portrait.jpg" />
     <meta name="twitter:image:alt" content="Bobby Lohia - Wildlife Photographer Portrait" />
     
-    <!-- LinkedIn - Fixed: Removed conflicting og:type -->
+    <!-- LinkedIn -->
+    <meta property="og:type" content="article" />
     <meta property="article:author" content="Bobby Lohia" />
     <meta property="article:publisher" content="https://bobbylohia.com" />
+    
+    <!-- Favicon and icons - Bobby Lohia Portrait -->
+    <link rel="icon" type="image/jpeg" href="/src/assets/Img2.jpg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/src/assets/Img2.jpg">
+    <link rel="manifest" href="/site.webmanifest">
     
     <!-- Enhanced Title -->
     <title>Bobby Lohia | Nature Photography | Wildlife Photography</title>
