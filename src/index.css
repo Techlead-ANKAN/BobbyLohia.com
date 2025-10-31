@@ -769,3 +769,26 @@
   background: white;
   overflow: hidden;
 }
+
+
+
+@media (max-width: 600px) {
+  .lightbox-image {
+    min-height: unset !important;
+    width: 75vw !important;
+    max-width: 75vw !important;
+    height: auto !important;
+    max-height: 90vh !important;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .card-image-mobile {
+    width: 95vw !important;
+    max-width: 95vw !important;
+    min-height: unset !important;
+    height: auto !important;
+    max-height: 90vh !important;
+  }
+}
