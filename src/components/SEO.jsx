@@ -3,8 +3,8 @@ import { useLocation } from 'react-router-dom';
 
 const SEO = ({ 
   title = "Bobby Lohia - Professional Wildlife Photographer | Nature Photography India",
-  description = "Award-winning wildlife photographer from India with 15+ years experience. Specializing in African safaris, Bengal tigers, and conservation photography. View stunning galleries and book photography workshops.",
-  keywords = "Bobby Lohia photographer, wildlife photography India, nature photographer Kolkata, African safari photography, Bengal tiger photos, wildlife conservation photography",
+  description = "Bobby Lohia - Wildlife photographer from Kolkata, India with 15+ years capturing wildlife. Nature photography, conservation workshops.",
+  keywords = "Bobby Lohia photographer, wildlife photography India, nature photographer Kolkata, tiger photos, wildlife conservation photography, nature photographer, photography workshops India, wildlife photographs, nature photography",
   image = "/images/WildlifeAlbumFiles39.jpg",
   url = "https://bobbylohia.com",
   type = "website",
