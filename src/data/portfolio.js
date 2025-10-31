@@ -1691,7 +1691,7 @@ export const wildlifeImages = [
         "title": "",
         "description": "",
         "alt": "",
-        "category": "Wildlife",
+        "category": "Landscape",
         "image": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife2.jpg",
         "thumbnail": "/images/NEWUPDATED/WildLifeBLWebsite/Wildlife2.jpg"
     },
