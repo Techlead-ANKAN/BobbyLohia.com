@@ -1,10 +1,56 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { photoAlbums } from '../data/portfolio';
 import SEO from '../components/SEO';
 
 const Albums = () => {
   const [selectedAlbum, setSelectedAlbum] = useState(null);
+  const [albums, setAlbums] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  // Fetch images from backend and organize by category
+  useEffect(() => {
+    const fetchAlbums = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/api/images');
+        const data = await response.json();
+        
+        if (data.success && data.images) {
+          // Group images by category
+          const groupedImages = data.images.reduce((acc, image) => {
+            if (!acc[image.category]) {
+              acc[image.category] = [];
+            }
+            acc[image.category].push({
+              image: `http://localhost:5000${image.imagePath}`,
+              title: image.title || 'Untitled',
+              description: image.description || '',
+              id: image.id
+            });
+            return acc;
+          }, {});
+
+          // Create album objects
+          const albumsData = Object.keys(groupedImages).map(category => ({
+            id: category.toLowerCase(),
+            title: category.charAt(0).toUpperCase() + category.slice(1),
+            description: `Explore our collection of ${category.toLowerCase()} photography featuring stunning captures from nature.`,
+            images: groupedImages[category],
+            category: category
+          }));
+
+          setAlbums(albumsData);
+        }
+      } catch (error) {
+        console.error('Error fetching albums:', error);
+        // Fallback to empty albums if API fails
+        setAlbums([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchAlbums();
+  }, []);
 
   return (
     <>
@@ -52,8 +98,29 @@ const Albums = () => {
                  backgroundAttachment: 'local, fixed'
                }}>
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 lg:gap-10">
-            {photoAlbums.map((album, index) => (
+          {loading ? (
+            <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 lg:gap-10">
+              {[1, 2].map((_, index) => (
+                <div key={index} className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(45%-1.25rem)] max-w-md mx-auto">
+                  <div className="card-ultra-modern overflow-hidden animate-pulse">
+                    <div className="relative h-48 sm:h-56 md:h-64 lg:h-72 bg-gray-300 rounded-xl"></div>
+                    <div className="p-4 sm:p-6 lg:p-8">
+                      <div className="h-6 bg-gray-300 rounded mb-3"></div>
+                      <div className="h-4 bg-gray-200 rounded mb-2"></div>
+                      <div className="h-4 bg-gray-200 rounded w-3/4"></div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : albums.length === 0 ? (
+            <div className="text-center py-20">
+              <h3 className="text-2xl font-copperplate text-black mb-4">No Albums Available</h3>
+              <p className="text-black/70">Upload some images from the admin panel to create albums.</p>
+            </div>
+          ) : (
+            <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 lg:gap-10">
+              {albums.map((album, index) => (
               <div key={index} className="group scroll-reveal touch-manipulation w-full sm:w-[calc(50%-1rem)] lg:w-[calc(45%-1.25rem)] max-w-md mx-auto" style={{ animationDelay: `${index * 200}ms` }}>
                 <Link to={`/albums/${album.id}`} className="block">
                   <div className="card-ultra-modern overflow-hidden image-reveal magnetic-hover">
@@ -96,8 +163,9 @@ const Albums = () => {
                   </div>
                 </Link>
               </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

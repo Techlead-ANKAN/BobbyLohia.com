@@ -89,6 +89,7 @@ import Gallery from './pages/Gallery';
 import Albums from './pages/Albums';
 import AlbumDetail from './pages/AlbumDetail';
 import Contact from './pages/Contact';
+import ProfessionalAdminPanel from './pages/AdminPanel_pro';
 import NotFound from './pages/NotFound';
 import { trackPageView } from './utils/analytics';
 
@@ -132,26 +133,34 @@ function App() {
   }, []);
 
   return (
-    <ImageProtection>
-      <Router>
-        <PageTracker /> {/* Add the tracker component */}
-        <div className="min-h-screen bg-black text-white">
-          <MouseTracker />
-          <Navigation />
-          <main className="relative z-10">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/gallery" element={<Gallery />} />
-              <Route path="/albums" element={<Albums />} />
-              <Route path="/albums/:albumId" element={<AlbumDetail />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
-      </Router>
-    </ImageProtection>
+    <Router>
+      <PageTracker />
+      <Routes>
+        {/* Admin Panel - Completely Separate */}
+        <Route path="/admin" element={<ProfessionalAdminPanel />} />
+        
+        {/* Main Website Routes */}
+        <Route path="/*" element={
+          <ImageProtection>
+            <div className="min-h-screen bg-black text-white">
+              <MouseTracker />
+              <Navigation />
+              <main className="relative z-10">
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/gallery" element={<Gallery />} />
+                  <Route path="/albums" element={<Albums />} />
+                  <Route path="/albums/:albumId" element={<AlbumDetail />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </main>
+              <Footer />
+            </div>
+          </ImageProtection>
+        } />
+      </Routes>
+    </Router>
   );
 }
 

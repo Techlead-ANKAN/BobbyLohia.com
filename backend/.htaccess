@@ -1,0 +1,64 @@
+# Enable rewrite engine
+RewriteEngine On
+
+# Handle backend API requests - proxy to Node.js server
+RewriteRule ^api/(.*)$ http://localhost:5000/api/$1 [P,L]
+
+# Handle uploads directory - serve static files
+RewriteRule ^uploads/(.*)$ uploads/$1 [L]
+
+# Handle React Router - all other requests go to index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/api/
+RewriteCond %{REQUEST_URI} !^/uploads/
+RewriteRule . /index.html [L]
+
+# Security headers
+<IfModule mod_headers.c>
+    # CORS headers for API
+    <FilesMatch "\.(json|js)$">
+        Header set Access-Control-Allow-Origin "*"
+        Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+        Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+    </FilesMatch>
+    
+    # Cache control for images
+    <FilesMatch "\.(jpg|jpeg|png|gif|webp|svg)$">
+        Header set Cache-Control "max-age=31536000, public, immutable"
+    </FilesMatch>
+    
+    # Security headers
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "DENY"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Gzip compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
+</IfModule>
+
+# Prevent access to sensitive files
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+<Files "*.json">
+    <RequireAll>
+        Require all denied
+        Require local
+        Require expr "%{REQUEST_URI} =~ m#^/api/#"
+    </RequireAll>
+</Files>

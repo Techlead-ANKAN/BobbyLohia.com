@@ -228,6 +228,7 @@
 
 
 import React, { useEffect, useState } from 'react';
+import ImageAPI from '../services/imageAPI';
 
 const Lightbox = ({ image, isOpen, onClose, onNext, onPrev, currentIndex, totalImages }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -407,7 +408,7 @@ const Lightbox = ({ image, isOpen, onClose, onNext, onPrev, currentIndex, totalI
                 )}
                 
                 <img
-                  src={image.image}
+                  src={ImageAPI.getImageUrl(image.image)}
                   alt={image.alt || `${image.title || 'Wildlife photography'} - Professional nature photography by Bobby Lohia featuring ${image.category?.toLowerCase()} wildlife from ${image.location}`}
                   title={image.title || `${image.category} Photography by Bobby Lohia - Professional Wildlife Photographer`}
                   className={`lightbox-image block max-w-full object-contain mx-auto transition-all duration-500 ${

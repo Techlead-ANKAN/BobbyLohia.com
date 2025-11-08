@@ -499,6 +499,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { wildlifeImages } from '../data/portfolio';
+import { useImages } from '../services/imageAPI';
+import ImageAPI from '../services/imageAPI';
 import SEO from '../components/SEO';
 import { GallerySchema } from '../components/ImageSchema';
 import Lightbox from '../components/Lightbox'; // ✅ integrated external component
@@ -509,8 +511,12 @@ const Gallery = () => {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [filter, setFilter] = useState('all');
 
+  // Fetch images from API with fallback to static images
+  const { images: apiImages, loading, error } = useImages();
+  const images = apiImages.length > 0 ? apiImages : wildlifeImages;
+
   // Filter logic - case insensitive
-  const filteredImages = wildlifeImages.filter(image => {
+  const filteredImages = images.filter(image => {
     if (filter === 'all') return true;
     return image.category && image.category.toLowerCase() === filter.toLowerCase();
   });
@@ -552,7 +558,7 @@ const Gallery = () => {
       <GallerySchema 
         name="Wildlife Photography Gallery"
         description="Complete collection of Bobby Lohia's wildlife photography featuring tigers, elephants, birds, and diverse wildlife from India's premier national parks."
-        images={wildlifeImages}
+        images={images}
       />
 
       <div className="min-h-screen text-white relative overflow-hidden"
@@ -625,7 +631,9 @@ const Gallery = () => {
 
             <div className="mt-6 text-center">
               <p className="text-black/70 font-mangro text-base">
-                Showing {filteredImages.length} of {wildlifeImages.length} images
+                Showing {filteredImages.length} of {images.length} images
+                {loading && <span className="ml-2 text-blue-600">(Loading...)</span>}
+                {error && <span className="ml-2 text-red-600">(Using static images)</span>}
               </p>
             </div>
           </div>
@@ -649,7 +657,7 @@ const Gallery = () => {
                   >
                     <div className="relative w-full h-full overflow-hidden rounded-xl">
                       <img
-                        src={image.image}
+                        src={ImageAPI.getImageUrl(image.image)}
                         alt={image.alt || `${image.title || 'Wildlife photography'} - Professional nature photography by Bobby Lohia featuring ${image.category?.toLowerCase()} from ${image.location}`}
                         title={image.title || `${image.category} Photography by Bobby Lohia`}
                         className="w-full h-full object-cover"

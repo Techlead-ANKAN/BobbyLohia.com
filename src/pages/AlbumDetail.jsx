@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { photoAlbums } from '../data/portfolio';
 import GalleryCard from '../components/GalleryCard';
 import Lightbox from '../components/Lightbox';
 
@@ -9,12 +8,62 @@ const AlbumDetail = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [album, setAlbum] = useState(null);
+  const [loading, setLoading] = useState(true);
   
-  // Find the album by ID
-  const album = photoAlbums.find(album => album.id === albumId);
+  // Fetch album data from backend
+  useEffect(() => {
+    const fetchAlbumData = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/api/images');
+        const data = await response.json();
+        
+        if (data.success && data.images) {
+          // Filter images by category (albumId should match category)
+          const categoryImages = data.images.filter(image => 
+            image.category.toLowerCase() === albumId.toLowerCase()
+          );
+          
+          if (categoryImages.length > 0) {
+            const albumData = {
+              id: albumId,
+              title: albumId.charAt(0).toUpperCase() + albumId.slice(1),
+              description: `Explore our collection of ${albumId.toLowerCase()} photography featuring stunning captures from nature.`,
+              images: categoryImages.map(image => ({
+                image: `http://localhost:5000${image.imagePath}`,
+                title: image.title || 'Untitled',
+                description: image.description || '',
+                id: image.id,
+                category: image.category
+              }))
+            };
+            setAlbum(albumData);
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching album data:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchAlbumData();
+  }, [albumId]);
+  
+  // If loading, show loading state
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-black text-white flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white mx-auto mb-4"></div>
+          <p className="text-xl font-copperplate">Loading album...</p>
+        </div>
+      </div>
+    );
+  }
   
   // If album not found, redirect to albums page
-  if (!album) {
+  if (!album || album.images.length === 0) {
     return <Navigate to="/albums" replace />;
   }
 

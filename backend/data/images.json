@@ -1,0 +1,50 @@
+{
+  "images": [
+    {
+      "id": 1762506502554.675,
+      "filename": "img_1762506502545_vs0zrxi8o.jpg",
+      "originalName": "image.jpg",
+      "title": "Untitled",
+      "description": "",
+      "altText": "Image",
+      "category": "wildlife",
+      "featured": false,
+      "imagePath": "/uploads/wildlife/img_1762506502545_vs0zrxi8o.jpg",
+      "thumbnailPath": "/uploads/wildlife/img_1762506502545_vs0zrxi8o.jpg",
+      "size": 802441,
+      "uploadDate": "2025-11-07T09:08:22.554Z",
+      "isActive": true
+    },
+    {
+      "id": 1762506659529.0984,
+      "filename": "img_1762506659524_hblmz6y7o.jpg",
+      "originalName": "2.jpg",
+      "title": "Untitled",
+      "description": "",
+      "altText": "Image",
+      "category": "landscape",
+      "featured": false,
+      "imagePath": "/uploads/landscape/img_1762506659524_hblmz6y7o.jpg",
+      "thumbnailPath": "/uploads/landscape/img_1762506659524_hblmz6y7o.jpg",
+      "size": 59370,
+      "uploadDate": "2025-11-07T09:10:59.529Z",
+      "isActive": true,
+      "updatedDate": "2025-11-07T09:17:15.216Z"
+    },
+    {
+      "id": 1762507418294.644,
+      "filename": "img_1762507418280_nvbld5sj7.jpg",
+      "originalName": "835373_preview.jpg",
+      "title": "Untitled",
+      "description": "",
+      "altText": "Image",
+      "category": "landscape",
+      "featured": false,
+      "imagePath": "/uploads/landscape/img_1762507418280_nvbld5sj7.jpg",
+      "thumbnailPath": "/uploads/landscape/img_1762507418280_nvbld5sj7.jpg",
+      "size": 1056449,
+      "uploadDate": "2025-11-07T09:23:38.294Z",
+      "isActive": true
+    }
+  ]
+}
